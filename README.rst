@@ -1,6 +1,7 @@
 vaxXxa's dotfiles
 =================
 
+
 Installation
 ------------
 
@@ -23,6 +24,7 @@ or
 
     ./bootstrap.sh --force
 
+
 Git-free install
 ----------------
 
@@ -31,6 +33,7 @@ To install these dotfiles without Git::
     cd; curl -#L https://github.com/vaxXxa/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,bootstrap.sh}
 
 To update later on, just run that command again.
+
 
 Add custom commands without creating a new fork
 -----------------------------------------------
@@ -43,7 +46,7 @@ My ``~/.extra/.local`` looks something like this::
     git config --global user.name "Vasyl Nakvasiuk"
     git config --global user.email "vaxxxa@gmail.com"
 
-Or you can overwrite something using ``~/.extra/.local``. For example::
+You can overwrite something using ``~/.extra/.local``. For example::
 
     # Overwrite alias
     alias p="cd ~/Projects"
@@ -51,7 +54,7 @@ Or you can overwrite something using ``~/.extra/.local``. For example::
     # Overwrite environment variable
     export EDITOR="vim"
 
-Or you can extend all your dotfiles configuration using ``~/.extra/.local`` like entry point. Your ``~/.extra/.local`` might be like this one::
+Or you can extend all your dotfiles configuration using ``~/.extra/.local`` like entry point. Your ``~/.extra/.local`` can be like this::
 
     for file in ~/.extra/.{local-exports,local-aliases,work-settings}; do
         [ -r "$file" ] && source "$file"
