@@ -40,11 +40,8 @@ If ``~/.extra/.local`` exists, it will be sourced along with the other files. Yo
 My ``~/.extra/.local`` looks something like this::
 
     # Git credentials
-    GIT_AUTHOR_NAME="Vasyl Nakvasiuk"
-    git config --global user.name "$GIT_AUTHOR_NAME"
-
-    GIT_AUTHOR_EMAIL="vaxxxa@gmail.com"
-    git config --global user.email "$GIT_AUTHOR_EMAIL"
+    git config --global user.name "Vasyl Nakvasiuk"
+    git config --global user.email "vaxxxa@gmail.com"
 
 Or you can extend all your dotfiles configuration using ``~/.extra/.local`` like entry point. Your ``~/.extra/.local`` might be like this one::
 
