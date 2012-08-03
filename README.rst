@@ -17,6 +17,12 @@ Alternatively, to update while avoiding the confirmation prompt::
 
     ./bootstrap.sh -f
 
+or
+
+::
+
+    ./bootstrap.sh --force
+
 Git-free install
 ----------------
 
@@ -34,15 +40,13 @@ If ``~/.extra/.local`` exists, it will be sourced along with the other files. Yo
 My ``~/.extra/.local`` looks something like this::
 
     # Git credentials
-    # Not in the repository, to prevent people from accidentally committing under my name
     GIT_AUTHOR_NAME="Vasyl Nakvasiuk"
-    GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
     git config --global user.name "$GIT_AUTHOR_NAME"
+
     GIT_AUTHOR_EMAIL="vaxxxa@gmail.com"
-    GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
     git config --global user.email "$GIT_AUTHOR_EMAIL"
 
-Or you extend all your dotfiles configuration using ``~/.extra/.local`` like entry point. Your ``~/.extra/.local`` might be like this one::
+Or you can extend all your dotfiles configuration using ``~/.extra/.local`` like entry point. Your ``~/.extra/.local`` might be like this one::
 
     for file in ~/.extra/.{local-exports,local-aliases,work-settings}; do
         [ -r "$file" ] && source "$file"
@@ -55,4 +59,4 @@ And in ``~/.extra/.local-exports``, ``~/.extra/.local-aliases``, ``~/.extra/.wor
 Thanks to...
 ------------
 
-`Mathias Bynens <https://github.com/mathiasbynens>`_ for sharing his `amazing collection of dotfiles <https://github.com/mathiasbynens/dotfiles>`_
+`Mathias Bynens <https://github.com/mathiasbynens>`_ for sharing his `amazing collection of dotfiles <https://github.com/mathiasbynens/dotfiles>`_.
