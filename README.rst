@@ -20,7 +20,7 @@ Alternatively, to update while avoiding the confirmation prompt::
 
 or
 
-:: shell
+.. code:: shell
 
     ./bootstrap.sh --force
 
