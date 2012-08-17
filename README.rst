@@ -6,15 +6,20 @@ Installation
 ------------
 
 You can clone the repository wherever you want (I like to keep it in ``~/Documents/Developing/Projects/dotfiles``). The bootstrapper script will pull in the latest version and copy the files to your home folder.
-::
+
+.. code:: bash
 
     git clone https://github.com/vaxXxa/dotfiles.git && cd dotfiles && ./bootstrap.sh
 
-To update, ``cd`` into your local ``dotfiles`` repository and then::
+To update, ``cd`` into your local ``dotfiles`` repository and then:
+
+.. code:: bash
 
     ./bootstrap.sh
 
-Alternatively, to update while avoiding the confirmation prompt::
+Alternatively, to update while avoiding the confirmation prompt:
+
+.. code:: bash
 
     ./bootstrap.sh -f
 
@@ -28,7 +33,9 @@ or
 Git-free install
 ----------------
 
-To install these dotfiles without Git::
+To install these dotfiles without Git:
+
+.. code:: bash
 
     cd; curl -#L https://github.com/vaxXxa/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,bootstrap.sh}
 
@@ -40,7 +47,9 @@ Add custom commands without creating a new fork
 
 If ``~/.extra/.local`` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
 
-My ``~/.extra/.local`` looks something like this::
+My ``~/.extra/.local`` looks something like this:
+
+.. code:: bash
 
     # Git credentials
     git config --global user.name "Vasyl Nakvasiuk"
@@ -56,7 +65,9 @@ You can overwrite something using ``~/.extra/.local``. For example:
     # Overwrite environment variable
     export EDITOR="vim"
 
-Or you can extend all your dotfiles configuration using ``~/.extra/.local`` like entry point. Your ``~/.extra/.local`` can be like this::
+Or you can extend all your dotfiles configuration using ``~/.extra/.local`` like entry point. Your ``~/.extra/.local`` can be like this:
+
+.. code:: bash
 
     for file in ~/.extra/.{local-exports,local-aliases,work-settings}; do
         [ -r "$file" ] && source "$file"
