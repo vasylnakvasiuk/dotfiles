@@ -5,7 +5,7 @@ vaxXxa's dotfiles
 Installation
 ------------
 
-You can clone the repository wherever you want. (I like to keep it in ``~/Documents/Developing/Projects/active/dotfiles``, with ``~/dotfiles`` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want (I like to keep it in ``~/Documents/Developing/Projects/dotfiles``). The bootstrapper script will pull in the latest version and copy the files to your home folder.
 ::
 
     git clone https://github.com/vaxXxa/dotfiles.git && cd dotfiles && ./bootstrap.sh
@@ -20,7 +20,7 @@ Alternatively, to update while avoiding the confirmation prompt::
 
 or
 
-::
+:: shell
 
     ./bootstrap.sh --force
 
@@ -46,7 +46,7 @@ My ``~/.extra/.local`` looks something like this::
     git config --global user.name "Vasyl Nakvasiuk"
     git config --global user.email "vaxxxa@gmail.com"
 
-You can overwrite something using ``~/.extra/.local``. For example::
+You can overwrite something using ``~/.extra/.local``. For example:: shell
 
     # Overwrite alias
     alias p="cd ~/Projects"
@@ -61,7 +61,7 @@ Or you can extend all your dotfiles configuration using ``~/.extra/.local`` like
     done
     unset file
 
-And in ``~/.extra/.local-exports``, ``~/.extra/.local-aliases``, ``~/.extra/.work-settings`` you can add you own custom commands.
+And in ``~/.extra/.local-exports``, ``~/.extra/.local-aliases``, ``~/.extra/.work-settings`` you can add your own custom commands.
 
 
 Thanks to...
