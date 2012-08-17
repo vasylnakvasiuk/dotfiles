@@ -46,7 +46,9 @@ My ``~/.extra/.local`` looks something like this::
     git config --global user.name "Vasyl Nakvasiuk"
     git config --global user.email "vaxxxa@gmail.com"
 
-You can overwrite something using ``~/.extra/.local``. For example:: shell
+You can overwrite something using ``~/.extra/.local``. For example:
+
+.. code:: bash
 
     # Overwrite alias
     alias p="cd ~/Projects"
