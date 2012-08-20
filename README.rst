@@ -9,25 +9,25 @@ You can clone the repository wherever you want (I like to keep it in ``~/Documen
 
 .. code:: bash
 
-    git clone https://github.com/vaxXxa/dotfiles.git && cd dotfiles && ./bootstrap.sh
+    $ git clone https://github.com/vaxXxa/dotfiles.git && cd dotfiles && ./bootstrap.sh
 
 To update, ``cd`` into your local ``dotfiles`` repository and then:
 
 .. code:: bash
 
-    ./bootstrap.sh
+    $ ./bootstrap.sh
 
 Alternatively, to update while avoiding the confirmation prompt:
 
 .. code:: bash
 
-    ./bootstrap.sh -f
+    $ ./bootstrap.sh -f
 
 or
 
 .. code:: bash
 
-    ./bootstrap.sh --force
+    $ ./bootstrap.sh --force
 
 
 Git-free install
@@ -37,7 +37,7 @@ To install these dotfiles without Git:
 
 .. code:: bash
 
-    cd; curl -#L https://github.com/vaxXxa/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,bootstrap.sh}
+    $ cd; curl -#L https://github.com/vaxXxa/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,bootstrap.sh}
 
 To update later on, just run that command again.
 
