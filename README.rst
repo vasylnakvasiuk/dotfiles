@@ -15,14 +15,14 @@ To update, ``cd`` into your local ``dotfiles`` repository and then:
 
 .. code:: bash
 
-    $ git pull `optional: pull last version`
+    $ git pull # optional: pull last version
     $ ./bootstrap.sh
 
 Alternatively, to update while avoiding the confirmation prompt:
 
 .. code:: bash
 
-    $ git pull `optional: pull last version`
+    $ git pull # optional: pull last version
     $ ./bootstrap.sh -f
 
 or
