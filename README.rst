@@ -5,7 +5,7 @@ vaxXxa's dotfiles
 Installation
 ------------
 
-You can clone the repository wherever you want (I like to keep it in ``~/Documents/Developing/Projects/dotfiles``). The bootstrapper script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want (I like to keep it in ``~/Documents/Projects/dotfiles``). The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 .. code:: bash
 
@@ -15,12 +15,14 @@ To update, ``cd`` into your local ``dotfiles`` repository and then:
 
 .. code:: bash
 
+    $ git pull `optional: pull last version`
     $ ./bootstrap.sh
 
 Alternatively, to update while avoiding the confirmation prompt:
 
 .. code:: bash
 
+    $ git pull `optional: pull last version`
     $ ./bootstrap.sh -f
 
 or
