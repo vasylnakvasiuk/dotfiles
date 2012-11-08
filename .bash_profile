@@ -1,6 +1,6 @@
 # Load extra files from ~./extra: .local, .exports, .aliases, .functions
 # ~/.extra/.local can be used for settings you don’t want to commit
-for file in ~/.extra/.{exports,aliases,functions,local}; do
+for file in ~/.extra/.{exports,aliases,functions,bash_prompt,local}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
