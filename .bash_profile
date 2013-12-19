@@ -8,6 +8,9 @@ unset file
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
 
+# Set limit the use of system-wide resources
+ulimit -S -n 4096
+
 # Prefer US English and use UTF-8 (support in Lion)
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
