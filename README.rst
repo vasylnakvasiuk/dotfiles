@@ -57,6 +57,13 @@ My ``~/.extra/.local`` looks something like this:
     git config --global user.name "Vasyl Nakvasiuk"
     git config --global user.email "vaxxxa@gmail.com"
 
+    # Go environment
+    export GOROOT=/usr/local/go
+    export GOPATH=$HOME/Documents/Projects/gocode
+    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+    source /usr/local/bin/virtualenvwrapper.sh
+
 You can overwrite something using ``~/.extra/.local``. For example:
 
 .. code:: bash
@@ -65,7 +72,7 @@ You can overwrite something using ``~/.extra/.local``. For example:
     alias p="cd ~/Projects"
 
     # Overwrite environment variable
-    export EDITOR="vim"
+    export EDITOR="emacs"
 
 Or you can extend all your dotfiles configuration using ``~/.extra/.local`` like entry point. Your ``~/.extra/.local`` can be like this:
 
