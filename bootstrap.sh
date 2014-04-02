@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 cd "$(dirname "$0")"
 
@@ -15,4 +15,4 @@ else
     fi
 fi
 unset doIt
-source ~/.bash_profile
+source ~/.zshrc
