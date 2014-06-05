@@ -5,6 +5,7 @@ cd "$(dirname "$0")"
 function doIt() {
     rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.rst" -av . ~
 }
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
     doIt
 else
@@ -14,5 +15,6 @@ else
         doIt
     fi
 fi
+
 unset doIt
 source ~/.zshrc
