@@ -4,7 +4,7 @@ vaxXxa's dotfiles
 Pre-installation
 ----------------
 
-1. Install unix shell – zsh_ (Z shell) and set zsh as your default shell.
+1. Install unix shell – zsh_ (Z shell) and set ``zsh`` as your default shell.
 2. Install zsh configuration framework oh-my-zsh_
 
 
