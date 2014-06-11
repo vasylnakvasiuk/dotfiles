@@ -1,51 +1,55 @@
 [core]
-    excludesfile = ~/.gitignore
-
-[alias]
-    # View the SHA, description and history graph
-    l = log --pretty=oneline --graph
-    # View the current working tree status using the short format
-    s = status -s
-    # Diff
-    d = diff --patch-with-stat
-    # Pull in remote changes for the current repository and all its submodules
-    p = !"git pull; git submodule foreach git pull origin master"
-    # Clone a repository including all submodules
-    c = clone --recursive
-    # Commit all changes
-    ca = !git add -A && git commit -av
-    # Switch to a branch, creating it if necessary
-    go = checkout -B
-    # Show verbose output about tags, branches or remotes
-    tags = tag -l
-    branches = branch -a
-    remotes = remote -v
-    # Credit an author on the latest commit
-    credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
-    # Undo a `git push`
-    undopush = push -f origin HEAD^:master
-
-[color]
-    # Use colors in Git commands that are capable of colored output when outputting to the terminal
-    ui = auto
-    status = auto
-    branch = auto
-    diff = auto
-    interactive = auto
-
-[difftool "Kaleidoscope"]
-    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-    tool = Kaleidoscope
-[difftool]
-    prompt = false
-
-[mergetool "Kaleidoscope"]
-    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-    trustExitCode = true
-[mergetool]
-    prompt = false
-[merge]
-    tool = Kaleidoscope
+  pager = less -FRSX
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  editor = vim -f
+  autocrlf = input
+  safecrlf = true
+  excludesfile = ~/.gitignore
 [push]
-    default = current
+  config = default
+  default = upstream
+[merge]
+  summary = true
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+[color "branch"]
+  current = yellow reverse
+  local   = yellow
+  remote  = green
+[color "diff"]
+  meta = blue
+  frag = magenta
+  old  = red
+  new  = green
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = blue
+[alias]
+  a       = add -u
+  aa      = add --all :/
+  ap      = add -u -p
+  b       = browse
+  bam     = "!source ~/.githelpers && delete_local_merged_branches"
+  bamr    = "!source ~/.githelpers && delete_remote_merged_branches"
+  c       = commit -v
+  co      = checkout
+  d       = diff
+  ds      = diff --staged
+  dw      = diff --color-words
+  po      = push origin head
+  pr      = "!f() { git fetch origin refs/pull/$1/head:pr/$1 && git co pr/$1; } ; f"
+  s       = status -s -b
+  sm      = submodule
+  smu     = submodule foreach git pull origin master
+  summary = "!source ~/.githelpers && weekly_summary"
+  td      = merge --no-ff
+  up      = "!git fetch upstream && git rebase upstream/master"
+  w       = whatchanged --decorate
+  wp      = whatchanged --decorate -p
+  l       = log --pretty='format:%C(yellow)%h %C(blue)%ad %C(reset)%s%C(red)%d %C(green)%an%C(reset), %C(cyan)%ar' --date=short
