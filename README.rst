@@ -70,7 +70,9 @@ Thanks to...
 ------------
 
 `Mathias Bynens`_ for sharing his `amazing collection of dotfiles`_.
+
 `Chris Hunt`_ for nice `dotfiles collection`_.
+
 `Chris Kempson`_ for awesome `color schemes`_.
 
 .. _zsh: http://www.zsh.org/
