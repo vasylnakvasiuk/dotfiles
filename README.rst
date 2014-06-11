@@ -4,7 +4,7 @@ vaxXxa's dotfiles
 Pre-installation
 ----------------
 
-1. Install unix shell – zsh_ (Z shell).
+1. Install unix shell – zsh_ (Z shell) and set zsh as your default shell.
 2. Install zsh configuration framework oh-my-zsh_
 
 
@@ -15,39 +15,13 @@ You can clone the repository wherever you want (I like to keep it in ``~/Documen
 
 .. code:: bash
 
-    $ git clone https://github.com/vaxXxa/dotfiles.git && cd dotfiles && ./bootstrap.sh
+    $ git clone https://github.com/vaxXxa/dotfiles.git && cd dotfiles && make
 
 To update, ``cd`` into your local ``dotfiles`` repository and then:
 
 .. code:: bash
 
-    $ git pull # optional: pull last version
-    $ ./bootstrap.sh
-
-Alternatively, to update while avoiding the confirmation prompt:
-
-.. code:: bash
-
-    $ git pull # optional: pull last version
-    $ ./bootstrap.sh -f
-
-or
-
-.. code:: bash
-
-    $ ./bootstrap.sh --force
-
-
-Git-free install
-----------------
-
-To install these dotfiles without Git:
-
-.. code:: bash
-
-    $ cd; curl -#L https://github.com/vaxXxa/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.rst,bootstrap.sh}
-
-To update later on, just run that command again.
+    $ make
 
 
 Add custom commands without creating a new fork
@@ -96,8 +70,14 @@ Thanks to...
 ------------
 
 `Mathias Bynens`_ for sharing his `amazing collection of dotfiles`_.
+`Chris Hunt`_ for nice `dotfiles collection`_.
+`Chris Kempson`_ for awesome `color schemes`_.
 
 .. _zsh: http://www.zsh.org/
 .. _oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
 .. _Mathias Bynens: https://github.com/mathiasbynens
 .. _amazing collection of dotfiles: https://github.com/mathiasbynens/dotfiles
+.. _Chris Hunt: https://github.com/chrishunt
+.. _dotfiles collection: https://github.com/chrishunt/dot-files
+.. _Chris Kempson: https://github.com/chriskempson
+.. _color schemes: https://github.com/chriskempson/base16
