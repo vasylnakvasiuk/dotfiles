@@ -23,4 +23,4 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 alias spotoff="sudo mdutil -a -i off"
 alias spoton="sudo mdutil -a -i on"
 
-alias tmux="TERM=xterm-256color tmux"
+alias tmux="tmux -2"
