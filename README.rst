@@ -4,8 +4,9 @@ vaxXxa's dotfiles
 Pre-installation
 ----------------
 
-1. Install unix shell – zsh_ (Z shell) and set ``zsh`` as your default shell.
-2. Install zsh configuration framework oh-my-zsh_
+1. Install Homebrew_.
+2. Install unix shell – zsh_ (Z shell) and set ``zsh`` as your default shell.
+3. Install zsh configuration framework oh-my-zsh_.
 
 
 Installation
@@ -27,9 +28,9 @@ To update, ``cd`` into your local ``dotfiles`` repository and then:
 Add custom commands without creating a new fork
 -----------------------------------------------
 
-If ``~/.extra/local.sh`` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
+If ``~/.extra/.zsh/local.sh`` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
 
-My ``~/.extra/local.sh`` looks something like this:
+My ``~/.extra/.zsh/local.sh`` looks something like this:
 
 .. code:: bash
 
@@ -44,7 +45,7 @@ My ``~/.extra/local.sh`` looks something like this:
 
     source /usr/local/bin/virtualenvwrapper.sh
 
-You can overwrite something using ``~/.extra/local.sh``. For example:
+You can overwrite something using ``~/.extra/.zsh/local.sh``. For example:
 
 .. code:: bash
 
@@ -54,16 +55,16 @@ You can overwrite something using ``~/.extra/local.sh``. For example:
     # Overwrite environment variable
     export EDITOR="emacs"
 
-Or you can extend all your dotfiles configuration using ``~/.extra/local.sh`` like entry point. Your ``~/.extra/local.sh`` can be like this:
+Or you can extend all your dotfiles configuration using ``~/.extra/.zsh/local.sh`` like entry point. Your ``~/.extra/.zsh/local.sh`` can be like this:
 
 .. code:: bash
 
-    for file in ~/.extra/{local-exports,local-aliases,local-work-settings}.sh; do
+    for file in ~/.extra/.zsh/{local-exports,local-aliases,local-work-settings}.sh; do
         [ -r "$file" ] && source "$file"
     done
     unset file
 
-And in ``~/.extra/local-exports.sh``, ``~/.extra/local-aliases.sh``, ``~/.extra/local-work-settings.sh`` you can add your own custom commands.
+And in ``~/.extra/.zsh/local-exports.sh``, ``~/.extra/.zsh/local-aliases.sh``, ``~/.extra/.zsh/local-work-settings.sh`` you can add your own custom commands.
 
 
 Thanks to...
@@ -75,6 +76,7 @@ Thanks to...
 
 `Chris Kempson`_ for awesome `color schemes`_.
 
+.. _brew: http://brew.sh/
 .. _zsh: http://www.zsh.org/
 .. _oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
 .. _Mathias Bynens: https://github.com/mathiasbynens
