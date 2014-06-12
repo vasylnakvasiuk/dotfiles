@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BREW_PACKAGES=(tmux git mc cmatrix tmux-mem-cpu-load)
+BREW_PACKAGES=(git mc htop tmux tmux-mem-cpu-load cmatrix figlet tree wget mtr)
 
 function install_brew_packages() {
     for index in $BREW_PACKAGES; do
@@ -12,6 +12,7 @@ function install_brew_packages() {
         fi
     done
 }
+
 
 echo "      _       _         __ _ _"
 echo "   __| | ___ | |_      / _(_) | ___  ___"
@@ -37,7 +38,7 @@ echo "  > Sync dot-files..."
 rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" -av . ~ &> /dev/null
 
 
-unset doIt
+unset install_brew_packages
 source ~/.zshrc
 
 echo "==> Done with setup."
