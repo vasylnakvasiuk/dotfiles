@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BREW_PACKAGES=(git mc htop iftop ifstat wget mtr tree cloc tmux tmux-mem-cpu-load cmatrix figlet)
+BREW_PACKAGES=(git mc htop iftop ifstat wget mtr tree ranger cloc tmux tmux-mem-cpu-load spark cmatrix figlet)
 
 function install_brew_packages() {
     for index in $BREW_PACKAGES; do
