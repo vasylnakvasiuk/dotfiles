@@ -1,5 +1,4 @@
 #!/usr/bin/env zsh
-
 case $(uname -s) in
   "Darwin")
     ioreg -c AppleSmartBattery -w0 | \
@@ -19,11 +18,11 @@ case $(uname -s) in
           export heart='♥';
           export percentcurcap=$(( 100 * $curcap / $maxcap ));
 
-          if [[ "$curcap" == "$maxcap" ]]; then
+          if (( $curcap == $maxcap )); then
             exit
           fi
 
-          if [[ $percentcurcap < 20 ]]; then
+          if (( $percentcurcap < 20 )); then
             export heart='♡';
           fi
 
