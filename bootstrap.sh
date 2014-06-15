@@ -38,6 +38,7 @@ echo "  > Sync dot-files..."
 rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" -av . ~ &> /dev/null
 
 
+unset BREW_PACKAGES
 unset install_brew_packages
 source ~/.zshrc
 
