@@ -22,8 +22,9 @@ Plugin 'gmarik/Vundle.vim'
 " List of plugins.
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-commentary'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-easymotion'
 
@@ -63,6 +64,9 @@ set nofoldenable                  " disable code folding
 set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
 
+" clear the command line and search highlighting
+noremap <C-l> :nohlsearch<CR>
+
 " set leader key to comma
 let mapleader = ","
 
@@ -72,7 +76,6 @@ let mapleader = ","
 
 " vim-airline settings.
 let g:airline_powerline_fonts = 1
-set fileformats+=dos
 
 " ctrlp settings.
 let g:ctrlp_custom_ignore = 'tmp$\|\.git$\|\.hg$\|\.pyc$\|\.svn$\|.rvm$|.bundle$\|vendor'
