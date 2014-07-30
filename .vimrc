@@ -23,7 +23,9 @@ Plugin 'gmarik/Vundle.vim'
 " Plugin 'kien/ctrlp.vim'
 " Plugin 'bling/vim-airline'
 " Plugin 'tpope/vim-commentary'
+" Plugin 'Valloric/YouCompleteMe'
 " Plugin 'tpope/vim-fugitive'
+" Plugin 'fatih/vim-go'
 " Plugin 'scrooloose/nerdtree'
 " Plugin 'Lokaltog/vim-easymotion'
 
@@ -62,6 +64,9 @@ set list listchars=tab:»·,trail:· " show extra space characters
 set nofoldenable                  " disable code folding
 set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
+
+" clear the command line and search highlighting
+noremap <C-l> :nohlsearch<CR>
 
 " set leader key to comma
 let mapleader = ","
