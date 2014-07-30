@@ -20,12 +20,12 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " List of plugins.
-Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Lokaltog/vim-easymotion'
+" Plugin 'kien/ctrlp.vim'
+" Plugin 'bling/vim-airline'
+" Plugin 'tpope/vim-commentary'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'Lokaltog/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -71,14 +71,13 @@ let mapleader = ","
 "
 
 " vim-airline settings.
-let g:airline_powerline_fonts = 1
-set fileformats+=dos
+" let g:airline_powerline_fonts = 1
 
 " ctrlp settings.
-let g:ctrlp_custom_ignore = 'tmp$\|\.git$\|\.hg$\|\.pyc$\|\.svn$\|.rvm$|.bundle$\|vendor'
+" let g:ctrlp_custom_ignore = 'tmp$\|\.git$\|\.hg$\|\.pyc$\|\.svn$\|.rvm$|.bundle$\|vendor'
 
 " put git status, column/row number, total lines, and percentage in status
-set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
+" set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
 
 "
 " Color settings
