@@ -1,3 +1,8 @@
+.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot.png
+    :alt: dotfiles logo
+    :align: center
+
+
 vaxXxa's dotfiles
 =================
 
