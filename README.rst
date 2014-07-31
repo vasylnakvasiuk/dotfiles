@@ -81,7 +81,7 @@ Thanks to...
 
 `Chris Kempson`_ for awesome `color schemes`_.
 
-.. _brew: http://brew.sh/
+.. _Homebrew: http://brew.sh/
 .. _zsh: http://www.zsh.org/
 .. _oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
 .. _Mathias Bynens: https://github.com/mathiasbynens
