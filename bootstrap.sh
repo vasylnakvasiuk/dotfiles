@@ -31,7 +31,7 @@ brew update &> /dev/null
 echo "  > Installing homebrew packages..."
 install_brew_packages
 
-echo "  > Pulling latest dot-files..."
+echo "  > Pulling latest dotfiles..."
 git pull &> /dev/null
 
 echo "  > Sync dot-files..."
