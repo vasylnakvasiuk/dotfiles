@@ -21,7 +21,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " List of plugins.
 Plugin 'kien/ctrlp.vim'
-" Plugin 'bling/vim-airline'
+Plugin 'rking/ag.vim'
+Plugin 'bling/vim-airline'
 " Plugin 'tpope/vim-commentary'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'tpope/vim-fugitive'
@@ -90,7 +91,8 @@ let g:ctrlp_max_files=0                               " do not limit the number 
 
 " ==================== Other ====================
 " vim-airline settings.
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " put git status, column/row number, total lines, and percentage in status
 " set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [%l,%c]\ [%L,%p%%]
