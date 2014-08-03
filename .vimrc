@@ -30,6 +30,7 @@ Plugin 'fatih/vim-go'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'scrooloose/nerdtree'
 " Plugin 'Lokaltog/vim-easymotion'
+" TODO: git gutter
 " TODO: comments plugin
 " TODO: snippets plugin
 " TODO: tagbar plugin
