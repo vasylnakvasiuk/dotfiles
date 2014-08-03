@@ -20,15 +20,21 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " List of plugins.
+Plugin 'chriskempson/base16-vim'
+Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
-Plugin 'bling/vim-airline'
+Plugin 'fatih/vim-go'
 " Plugin 'tpope/vim-commentary'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'tpope/vim-fugitive'
-Plugin 'fatih/vim-go'
 " Plugin 'scrooloose/nerdtree'
 " Plugin 'Lokaltog/vim-easymotion'
+" TODO: comments plugin
+" TODO: snippets plugin
+" TODO: tagbar plugin
+" TODO: modify base colors
+" TODO: modify airline colors
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,8 +54,8 @@ set autoindent                    " set auto indent
 set ts=4                          " set indent to 4 spaces
 set shiftwidth=4
 set expandtab                     " use spaces, not tab characters
-set noswapfile                    " Don't use swapfile
-set nobackup                      " Don't create annoying backup files
+set noswapfile                    " don't use swapfile
+set nobackup                      " don't create annoying backup files
 set relativenumber                " show relative line numbers
 set showmatch                     " show bracket matches
 set ignorecase                    " ignore case in search
