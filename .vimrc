@@ -60,7 +60,6 @@ set wildmode=list:longest,full
 " Remove the ugly splits separator
 set fillchars+=vert:\ 
 
-
 " ==================== Keymap settings ====================
 
 " Turn off arrows
@@ -83,6 +82,21 @@ noremap <C-l> :nohlsearch<CR>
 let mapleader = ","
 let g:mapleader = ","
 
+
+" Open a new empty buffer
+nmap <leader>T :enew<cr>
+
+" Move to the next buffer
+nmap <leader>l :bnext<CR>
+
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
+
+" Close the current buffer and move to the previous one
+nmap <leader>bq :bp <BAR> bd #<CR>
+
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
 
 " ==================== Plugin settings ====================
 
