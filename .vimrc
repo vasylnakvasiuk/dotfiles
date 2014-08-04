@@ -24,18 +24,17 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'fatih/vim-go'
 " Plugin 'tpope/vim-commentary'
 " Plugin 'Valloric/YouCompleteMe'
-" Plugin 'tpope/vim-fugitive'
-" Plugin 'scrooloose/nerdtree'
 " Plugin 'Lokaltog/vim-easymotion'
-" TODO: git gutter
 " TODO: comments plugin
 " TODO: snippets plugin
 " TODO: tagbar plugin
-" TODO: modify base colors
 " TODO: modify airline colors
+" TODO: vim-surround
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,8 +98,7 @@ let g:ctrlp_max_height = 30                           " maxiumum height of match
 let g:ctrlp_switch_buffer = 'et'                      " jump to a file if it's open already
 let g:ctrlp_max_files=0                               " do not limit the number of searchable files
 
-" ==================== Other ====================
-" vim-airline settings.
+" ==================== vim-airline ====================
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -114,3 +112,23 @@ let base16colorspace=256
 " set dark background and color scheme
 set background=dark
 colorscheme base16-railscasts
+
+" set up some custom colors
+highlight SignColumn            ctermbg=236
+highlight VertSplit             ctermbg=237
+highlight LineNr                ctermbg=236 ctermfg=240
+highlight CursorLineNr          ctermbg=236 ctermfg=240
+highlight CursorLine            ctermbg=236
+highlight IncSearch             ctermbg=3   ctermfg=1
+highlight Search                ctermbg=1   ctermfg=3
+highlight Visual                ctermbg=3   ctermfg=0
+highlight Pmenu                 ctermbg=240 ctermfg=12
+highlight PmenuSel              ctermbg=3   ctermfg=1
+
+highlight GitGutterAdd          ctermbg=236
+highlight GitGutterChange       ctermbg=236
+highlight GitGutterDelete       ctermbg=236
+highlight GitGutterChangeDelete ctermbg=236
+highlight SignColumn            ctermbg=236
+
+let airline#themes#base16#constant = 1
