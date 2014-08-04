@@ -1,22 +1,11 @@
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
+" Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
+" Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
 " List of plugins.
@@ -41,13 +30,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 
-"
-" Settings
-"
-
-"
-" Base settings
-"
+" ==================== Base settings ====================
 
 syntax on                         " show syntax highlighting
 set autoindent                    " set auto indent
@@ -74,11 +57,25 @@ set nofoldenable                  " disable code folding
 set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
 
-" clear the command line and search highlighting
-noremap <C-l> :nohlsearch<CR>
-
 " Remove the ugly splits separator
 set fillchars+=vert:\ 
+
+
+" ==================== Keymap settings ====================
+
+" Turn off arrows
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+
+" Clear the command line and search highlighting
+noremap <C-l> :nohlsearch<CR>
 
 " This comes first, because we have mappings that depend on leader
 " With a map leader it's possible to do extra key combinations
@@ -86,11 +83,10 @@ set fillchars+=vert:\
 let mapleader = ","
 let g:mapleader = ","
 
-"
-" Plugin Settings
-"
 
-" ==================== CtrlP ====================
+" ==================== Plugin settings ====================
+
+" -------------------- CtrlP --------------------
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' " use `ag` for custom file listing command
 let g:ctrlp_working_path_mode = 'ra'                  " change where to find
@@ -98,22 +94,21 @@ let g:ctrlp_max_height = 30                           " maxiumum height of match
 let g:ctrlp_switch_buffer = 'et'                      " jump to a file if it's open already
 let g:ctrlp_max_files=0                               " do not limit the number of searchable files
 
-" ==================== vim-airline ====================
+" -------------------- vim-airline --------------------
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
-"
-" Color settings
-"
+
+" ==================== Color settings ====================
 
 " Access colors present in 256 colorspace
 let base16colorspace=256
 
-" set dark background and color scheme
+" Set dark background and color scheme
 set background=dark
 colorscheme base16-railscasts
 
-" set up some custom colors
+" Set up some custom colors
 highlight SignColumn            ctermbg=236
 highlight VertSplit             ctermbg=237
 highlight LineNr                ctermbg=236 ctermfg=240
