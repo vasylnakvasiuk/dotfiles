@@ -97,6 +97,7 @@ let g:ctrlp_max_files=0                               " do not limit the number 
 " -------------------- vim-airline --------------------
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_detect_whitespace=0
 
 
 " ==================== Color settings ====================
@@ -139,18 +140,16 @@ let s:gui_med_gray_lo = '#3a3a3a'
 let s:cterm_med_gray_lo = 237
 let s:gui_light_gray = '#505050'
 let s:cterm_light_gray = 239
-let s:gui_green = '#99cc99'
-let s:cterm_green = 151
-let s:gui_blue = '#6a9fb5'
-let s:cterm_blue = 67
-let s:gui_purple = '#aa759f'
-let s:cterm_purple = 139
+let s:gui_green = '#00ff00'
+let s:cterm_green = 10
+let s:gui_blue = '#0000ff'
+let s:cterm_blue = 12
 let s:gui_orange = '#d28445'
 let s:cterm_orange = 173
 let s:gui_red = '#ac4142'
 let s:cterm_red = 131
-let s:gui_pink = '#d7afd7'
-let s:cterm_pink = 182
+let s:gui_yellow = '#ffff00'
+let s:cterm_yellow = 11
 
 " Normal mode
 let s:N1 = [s:gui_dark_gray, s:gui_green, s:cterm_dark_gray, s:cterm_green]
@@ -178,8 +177,8 @@ let g:airline#themes#base16#palette.replace = {
 let g:airline#themes#base16#palette.replace_modified = copy(g:airline#themes#base16#palette.insert_modified)
 
 " Visual mode
-let s:V1 = [s:gui_dark_gray, s:gui_pink, s:cterm_dark_gray, s:cterm_pink]
-let s:V3 = [s:gui_pink, s:gui_med_gray_hi, s:cterm_pink, s:cterm_med_gray_hi]
+let s:V1 = [s:gui_dark_gray, s:gui_yellow, s:cterm_dark_gray, s:cterm_yellow]
+let s:V3 = [s:gui_yellow, s:gui_med_gray_hi, s:cterm_yellow, s:cterm_med_gray_hi]
 let g:airline#themes#base16#palette.visual = airline#themes#generate_color_map(s:V1, s:N2, s:V3)
 let g:airline#themes#base16#palette.visual_modified = copy(g:airline#themes#base16#palette.insert_modified)
 
