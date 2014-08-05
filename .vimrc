@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdtree'
 " Plugin 'Lokaltog/vim-easymotion'
 " TODO: snippets plugin
 " TODO: tagbar plugin
+" TODO: linter plugin
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -109,6 +110,7 @@ let g:ctrlp_max_files=0                               " do not limit the number 
 " -------------------- vim-airline --------------------
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_detect_whitespace=0
 
 " -------------------- NERDTree --------------------
