@@ -16,14 +16,12 @@ Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'fatih/vim-go'
-" Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'Lokaltog/vim-easymotion'
-" TODO: comments plugin
 " TODO: snippets plugin
 " TODO: tagbar plugin
-" TODO: modify airline colors
-" TODO: vim-surround
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
