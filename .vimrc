@@ -18,6 +18,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'scrooloose/nerdtree'
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'Lokaltog/vim-easymotion'
 " TODO: snippets plugin
@@ -80,7 +81,6 @@ noremap <C-l> :nohlsearch<CR>
 let mapleader = ","
 let g:mapleader = ","
 
-
 " Open a new empty buffer
 nmap <leader>T :enew<cr>
 
@@ -111,6 +111,9 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_detect_whitespace=0
 
+" -------------------- NERDTree --------------------
+nmap ,n :NERDTreeFind<CR>
+nmap ,m :NERDTreeToggle<CR>
 
 " ==================== Color settings ====================
 
