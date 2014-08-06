@@ -43,6 +43,7 @@ set relativenumber                " show relative line numbers
 set showmatch                     " show bracket matches
 set ignorecase                    " ignore case in search
 set hlsearch                      " highlight all search matches
+set hidden                        " allow to switch between modified buffers
 set cursorline                    " highlight current line
 set smartcase                     " pay attention to case when caps are used
 set incsearch                     " show search results as I type
@@ -73,29 +74,26 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
-" Clear the command line and search highlighting
-noremap <C-l> :nohlsearch<CR>
-
 " This comes first, because we have mappings that depend on leader
 " With a map leader it's possible to do extra key combinations
 " i.e: <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
 
-" Open a new empty buffer
-nmap <leader>T :enew<cr>
+" Clear the command line and search highlighting
+noremap <leader>l :nohlsearch<CR>
 
 " Move to the next buffer
-nmap <leader>l :bnext<CR>
+nmap <C-L> :bnext<CR>
 
 " Move to the previous buffer
-nmap <leader>h :bprevious<CR>
+nmap <C-H> :bprevious<CR>
 
 " Close the current buffer and move to the previous one
-nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>c :bp <BAR> bd #<CR>
 
-" Show all open buffers and their status
-nmap <leader>bl :ls<CR>
+" Open a new empty buffer
+nmap <leader>T :enew<cr>
 
 " ==================== Plugin settings ====================
 
@@ -109,9 +107,9 @@ let g:ctrlp_max_files=0                               " do not limit the number 
 
 " -------------------- vim-airline --------------------
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_detect_whitespace=0
+let g:airline#extensions#tabline#enabled = 1          " Enable the list of buffers
+let g:airline#extensions#tabline#fnamemod = ':t'      " Show just the filename
+let g:airline_detect_whitespace=0                     " Hide whitespace extension
 
 " -------------------- NERDTree --------------------
 nmap ,n :NERDTreeFind<CR>
