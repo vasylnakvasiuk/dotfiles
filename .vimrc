@@ -121,6 +121,7 @@ nmap ,m :NERDTreeToggle<CR>
 
 " -------------------- YouCompleteMe --------------------
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:UltiSnipsExpandTrigger="<C-J>"
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 " ==================== Color settings ====================
