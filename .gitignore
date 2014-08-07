@@ -11,3 +11,6 @@ Desktop.ini
 
 # VIM swap files
 *.swp
+
+# Exuberant Ctags files
+tags

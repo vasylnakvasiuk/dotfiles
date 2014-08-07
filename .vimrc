@@ -22,15 +22,15 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-" Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'
 " Plugin 'Lokaltog/vim-easymotion'
-" TODO: snippets plugin
 " TODO: linter plugin
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
 
 " ==================== Base settings ====================
 
@@ -108,6 +108,8 @@ let g:ctrlp_max_height = 30                           " maxiumum height of match
 let g:ctrlp_switch_buffer = 'et'                      " jump to a file if it's open already
 let g:ctrlp_max_files=0                               " do not limit the number of searchable files
 
+nnoremap <leader>t :CtrlPTag<CR>
+
 " -------------------- vim-airline --------------------
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1          " Enable the list of buffers
@@ -118,11 +120,46 @@ let g:airline_detect_whitespace=0                     " Hide whitespace extensio
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
 
-
 " -------------------- YouCompleteMe --------------------
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:UltiSnipsExpandTrigger="<C-J>"
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
+function! g:UltiSnips_Complete()
+    call UltiSnips#ExpandSnippetOrJump()
+    if g:ulti_expand_or_jump_res == 0
+        if pumvisible()
+            return "\<C-N>"
+        else
+            return "\<TAB>"
+        endif
+    endif
+
+    return ""
+endfunction
+
+function! g:UltiSnips_Reverse()
+    call UltiSnips#JumpBackwards()
+    if g:ulti_jump_backwards_res == 0
+        return "\<C-P>"
+    endif
+
+    return ""
+endfunction
+
+
+if !exists("g:UltiSnipsJumpForwardTrigger")
+    let g:UltiSnipsJumpForwardTrigger = "<tab>"
+endif
+
+if !exists("g:UltiSnipsJumpBackwardTrigger")
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+endif
+
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
+
+" -------------------- vim-easytags --------------------
+:let g:easytags_dynamic_files = 1
 
 " ==================== Color settings ====================
 
@@ -143,8 +180,8 @@ highlight CursorLine            ctermbg=236
 highlight IncSearch             ctermbg=3   ctermfg=1
 highlight Search                ctermbg=1   ctermfg=3
 highlight Visual                ctermbg=3   ctermfg=0
-highlight Pmenu                 ctermbg=240 ctermfg=12
-highlight PmenuSel              ctermbg=3   ctermfg=1
+highlight Pmenu                 ctermbg=238 ctermfg=15
+highlight PmenuSel              ctermbg=12  ctermfg=232
 
 " Set up some vim-gitgutter custom colors
 highlight GitGutterAdd          ctermbg=236

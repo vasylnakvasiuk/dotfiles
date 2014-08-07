@@ -23,5 +23,8 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 alias spotoff="sudo mdutil -a -i off"
 alias spoton="sudo mdutil -a -i on"
 
-# Force tmux to assume the terminal supports 256 colours.
+# Force tmux to assume the terminal supports 256 colours
 alias tmux="tmux -2"
+
+# Use GNU ctags from brew
+alias ctags="`brew --prefix`/bin/ctags"
