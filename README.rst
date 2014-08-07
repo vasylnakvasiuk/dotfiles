@@ -9,6 +9,8 @@ vaxXxa's dotfiles
 Pre-installation
 ----------------
 
+*Note: this setup works only on Mac OS X*
+
 1. Install Homebrew_.
 2. Install unix shell – zsh_ (Z shell) and set ``zsh`` as your default shell.
 3. Install zsh configuration framework oh-my-zsh_.
