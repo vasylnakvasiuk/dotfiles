@@ -19,10 +19,12 @@ Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+" Plugin 'majutsushi/tagbar'
 " Plugin 'Lokaltog/vim-easymotion'
 " TODO: snippets plugin
-" TODO: tagbar plugin
 " TODO: linter plugin
 
 " All of your Plugins must be added before the following line
@@ -115,6 +117,11 @@ let g:airline_detect_whitespace=0                     " Hide whitespace extensio
 " -------------------- NERDTree --------------------
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
+
+
+" -------------------- YouCompleteMe --------------------
+let g:ycm_autoclose_preview_window_after_completion = 1
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 " ==================== Color settings ====================
 
