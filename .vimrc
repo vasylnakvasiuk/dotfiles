@@ -34,8 +34,9 @@ filetype plugin indent on    " required
 
 syntax on                         " show syntax highlighting
 set autoindent                    " set auto indent
-set ts=4                          " set indent to 4 spaces
-set shiftwidth=4
+set tabstop=4                     " set Tab indent to 4 spaces
+set softtabstop=4                 " set Tab indent to 4 spaces for insert mode
+set shiftwidth=4                  " set indent for shift operation
 set expandtab                     " use spaces, not tab characters
 set noswapfile                    " don't use swapfile
 set nobackup                      " don't create annoying backup files
@@ -108,7 +109,7 @@ let g:ctrlp_max_files=0                               " do not limit the number 
 " -------------------- vim-airline --------------------
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1          " Enable the list of buffers
-let g:airline#extensions#tabline#fnamemod = ':t'      " Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'      " Show just the filename (:help filename-modifiers)
 let g:airline_detect_whitespace=0                     " Hide whitespace extension
 
 " -------------------- NERDTree --------------------
@@ -126,6 +127,7 @@ colorscheme base16-railscasts
 
 " Set up some base custom colors
 highlight SignColumn            ctermbg=236
+highlight ColorColumn           ctermbg=237
 highlight VertSplit             ctermbg=237
 highlight LineNr                ctermbg=236 ctermfg=240
 highlight CursorLineNr          ctermbg=236 ctermfg=240
@@ -203,3 +205,8 @@ let g:airline#themes#base16#palette.inactive = airline#themes#generate_color_map
 let g:airline#themes#base16#palette.inactive_modified = {
     \ 'airline_c': [s:gui_orange, '', s:cterm_orange, '', ''],
     \ }
+
+" ==================== Filetype settings ====================
+
+autocmd Filetype python setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=80
+autocmd Filetype htmldjango setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
