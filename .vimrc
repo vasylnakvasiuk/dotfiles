@@ -25,8 +25,8 @@ Plugin 'honza/vim-snippets'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
-" Plugin 'Lokaltog/vim-easymotion'
-" TODO: linter plugin
+Plugin 'scrooloose/syntastic'
+Plugin 'Lokaltog/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -114,7 +114,6 @@ nnoremap <leader>t :CtrlPTag<CR>
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1          " Enable the list of buffers
 let g:airline#extensions#tabline#fnamemod = ':t'      " Show just the filename (:help filename-modifiers)
-let g:airline_detect_whitespace=0                     " Hide whitespace extension
 
 " -------------------- NERDTree --------------------
 nmap ,n :NERDTreeFind<CR>
@@ -160,6 +159,15 @@ au BufEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-
 
 " -------------------- vim-easytags --------------------
 :let g:easytags_dynamic_files = 1
+:let g:easytags_async = 1
+
+" -------------------- syntastic  --------------------
+let g:syntastic_check_on_open=1
+
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_style_error_symbol='✗'
+let g:syntastic_style_warning_symbol='⚠'
 
 " ==================== Color settings ====================
 
@@ -170,7 +178,7 @@ let base16colorspace=256
 set background=dark
 colorscheme base16-railscasts
 
-" Set up some base custom colors
+" -------------------- base colors  --------------------
 highlight SignColumn            ctermbg=236
 highlight ColorColumn           ctermbg=237
 highlight VertSplit             ctermbg=237
@@ -183,14 +191,20 @@ highlight Visual                ctermbg=3   ctermfg=0
 highlight Pmenu                 ctermbg=238 ctermfg=15
 highlight PmenuSel              ctermbg=12  ctermfg=232
 
-" Set up some vim-gitgutter custom colors
+" -------------------- syntastic  --------------------
+highlight SyntasticErrorSign        ctermbg=236 ctermfg=9
+highlight SyntasticWarningSign      ctermbg=236 ctermfg=9
+highlight SyntasticStyleErrorSign   ctermbg=236 ctermfg=9
+highlight SyntasticStyleWarningSign ctermbg=236 ctermfg=9
+
+" -------------------- vim-gitgutter  --------------------
 highlight GitGutterAdd          ctermbg=236
 highlight GitGutterChange       ctermbg=236
 highlight GitGutterDelete       ctermbg=236
 highlight GitGutterChangeDelete ctermbg=236
 highlight SignColumn            ctermbg=236
 
-" Set up some vim-airline custom colors
+" -------------------- vim-airline  --------------------
 let g:airline#themes#base16#palette = {}
 
 " Color palette
