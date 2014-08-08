@@ -83,8 +83,11 @@ inoremap <Right> <NOP>
 let mapleader = ","
 let g:mapleader = ","
 
+" Quick save
+nmap <leader>s :w<CR>
+
 " Clear the command line and search highlighting
-noremap <leader>l :nohlsearch<CR>
+nmap <leader>l :nohlsearch<CR>
 
 " Move to the next buffer
 nmap <C-L> :bnext<CR>
