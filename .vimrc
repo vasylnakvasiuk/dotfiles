@@ -122,10 +122,25 @@ let g:airline#extensions#tabline#fnamemod = ':t'      " Show just the filename (
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
 
+" -------------------- vim-go --------------------
+let g:go_fmt_fail_silently = 1
+
+au FileType go nmap gd <Plug>(go-def)
+au FileType go nmap <Leader>s <Plug>(go-def-split)
+au FileType go nmap <Leader>v <Plug>(go-def-vertical)
+
+au FileType go nmap <Leader>i <Plug>(go-info)
+
+au FileType go nmap  <leader>r  <Plug>(go-run)
+au FileType go nmap  <leader>b  <Plug>(go-build)
+au FileType go nmap  <leader>t  <Plug>(go-test)
+
+au FileType go nmap <Leader>d <Plug>(go-doc-browser)
+
 " -------------------- YouCompleteMe --------------------
 let g:ycm_autoclose_preview_window_after_completion = 1
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
+" -------------------- UltiSnips --------------------
 function! g:UltiSnips_Complete()
     call UltiSnips#ExpandSnippetOrJump()
     if g:ulti_expand_or_jump_res == 0
@@ -161,16 +176,16 @@ au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:U
 au BufEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
 
 " -------------------- vim-easytags --------------------
-:let g:easytags_dynamic_files = 1
+:let g:easytags_dynamic_files = 2
 :let g:easytags_async = 1
 
 " -------------------- syntastic  --------------------
 let g:syntastic_check_on_open=1
 
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol='✗'
-let g:syntastic_style_warning_symbol='⚠'
+let g:syntastic_error_symbol='●'
+let g:syntastic_warning_symbol='✘'
+let g:syntastic_style_error_symbol='●'
+let g:syntastic_style_warning_symbol='✘'
 
 " ==================== Color settings ====================
 
@@ -193,6 +208,7 @@ highlight Search                ctermbg=1   ctermfg=3
 highlight Visual                ctermbg=3   ctermfg=0
 highlight Pmenu                 ctermbg=238 ctermfg=15
 highlight PmenuSel              ctermbg=12  ctermfg=232
+highlight NonText               ctermfg=bg
 
 " -------------------- syntastic  --------------------
 highlight SyntasticErrorSign        ctermbg=236 ctermfg=9
