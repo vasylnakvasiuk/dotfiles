@@ -37,8 +37,8 @@ brew upgrade &> /dev/null
 echo "  > Pulling latest dotfiles..."
 git pull &> /dev/null
 
-echo "  > Sync dot-files..."
-rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" -av . ~ &> /dev/null
+echo "  > Sync dotfiles..."
+rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot.png" -av . ~ &> /dev/null
 
 unset BREW_PACKAGES
 unset install_brew_packages
