@@ -27,6 +27,7 @@ Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'kshenoy/vim-signature'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -221,7 +222,6 @@ highlight GitGutterAdd          ctermbg=236
 highlight GitGutterChange       ctermbg=236
 highlight GitGutterDelete       ctermbg=236
 highlight GitGutterChangeDelete ctermbg=236
-highlight SignColumn            ctermbg=236
 
 " -------------------- vim-airline  --------------------
 let g:airline#themes#base16#palette = {}
