@@ -120,8 +120,12 @@ let g:airline#extensions#tabline#enabled = 1          " Enable the list of buffe
 let g:airline#extensions#tabline#fnamemod = ':t'      " Show just the filename (:help filename-modifiers)
 
 " -------------------- NERDTree --------------------
-nmap ,n :NERDTreeFind<CR>
-nmap ,m :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeFind<CR>
+nmap <leader>m :NERDTreeToggle<CR>
+
+" -------------------- vim-fugitive --------------------
+nmap <leader>gd :Gvplit! diff<CR>
+nmap <leader>gdc :Gvplit! diff --cached<CR>
 
 " -------------------- vim-go --------------------
 let g:go_fmt_fail_silently = 1
@@ -200,7 +204,7 @@ colorscheme base16-railscasts
 " -------------------- base colors  --------------------
 highlight SignColumn            ctermbg=236
 highlight ColorColumn           ctermbg=237
-highlight VertSplit             ctermbg=237
+highlight VertSplit             ctermbg=236
 highlight LineNr                ctermbg=236 ctermfg=240
 highlight CursorLineNr          ctermbg=236 ctermfg=240
 highlight CursorLine            ctermbg=236
