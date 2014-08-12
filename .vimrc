@@ -57,7 +57,7 @@ set vb                            " enable visual bell (disable audio bell)
 set ruler                         " show row and column in footer
 set scrolloff=2                   " minimum lines above/below cursor
 set laststatus=2                  " always show status bar
-set list listchars=tab:»·,trail:· " show extra space characters
+set list listchars=tab:›\ ,trail:·,extends:#,nbsp:. " Highlight problematic whitespace
 set nofoldenable                  " disable code folding
 set wildmenu                      " enable bash style tab completion
 set wildmode=list:longest,full
@@ -85,22 +85,22 @@ let mapleader = ","
 let g:mapleader = ","
 
 " Quick save
-nmap <leader>s :w<CR>
+nnoremap <leader>s :w<CR>
 
 " Clear the command line and search highlighting
-nmap <leader>l :nohlsearch<CR>
+nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 " Move to the next buffer
-nmap <C-L> :bnext<CR>
+nnoremap <C-L> :bnext<CR>
 
 " Move to the previous buffer
-nmap <C-H> :bprevious<CR>
+nnoremap <C-H> :bprevious<CR>
 
 " Close the current buffer and move to the previous one
-nmap <leader>c :bp <BAR> bd #<CR>
+nnoremap <leader>c :bp <BAR> bd #<CR>
 
 " Open a new empty buffer
-nmap <leader>T :enew<cr>
+nnoremap <leader>T :enew<cr>
 
 " ==================== Plugin settings ====================
 
@@ -120,65 +120,48 @@ let g:airline#extensions#tabline#enabled = 1          " Enable the list of buffe
 let g:airline#extensions#tabline#fnamemod = ':t'      " Show just the filename (:help filename-modifiers)
 
 " -------------------- NERDTree --------------------
-nmap <leader>n :NERDTreeFind<CR>
-nmap <leader>m :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeFind<CR>
+nnoremap <leader>m :NERDTreeToggle<CR>
 
 " -------------------- vim-fugitive --------------------
-nmap <leader>gd :Gvplit! diff<CR>
-nmap <leader>gdc :Gvplit! diff --cached<CR>
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>gd :Gvsplit! diff<CR>
+nnoremap <silent> <leader>gdc :Gvsplit! diff --cached<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gb :Gblame<CR>
+nnoremap <silent> <leader>gl :Glog<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <silent> <leader>gr :Gread<CR>
+nnoremap <silent> <leader>gw :Gwrite<CR>
+nnoremap <silent> <leader>ge :Gedit<CR>
 
 " -------------------- vim-go --------------------
 let g:go_fmt_fail_silently = 1
 
-au FileType go nmap gd <Plug>(go-def)
-au FileType go nmap <Leader>s <Plug>(go-def-split)
-au FileType go nmap <Leader>v <Plug>(go-def-vertical)
+au FileType go nnoremap gd <Plug>(go-def)
+au FileType go nnoremap <Leader>s <Plug>(go-def-split)
+au FileType go nnoremap <Leader>v <Plug>(go-def-vertical)
 
-au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nnoremap <Leader>i <Plug>(go-info)
 
-au FileType go nmap  <leader>r  <Plug>(go-run)
-au FileType go nmap  <leader>b  <Plug>(go-build)
-au FileType go nmap  <leader>t  <Plug>(go-test)
+au FileType go nnoremap  <leader>r  <Plug>(go-run)
+au FileType go nnoremap  <leader>b  <Plug>(go-build)
+au FileType go nnoremap  <leader>t  <Plug>(go-test)
 
-au FileType go nmap <Leader>d <Plug>(go-doc-browser)
+au FileType go nnoremap <Leader>d <Plug>(go-doc-browser)
 
 " -------------------- YouCompleteMe --------------------
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 " -------------------- UltiSnips --------------------
-function! g:UltiSnips_Complete()
-    call UltiSnips#ExpandSnippetOrJump()
-    if g:ulti_expand_or_jump_res == 0
-        if pumvisible()
-            return "\<C-N>"
-        else
-            return "\<TAB>"
-        endif
-    endif
 
-    return ""
-endfunction
+" enable completion from tags
+let g:ycm_collect_identifiers_from_tags_files = 1
 
-function! g:UltiSnips_Reverse()
-    call UltiSnips#JumpBackwards()
-    if g:ulti_jump_backwards_res == 0
-        return "\<C-P>"
-    endif
-
-    return ""
-endfunction
-
-
-if !exists("g:UltiSnipsJumpForwardTrigger")
-    let g:UltiSnipsJumpForwardTrigger = "<tab>"
-endif
-
-if !exists("g:UltiSnipsJumpBackwardTrigger")
-    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-endif
-
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
+" remap Ultisnips for compatibility for YCM
+let g:UltiSnipsExpandTrigger = '<C-j>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
 " -------------------- vim-easytags --------------------
 :let g:easytags_dynamic_files = 2
