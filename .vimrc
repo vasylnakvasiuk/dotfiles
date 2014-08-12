@@ -22,8 +22,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-" Plugin 'xolox/vim-misc'
-" Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'Lokaltog/vim-easymotion'
@@ -165,10 +163,6 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:UltiSnipsExpandTrigger = '<C-j>'
 let g:UltiSnipsJumpForwardTrigger = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
-
-" -------------------- vim-easytags --------------------
-:let g:easytags_dynamic_files = 2
-:let g:easytags_async = 1
 
 " -------------------- syntastic  --------------------
 let g:syntastic_check_on_open=1
