@@ -112,7 +112,7 @@ let g:ctrlp_max_height = 30                           " maxiumum height of match
 let g:ctrlp_switch_buffer = 'et'                      " jump to a file if it's open already
 let g:ctrlp_max_files=0                               " do not limit the number of searchable files
 
-nnoremap <leader>t :CtrlPTag<CR>
+nnoremap <leader>. :CtrlPTag<CR>
 
 " -------------------- vim-airline --------------------
 let g:airline_powerline_fonts = 1
@@ -122,6 +122,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'      " Show just the filename (
 " -------------------- NERDTree --------------------
 nnoremap <leader>n :NERDTreeFind<CR>
 nnoremap <leader>m :NERDTreeToggle<CR>
+
+" -------------------- vim-tagbar --------------------
+nnoremap <silent> <leader>tt :TagbarToggle<CR>
 
 " -------------------- vim-fugitive --------------------
 nnoremap <silent> <leader>gs :Gstatus<CR>
