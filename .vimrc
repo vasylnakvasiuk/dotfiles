@@ -164,7 +164,7 @@ let g:UltiSnipsExpandTrigger = '<C-j>'
 let g:UltiSnipsJumpForwardTrigger = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
-" -------------------- syntastic  --------------------
+" -------------------- syntastic --------------------
 let g:syntastic_check_on_open=1
 
 let g:syntastic_error_symbol='●'
@@ -181,7 +181,7 @@ let base16colorspace=256
 set background=dark
 colorscheme base16-railscasts
 
-" -------------------- base colors  --------------------
+" -------------------- base colors --------------------
 highlight SignColumn            ctermbg=236
 highlight ColorColumn           ctermbg=237
 highlight VertSplit             ctermbg=236
@@ -195,19 +195,22 @@ highlight Pmenu                 ctermbg=238 ctermfg=15
 highlight PmenuSel              ctermbg=12  ctermfg=232
 highlight NonText               ctermfg=bg
 
-" -------------------- syntastic  --------------------
+" -------------------- syntastic --------------------
 highlight SyntasticErrorSign        ctermbg=236 ctermfg=9
 highlight SyntasticWarningSign      ctermbg=236 ctermfg=9
 highlight SyntasticStyleErrorSign   ctermbg=236 ctermfg=9
 highlight SyntasticStyleWarningSign ctermbg=236 ctermfg=9
 
-" -------------------- vim-gitgutter  --------------------
+" -------------------- vim-gitgutter --------------------
 highlight GitGutterAdd          ctermbg=236
 highlight GitGutterChange       ctermbg=236
 highlight GitGutterDelete       ctermbg=236
 highlight GitGutterChangeDelete ctermbg=236
 
-" -------------------- vim-airline  --------------------
+" -------------------- vim-signature --------------------
+let g:SignatureMarkTextHL = 'SignColumn'
+
+" -------------------- vim-airline --------------------
 let g:airline#themes#base16#palette = {}
 
 " Color palette
