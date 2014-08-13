@@ -1,4 +1,8 @@
-.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot.png
+.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-main.png
+    :alt: dotfiles logo
+    :align: center
+
+.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-vim.png
     :alt: dotfiles logo
     :align: center
 
