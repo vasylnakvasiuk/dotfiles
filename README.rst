@@ -19,7 +19,7 @@ Pre-installation
 *Note: this setup works only on Mac OS X*
 
 1. Install Homebrew_.
-2. Install unix shell – zsh_ (Z shell) and set ``zsh`` as your default shell.
+2. Install unix shell – zsh_ (Z shell) and set ``zsh`` as your `default shell`_.
 3. Install zsh configuration framework oh-my-zsh_.
 
 
@@ -92,6 +92,7 @@ Thanks to...
 
 .. _Homebrew: http://brew.sh/
 .. _zsh: http://www.zsh.org/
+.. _default shell: http://zanshin.net/2013/09/03/how-to-use-homebrew-zsh-instead-of-max-os-x-default/
 .. _oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
 .. _Mathias Bynens: https://github.com/mathiasbynens
 .. _amazing collection of dotfiles: https://github.com/mathiasbynens/dotfiles
