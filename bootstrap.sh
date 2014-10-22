@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BREW_PACKAGES=(git mc htop iftop ifstat wget mtr wrk tree ag cloc task vit tmux tmux-mem-cpu-load reattach-to-user-namespace spark cmatrix figlet)
+BREW_PACKAGES=(zsh git mc htop iftop ifstat wget mtr wrk tree ag cloc task vit tmux tmux-mem-cpu-load reattach-to-user-namespace spark cmatrix figlet)
 
 function install_brew_packages() {
     for index in $BREW_PACKAGES; do
