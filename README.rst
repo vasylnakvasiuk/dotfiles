@@ -26,7 +26,7 @@ Pre-installation
 Installation
 ------------
 
-You can clone the repository wherever you want (I like to keep it in ``~/Documents/Projects/dotfiles``). The bootstrapper script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want (I like to keep it in ``~/Projects/dotfiles``). The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 .. code:: bash
 
@@ -54,7 +54,7 @@ My ``~/.extra/.zsh/local.sh`` looks something like this:
 
     # Go environment
     export GOROOT=/usr/local/go
-    export GOPATH=$HOME/Documents/Projects/gocode
+    export GOPATH=$HOME/Projects/gocode
     export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
     source /usr/local/bin/virtualenvwrapper.sh
@@ -64,7 +64,7 @@ You can overwrite something using ``~/.extra/.zsh/local.sh``. For example:
 .. code:: bash
 
     # Overwrite alias
-    alias p="cd ~/Projects"
+    alias p="cd ~/Documents/Projects"
 
     # Overwrite environment variable
     export EDITOR="emacs"

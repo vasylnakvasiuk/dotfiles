@@ -1,5 +1,5 @@
 # Shortcuts
-alias p="cd $HOME/Documents/Projects"
+alias p="cd $HOME/Projects"
 alias h="history"
 alias v="vim"
 
@@ -15,16 +15,5 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
 
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
-# Disable/Enable Spotlight
-alias spotoff="sudo mdutil -a -i off"
-alias spoton="sudo mdutil -a -i on"
-
 # Force tmux to assume the terminal supports 256 colours
 alias tmux="tmux -2"
-
-# Use GNU ctags from brew
-alias ctags="`brew --prefix`/bin/ctags"

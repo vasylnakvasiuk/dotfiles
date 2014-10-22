@@ -22,7 +22,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kshenoy/vim-signature'
@@ -110,8 +109,6 @@ let g:ctrlp_max_height = 30                           " maxiumum height of match
 let g:ctrlp_switch_buffer = 'et'                      " jump to a file if it's open already
 let g:ctrlp_max_files=0                               " do not limit the number of searchable files
 
-nnoremap <leader>. :CtrlPTag<CR>
-
 " -------------------- vim-airline --------------------
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1          " Enable the list of buffers
@@ -120,9 +117,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'      " Show just the filename (
 " -------------------- NERDTree --------------------
 nnoremap <leader>n :NERDTreeFind<CR>
 nnoremap <leader>m :NERDTreeToggle<CR>
-
-" -------------------- vim-tagbar --------------------
-nnoremap <silent> <leader>tt :TagbarToggle<CR>
 
 " -------------------- vim-fugitive --------------------
 nnoremap <silent> <leader>gs :Gstatus<CR>
@@ -155,9 +149,6 @@ au FileType go nnoremap <Leader>d <Plug>(go-doc-browser)
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 " -------------------- UltiSnips --------------------
-
-" enable completion from tags
-let g:ycm_collect_identifiers_from_tags_files = 1
 
 " remap Ultisnips for compatibility for YCM
 let g:UltiSnipsExpandTrigger = '<C-j>'
