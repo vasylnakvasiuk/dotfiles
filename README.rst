@@ -81,6 +81,16 @@ Or you can extend all your dotfiles configuration using ``~/.extra/.zsh/local.sh
 And in ``~/.extra/.zsh/local-exports.sh``, ``~/.extra/.zsh/local-aliases.sh``, ``~/.extra/.zsh/local-work-settings.sh`` you can add your own custom commands.
 
 
+Colorscheme and font
+--------------------
+
+I'm using "Base16 Railscasts Dark 256" colorscheme and "Menlo Regular for Powerline" font. These files you can find at ``.extra/etc/`` folder. Also I set different font size for ASCII and non-ASCII characters.
+
+.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-iterm2-fonts.png
+    :alt: vim
+    :align: center
+
+
 Thanks to...
 ------------
 
