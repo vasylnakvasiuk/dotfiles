@@ -19,7 +19,6 @@ Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/syntastic'
@@ -144,9 +143,6 @@ au FileType go nnoremap  <leader>b  <Plug>(go-build)
 au FileType go nnoremap  <leader>t  <Plug>(go-test)
 
 au FileType go nnoremap <Leader>d <Plug>(go-doc-browser)
-
-" -------------------- YouCompleteMe --------------------
-let g:ycm_autoclose_preview_window_after_completion = 1
 
 " -------------------- UltiSnips --------------------
 
