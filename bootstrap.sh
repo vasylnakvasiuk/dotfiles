@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BREW_PACKAGES=(zsh git mc vim htop iftop ifstat nmap arp-scan arpoison ettercap spoof-mac tor proxychains-ng wget mtr wrk tree ag cloc tmux tmux-mem-cpu-load reattach-to-user-namespace spark cmatrix figlet)
+BREW_PACKAGES=(zsh git mc vim htop iftop ifstat nmap arp-scan arpoison ettercap spoof-mac tor proxychains-ng wget mtr wrk tree ag jq cloc tmux tmux-mem-cpu-load reattach-to-user-namespace spark cmatrix figlet)
 
 function install_brew_packages() {
     for index in $BREW_PACKAGES; do
