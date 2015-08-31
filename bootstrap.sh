@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BREW_PACKAGES=(zsh git mc vim htop iftop ifstat nmap wget mtr wrk tree ag cloc task vit tmux tmux-mem-cpu-load reattach-to-user-namespace spark cmatrix figlet)
+BREW_PACKAGES=(zsh git mc vim htop iftop ifstat nmap arp-scan arpoison ettercap spoof-mac tor proxychains-ng wget mtr wrk tree ag jq cloc tmux tmux-mem-cpu-load reattach-to-user-namespace spark cmatrix figlet)
 
 function install_brew_packages() {
     for index in $BREW_PACKAGES; do
@@ -32,7 +32,7 @@ echo "  > Installing homebrew packages..."
 install_brew_packages
 
 echo "  > Upgrading homebrew..."
-brew upgrade &> /dev/null
+brew upgrade --all &> /dev/null
 
 echo "  > Pulling latest dotfiles..."
 git pull &> /dev/null
