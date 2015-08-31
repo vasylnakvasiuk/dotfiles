@@ -7,3 +7,5 @@ for file in ~/.extra/.zsh/{oh-my-zsh,exports,aliases,functions,local}.sh; do
     [ -r "$file" ] && source "$file"
 done
 unset file
+
+[ -f ~/.extra/.zsh/fzf/.fzf.zsh ] && source ~/.extra/.zsh/fzf/.fzf.zsh
