@@ -17,3 +17,7 @@ alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && kil
 
 # Force tmux to assume the terminal supports 256 colours
 alias tmux="tmux -2"
+
+# Tmux helperstb
+alias tb="tmux-bootstrap.sh"
+alias tk="tmux kill-server"
