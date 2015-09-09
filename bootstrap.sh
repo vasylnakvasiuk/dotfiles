@@ -45,6 +45,7 @@ unset install_brew_packages
 source ~/.zshrc
 
 echo "  > Updating vim plugins..."
-nvim +PlugInstall +qall &> /dev/null
+nvim +PlugInstall
+# nvim +PlugInstall +qall &> /dev/null
 
 echo "==> Done with setup."
