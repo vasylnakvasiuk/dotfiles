@@ -9,3 +9,7 @@ done
 unset file
 
 [ -f ~/.extra/.zsh/fzf/.fzf.zsh ] && source ~/.extra/.zsh/fzf/.fzf.zsh
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.extra/.zsh/base16-shell/base16-railscasts.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
