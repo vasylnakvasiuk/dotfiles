@@ -30,7 +30,7 @@ You can clone the repository wherever you want (I like to keep it in ``~/Project
 
 .. code:: bash
 
-    $ git clone https://github.com/vaxXxa/dotfiles.git && cd dotfiles && make
+    $ git clone git@github.com:vaxXxa/dotfiles.git && cd dotfiles && make
 
 To update, ``cd`` into your local ``dotfiles`` repository and then:
 
@@ -84,7 +84,7 @@ And in ``~/.extra/.zsh/local-exports.sh``, ``~/.extra/.zsh/local-aliases.sh``, `
 Colorscheme and font
 --------------------
 
-I'm using "Base16 Railscasts Dark 256" colorscheme and "Menlo Regular for Powerline" font. These files you can find at ``.extra/etc/`` folder. Also I set different font size for ASCII and non-ASCII characters.
+I'm using "Base16 Railscasts Dark 256" colorscheme and "Menlo Regular for Powerline" font. These files you can find at ``.extra/etc/`` and ``.extra/.zsh/base16-shell/`` folders. Also I set different font size for ASCII and non-ASCII characters.
 
 .. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-iterm2-fonts.png
     :alt: vim

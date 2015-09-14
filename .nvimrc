@@ -13,5 +13,10 @@ Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
-let base16colorspace=256  " Access colors present in 256 colorspace
-colo seoul256
+" | Color options | {{{
+set background=dark
+let base16colorspace=256
+colors base16-railscasts
+" Disable background and foreground for vertical split
+hi vertsplit ctermbg=NONE guibg=NONE
+" }}}
