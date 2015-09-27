@@ -1,0 +1,2 @@
+- bindkey "\e\e" fuck-command-line
+- change MODE_INDICATOR="%{$fg_bold[red]%}<%{$fg[red]%}<<%{$reset_color%}"
