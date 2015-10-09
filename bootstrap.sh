@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BREW_PACKAGES=(zsh git mc vim htop iftop ifstat nmap arp-scan arpoison ettercap spoof-mac tor proxychains-ng wget mtr wrk tree ag jq cloc tmux tmux-mem-cpu-load reattach-to-user-namespace spark cmatrix figlet fzf)
+BREW_PACKAGES=(zsh git mc htop iftop ifstat nmap arp-scan arpoison ettercap spoof-mac tor proxychains-ng wget mtr wrk tree ag jq cloc tmux tmux-mem-cpu-load reattach-to-user-namespace spark cmatrix figlet fzf ranger)
 
 function install_brew_packages() {
     for index in $BREW_PACKAGES; do
@@ -38,13 +38,18 @@ echo "  > Pulling latest dotfiles..."
 git pull &> /dev/null
 
 echo "  > Sync dotfiles..."
-rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-main.png" --exclude "screenshot-vim.png" --exclude "screenshot-iterm2-fonts.png" -av . ~ &> /dev/null
+rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-main.png" --exclude "screenshot-vim.png" --exclude "screenshot-iterm2-fonts.png" --exclude "TODO" -av . ~ &> /dev/null
 
 unset BREW_PACKAGES
 unset install_brew_packages
 source ~/.zshrc
 
-echo "  > Updating vim plugins..."
-nvim +PlugInstall +qall
+echo -n 'Do you want to update nvim plugins (y/n)? '
+read $ans
+
+if [[ $ans == y ]]; then
+  echo "  > Updating nvim plugins..."
+  nvim +PlugInstall +qall
+fi
 
 echo "==> Done with setup."
