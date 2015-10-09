@@ -44,10 +44,10 @@ unset BREW_PACKAGES
 unset install_brew_packages
 source ~/.zshrc
 
-echo -n 'Do you want to update nvim plugins (y/n)? '
-read $ans
+echo -n '  > Do you want to update nvim plugins (y/n)? '
+read ans
 
-if [[ $ans == y ]]; then
+if [[ $ans == "y" ]]; then
   echo "  > Updating nvim plugins..."
   nvim +PlugInstall +qall
 fi
