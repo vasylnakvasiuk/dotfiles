@@ -1,6 +1,6 @@
-if filereadable(expand('~/.nvim/plugins.vim'))
+if filereadable(expand('~/.config/nvim/plugins.vim'))
   " Include plugins list
-  source ~/.nvim/plugins.vim
+  source ~/.config/nvim/plugins.vim
 endif
 
 let mapleader = "," " Map leader

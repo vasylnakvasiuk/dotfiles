@@ -1,11 +1,11 @@
 " Automatic installation
-if empty(glob('~/.nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.nvim/autoload/plug.vim --create-dirs
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " For correct install color schemes pls read these notes
 " https://github.com/chriskempson/base16-vim
@@ -20,7 +20,6 @@ Plug 'bling/vim-airline'
 Plug 'easymotion/vim-easymotion'
 
 call plug#end()
-
 
 " | vim-airline | {{{
 let g:airline_powerline_fonts = 1 " Use airline fonts
