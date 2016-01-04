@@ -28,6 +28,9 @@ echo "==> Here we go..."
 
 cd "$(dirname "$0")"
 
+echo "  > Pulling latest dotfiles..."
+git pull &> /dev/null
+
 echo "  > Updating homebrew..."
 brew update &> /dev/null
 
@@ -36,9 +39,6 @@ install_brew_packages
 
 echo "  > Upgrading homebrew..."
 brew upgrade --all &> /dev/null
-
-echo "  > Pulling latest dotfiles..."
-git pull &> /dev/null
 
 echo "  > Sync dotfiles..."
 rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-main.png" --exclude "screenshot-vim.png" --exclude "screenshot-iterm2-fonts.png" --exclude "TODO" -av . ~ &> /dev/null
