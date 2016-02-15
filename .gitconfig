@@ -1,53 +1,58 @@
 [core]
-  pager = less -FRSX
-  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  editor = nvim -f
-  autocrlf = input
-  safecrlf = true
-  excludesfile = ~/.gitignore
+	pager = less -FRSX
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	editor = nvim -f
+	autocrlf = false
+	safecrlf = true
+	excludesfile = ~/.gitignore
+[pull]
+	rebase = true
 [push]
-  config = default
-  default = upstream
+	config = default
+	default = simple
 [merge]
-  summary = true
+	summary = true
+	ff = only
+[fetch]
+	prune = true
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
-  ui = true
-  pager = true
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
 [color "branch"]
-  current = yellow reverse
-  local   = yellow
-  remote  = green
+	current = yellow reverse
+	local   = yellow
+	remote  = green
 [color "diff"]
-  meta = blue
-  frag = magenta
-  old  = red
-  new  = green
+	meta = blue
+	frag = magenta
+	old  = red
+	new  = green
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = blue
+	added = yellow
+	changed = green
+	untracked = blue
 [alias]
-  a       = add -u
-  aa      = add --all :/
-  ap      = add -u -p
-  b       = browse
-  c       = commit -v
-  co      = checkout
-  d       = diff
-  ds      = diff --staged
-  dw      = diff --color-words
-  po      = push origin head
-  pr      = "!f() { git fetch origin refs/pull/$1/head:pr/$1 && git co pr/$1; } ; f"
-  s       = status -s -b
-  sm      = submodule
-  smu     = submodule foreach git pull origin master
-  td      = merge --no-ff
-  up      = "!git fetch upstream && git rebase upstream/master"
-  w       = whatchanged --decorate
-  wp      = whatchanged --decorate -p
-  tree    = log --oneline --decorate --all --graph
-  l       = log --pretty='format:%C(yellow)%h %C(blue)%ad %C(reset)%s%C(red)%d %C(green)%an%C(reset), %C(cyan)%ar' --date=short
+	a       = add -u
+	aa      = add --all :/
+	ap      = add -u -p
+	b       = browse
+	c       = commit -v
+	co      = checkout
+	d       = diff
+	ds      = diff --staged
+	dw      = diff --color-words
+	po      = push origin head
+	pr      = "!f() { git fetch origin refs/pull/$1/head:pr/$1 && git co pr/$1; } ; f"
+	s       = status -s -b
+	sm      = submodule
+	smu     = submodule foreach git pull origin master
+	td      = merge --no-ff
+	up      = "!git fetch upstream && git rebase upstream/master"
+	w       = whatchanged --decorate
+	wp      = whatchanged --decorate -p
+	tree    = log --oneline --decorate --all --graph
+	l       = log --pretty='format:%C(yellow)%h %C(blue)%ad %C(reset)%s%C(red)%d %C(green)%an%C(reset), %C(cyan)%ar' --date=short
