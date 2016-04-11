@@ -19,5 +19,5 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles 0 && killall Finde
 alias tmux="tmux -2"
 
 # Tmux helperstb
-alias tb="tmux-bootstrap.sh"
+alias tb="tmux-bootstrap"
 alias tk="tmux kill-server"
