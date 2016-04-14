@@ -15,6 +15,8 @@ Plug 'chriskempson/base16-vim'
 
 " Lean & mean status/tabline for vim that's light as air
 Plug 'bling/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
