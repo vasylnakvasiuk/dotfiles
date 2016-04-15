@@ -17,8 +17,11 @@ Plug 'chriskempson/base16-vim'
 Plug 'bling/vim-airline'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'dyng/ctrlsf.vim'
+Plug 'rking/ag.vim'
 
 call plug#end()
+
 
 " | vim-airline | {{{
 " Use airline fonts
@@ -30,3 +33,26 @@ let g:airline#extensions#tabline#enabled = 1
 " Just show the filename (no path) in the tab
 let g:airline#extensions#tabline#fnamemod = ':t'
 " | vim-airline | }}}
+
+
+" | Silver Searcher | {{{
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+" | Silver Searcher | }}}
+
+
+" | CtrlSF | {{{
+
+let g:ctrlsf_position = 'bottom'
+
+" bind K to grep word under cursor
+nmap K :CtrlSF <C-R><C-W><CR>
+" | CtrlSF | }}}
