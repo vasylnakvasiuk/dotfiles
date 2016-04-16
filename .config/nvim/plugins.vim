@@ -54,5 +54,12 @@ endif
 let g:ctrlsf_position = 'bottom'
 
 " bind K to grep word under cursor
-nmap K :CtrlSF <C-R><C-W><CR>
+nmap <C-J>f <Plug>CtrlSFPrompt
+vmap <C-J>f <Plug>CtrlSFVwordPath
+vmap <C-J>F <Plug>CtrlSFVwordExec
+nmap <C-J>n <Plug>CtrlSFCwordPath
+nmap <C-J>p <Plug>CtrlSFPwordPath
+nmap <C-J>o :CtrlSFOpen<CR>
+nmap <C-J>t :CtrlSFToggle<CR>
+imap <C-J>t <Esc>:CtrlSFToggle<CR>
 " | CtrlSF | }}}
