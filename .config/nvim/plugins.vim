@@ -19,6 +19,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'dyng/ctrlsf.vim'
 Plug 'rking/ag.vim'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -64,13 +65,17 @@ let g:NERDTreeHijackNetrw = 1
 " | CtrlSF | {{{
 let g:ctrlsf_position = 'bottom'
 
-" bind K to grep word under cursor
-nmap <C-J>f <Plug>CtrlSFPrompt
-vmap <C-J>f <Plug>CtrlSFVwordPath
-vmap <C-J>F <Plug>CtrlSFVwordExec
-nmap <C-J>n <Plug>CtrlSFCwordPath
-nmap <C-J>p <Plug>CtrlSFPwordPath
-nnoremap <C-J>o :CtrlSFOpen<CR>
-nnoremap <C-J>t :CtrlSFToggle<CR>
-inoremap <C-J>t <Esc>:CtrlSFToggle<CR>
+vmap <C-N>n <Plug>CtrlSFVwordPath
+vmap <C-N>N <Plug>CtrlSFVwordExec
+nmap <C-N>f <Plug>CtrlSFPrompt
+nmap <C-N>n <Plug>CtrlSFCwordPath
+nmap <C-N>N <Plug>CtrlSFCwordPath<CR>
+nmap <C-N>p <Plug>CtrlSFPwordPath
+nnoremap <C-N>t :CtrlSFToggle<CR>
 " | CtrlSF | }}}
+
+
+" | NERDTree | {{{
+" Reduce the delay of updating sign column to 250ms
+set updatetime=250
+" | NERDTree | }}}
