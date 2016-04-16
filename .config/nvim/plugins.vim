@@ -15,7 +15,7 @@ Plug 'chriskempson/base16-vim'
 
 " Lean & mean status/tabline for vim that's light as air
 Plug 'bling/vim-airline'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'dyng/ctrlsf.vim'
 Plug 'rking/ag.vim'
@@ -35,7 +35,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " | vim-airline | }}}
 
 
-" | Silver Searcher | {{{
+" | ctrlp + Silver Searcher | {{{
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
@@ -46,11 +46,22 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-" | Silver Searcher | }}}
+" | ctrlp + Silver Searcher | }}}
+
+
+" | NERDTree | {{{
+" Find the current file in the tree
+nmap ,n :NERDTreeFind<CR>
+
+" Toggle NERD tree window
+nmap ,m :NERDTreeToggle<CR>
+
+" Will open up a window level NERD tree instead of a netrw in the target window
+let g:NERDTreeHijackNetrw = 1
+" | NERDTree | }}}
 
 
 " | CtrlSF | {{{
-
 let g:ctrlsf_position = 'bottom'
 
 " bind K to grep word under cursor
@@ -59,7 +70,7 @@ vmap <C-J>f <Plug>CtrlSFVwordPath
 vmap <C-J>F <Plug>CtrlSFVwordExec
 nmap <C-J>n <Plug>CtrlSFCwordPath
 nmap <C-J>p <Plug>CtrlSFPwordPath
-nmap <C-J>o :CtrlSFOpen<CR>
-nmap <C-J>t :CtrlSFToggle<CR>
-imap <C-J>t <Esc>:CtrlSFToggle<CR>
+nnoremap <C-J>o :CtrlSFOpen<CR>
+nnoremap <C-J>t :CtrlSFToggle<CR>
+inoremap <C-J>t <Esc>:CtrlSFToggle<CR>
 " | CtrlSF | }}}
