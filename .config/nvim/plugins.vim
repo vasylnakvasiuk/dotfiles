@@ -51,10 +51,10 @@ endif
 
 " | NERDTree | {{{
 " Find the current file in the tree
-nmap ,n :NERDTreeFind<CR>
+nmap <silent> ,n :NERDTreeFind<CR>
 
 " Toggle NERD tree window
-nmap ,m :NERDTreeToggle<CR>
+nmap <silent> ,m :NERDTreeToggle<CR>
 
 " Will open up a window level NERD tree instead of a netrw in the target window
 let g:NERDTreeHijackNetrw = 1
