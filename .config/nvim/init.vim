@@ -6,6 +6,7 @@ if filereadable(expand('~/.config/nvim/plugins.vim'))
 endif
 
 set number " Enable line numbers
+set cursorline " Highlight current line
 
 " | Color options | {{{
 set background=dark
