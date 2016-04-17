@@ -66,11 +66,11 @@ let g:NERDTreeHijackNetrw = 1
 " | CtrlSF | {{{
 let g:ctrlsf_position = 'bottom'
 
-vmap <C-N>n <Plug>CtrlSFVwordPath
-vmap <C-N>N <Plug>CtrlSFVwordExec
+vmap <C-N>N <Plug>CtrlSFVwordPath
+vmap <C-N>n <Plug>CtrlSFVwordExec
 nmap <C-N>f <Plug>CtrlSFPrompt
-nmap <C-N>n <Plug>CtrlSFCwordPath
-nmap <C-N>N <Plug>CtrlSFCwordPath<CR>
+nmap <C-N>N <Plug>CtrlSFCwordPath
+nmap <C-N>n <Plug>CtrlSFCwordPath<CR>
 nmap <C-N>p <Plug>CtrlSFPwordPath
 nnoremap <C-N>t :CtrlSFToggle<CR>
 " | CtrlSF | }}}
