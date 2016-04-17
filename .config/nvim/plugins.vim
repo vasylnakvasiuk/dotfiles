@@ -19,6 +19,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'dyng/ctrlsf.vim'
 Plug 'rking/ag.vim'
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 call plug#end()
