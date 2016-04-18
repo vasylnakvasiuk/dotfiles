@@ -14,10 +14,10 @@ let base16colorspace=256
 colorscheme base16-eighties
 " | Color options | }}}
 
-" Center the screen
-nmap <space> zz
-
 " Remove search highlight
-nmap <silent> <leader><space> :nohlsearch<CR>
+nmap <silent> <space> :nohlsearch<CR>
+
+" Trim whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 autocmd FileType python set colorcolumn=80
