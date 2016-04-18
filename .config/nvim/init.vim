@@ -19,3 +19,5 @@ nmap <space> zz
 
 " Remove search highlight
 nmap <silent> <leader><space> :nohlsearch<CR>
+
+autocmd FileType python set colorcolumn=80
