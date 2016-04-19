@@ -1,12 +1,16 @@
-let mapleader="," " Map leader
+" Map leader
+let mapleader=","
 
 if filereadable(expand('~/.config/nvim/plugins.vim'))
   " Include plugins list
   source ~/.config/nvim/plugins.vim
 endif
 
-set number " Enable line numbers
-set cursorline " Highlight current line
+" Enable line numbers
+set number
+
+" Highlight current line
+set cursorline
 
 " | Color options | {{{
 set background=dark
@@ -19,5 +23,7 @@ nmap <silent> <space> :nohlsearch<CR>
 
 " Trim whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
-
 autocmd FileType python set colorcolumn=80
+
+" Saving read-only files by sudo
+cmap w!! w !sudo tee % >/dev/null
