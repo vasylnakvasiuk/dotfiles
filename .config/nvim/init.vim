@@ -12,6 +12,9 @@ set number
 " Highlight current line
 set cursorline
 
+" Use system clipboard
+set clipboard=unnamed
+
 " | Color options | {{{
 set background=dark
 let base16colorspace=256
