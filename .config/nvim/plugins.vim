@@ -22,6 +22,7 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
+Plug 'fisadev/vim-ctrlp-cmdpalette'
 
 call plug#end()
 
@@ -49,15 +50,18 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+" Set max and max displayed results
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:25,results:50'
 " | ctrlp + Silver Searcher | }}}
 
 
 " | NERDTree | {{{
 " Find the current file in the tree
-nmap <silent> ,n :NERDTreeFind<CR>
+nmap <silent> <leader>n :NERDTreeFind<CR>
 
 " Toggle NERD tree window
-nmap <silent> ,m :NERDTreeToggle<CR>
+nmap <silent> <leader>m :NERDTreeToggle<CR>
 
 " Will open up a window level NERD tree instead of a netrw in the target window
 let g:NERDTreeHijackNetrw = 1
@@ -81,3 +85,12 @@ nnoremap <C-N>t :CtrlSFToggle<CR>
 " Reduce the delay of updating sign column to 250ms
 set updatetime=250
 " | NERDTree | }}}
+
+
+" | Vim-CtrlP-CmdPalette | {{{
+" Auto Vim-CtrlP-CmdPalette add to CtrlP pane
+let g:ctrlp_extensions = ['cmdpalette']
+
+" Open Vim-CtrlP-CmdPalette
+nmap <leader>p :CtrlPCmdPalette<CR>
+" | Vim-CtrlP-CmdPalette | }}}
