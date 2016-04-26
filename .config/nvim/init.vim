@@ -1,5 +1,6 @@
 " Map leader
 let mapleader=","
+nnoremap <leader><leader> ,
 
 if filereadable(expand('~/.config/nvim/plugins.vim'))
   " Include plugins list
@@ -26,6 +27,8 @@ nmap <silent> <space> :nohlsearch<CR>
 
 " Trim whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Display vertical line at 80 columns
 autocmd FileType python set colorcolumn=80
 
 " Saving read-only files by sudo
