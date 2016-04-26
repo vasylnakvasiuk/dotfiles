@@ -21,7 +21,7 @@ Pre-installation
 1. Install Homebrew_.
 2. Install unix shell – zsh_ (Z shell) and set ``zsh`` as your `default shell`_.
 3. Install zsh configuration framework oh-my-zsh_.
-
+4. Install `Python support`_ for neovim.
 
 Installation
 ------------
@@ -110,3 +110,4 @@ Thanks to...
 .. _dotfiles collection: https://github.com/chrishunt/dot-files
 .. _Chris Kempson: https://github.com/chriskempson
 .. _color schemes: https://github.com/chriskempson/base16
+.. _Python support: https://neovim.io/doc/user/nvim_python.html
