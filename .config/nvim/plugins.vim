@@ -23,6 +23,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'fisadev/vim-ctrlp-cmdpalette'
+Plug 'henrik/vim-indexed-search'
 
 call plug#end()
 
