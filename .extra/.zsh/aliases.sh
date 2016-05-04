@@ -1,7 +1,8 @@
 # Shortcuts
 alias p="cd $HOME/Projects"
 alias h="history"
-alias v="vim"
+alias v="nvim"
+alias vim="nvim"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
