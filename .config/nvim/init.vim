@@ -13,6 +13,9 @@ set number
 " Highlight current line
 set cursorline
 
+" Turn on whitespace highlight
+set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+
 " Use system clipboard
 set clipboard=unnamed
 
