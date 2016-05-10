@@ -25,6 +25,11 @@ Plug 'tpope/vim-commentary'
 Plug 'fisadev/vim-ctrlp-cmdpalette'
 Plug 'henrik/vim-indexed-search'
 
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+
 call plug#end()
 
 
@@ -95,3 +100,10 @@ let g:ctrlp_extensions = ['cmdpalette']
 " Open Vim-CtrlP-CmdPalette
 nmap <leader>p :CtrlPCmdPalette<CR>
 " | Vim-CtrlP-CmdPalette | }}}
+
+
+" | deoplete | {{{
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_ignore_case = 1
+let g:deoplete#enable_refresh_always = 1
+" | deoplete | }}}
