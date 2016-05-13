@@ -18,7 +18,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'fisadev/vim-ctrlp-cmdpalette'
 Plug 'henrik/vim-indexed-search'
+Plug 'Raimondi/delimitMate'
+
 Plug 'cespare/vim-toml', {'for': 'toml'}
+Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 
 function! DoRemote(arg)
   UpdateRemotePlugins
@@ -101,4 +104,18 @@ nmap <leader>p :CtrlPCmdPalette<CR>
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_refresh_always = 1
+" | deoplete | }}}
+
+" | deoplete | {{{
+" Turns on the expansion of <CR>
+let delimitMate_expand_cr = 1
+
+" Go outside quotes, parens, brackets, etc. (Duplicate for S-Tab)
+imap <C-L> <Plug>delimitMateS-Tab
+
+" Put triple quotes on the separate line after <CR>
+au FileType python let b:delimitMate_expand_inside_quotes = 1
+
+" Helpful for triple quotes
+au FileType python let b:delimitMate_nesting_quotes = ["'"]
 " | deoplete | }}}
