@@ -13,6 +13,9 @@ set number
 " Highlight current line
 set cursorline
 
+" Set croll offset – number of context lines you would like to see above and below the cursor
+set scrolloff=5
+
 " Turn on whitespace highlight
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
@@ -28,11 +31,12 @@ colorscheme base16-eighties
 " Remove search highlight
 nmap <silent> <space> :nohlsearch<CR>
 
+" Tricky scroll
+nnoremap <C-J> 3<C-E>
+nnoremap <C-K> 3<C-Y>
+
 " Trim whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Display vertical line at 80 columns
 autocmd FileType python set colorcolumn=80
-
-" Saving read-only files by sudo
-cmap w!! w !sudo tee % >/dev/null

@@ -7,14 +7,8 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-" For correct install color schemes please read these notes
-" https://github.com/chriskempson/base16-vim
-" https://github.com/chriskempson/base16-shell
-" https://github.com/chriskempson/base16-iterm2
 Plug 'chriskempson/base16-vim'
-
-" Lean & mean status/tabline for vim that's light as air
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'dyng/ctrlsf.vim'
@@ -24,6 +18,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'fisadev/vim-ctrlp-cmdpalette'
 Plug 'henrik/vim-indexed-search'
+Plug 'cespare/vim-toml', {'for': 'toml'}
 
 function! DoRemote(arg)
   UpdateRemotePlugins
