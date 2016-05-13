@@ -106,7 +106,7 @@ let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_refresh_always = 1
 " | deoplete | }}}
 
-" | deoplete | {{{
+" | delimitMate | {{{
 " Turns on the expansion of <CR>
 let delimitMate_expand_cr = 1
 
@@ -118,4 +118,4 @@ au FileType python let b:delimitMate_expand_inside_quotes = 1
 
 " Helpful for triple quotes
 au FileType python let b:delimitMate_nesting_quotes = ["'"]
-" | deoplete | }}}
+" | delimitMate | }}}
