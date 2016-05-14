@@ -28,6 +28,9 @@ plugins=(git vi-mode)
 
 # Install oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
+
+# Hide hostname and username.
+prompt_context () { }
 # ======================================= local oh-my-zsh =======================================
 
 # Adding Vi To Your Zsh (extra for "vi-mode")
