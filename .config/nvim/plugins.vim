@@ -85,10 +85,10 @@ nnoremap <C-N>t :CtrlSFToggle<CR>
 " | CtrlSF | }}}
 
 
-" | NERDTree | {{{
+" | vim-gitgutter | {{{
 " Reduce the delay of updating sign column to 250ms
 set updatetime=250
-" | NERDTree | }}}
+" | vim-gitgutter | }}}
 
 
 " | Vim-CtrlP-CmdPalette | {{{
@@ -105,6 +105,7 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_refresh_always = 1
 " | deoplete | }}}
+
 
 " | delimitMate | {{{
 " Turns on the expansion of <CR>

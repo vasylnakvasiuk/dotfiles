@@ -13,7 +13,7 @@ set number
 " Highlight current line
 set cursorline
 
-" Set croll offset – number of context lines you would like to see above and below the cursor
+" Set scroll offset – number of context lines you would like to see above and below the cursor
 set scrolloff=5
 
 " Turn on whitespace highlight
