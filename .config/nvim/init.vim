@@ -13,6 +13,9 @@ set number
 " Highlight current line
 set cursorline
 
+" Case-insensitive search
+set ignorecase
+
 " Set scroll offset – number of context lines you would like to see above and below the cursor
 set scrolloff=5
 
@@ -36,7 +39,20 @@ nnoremap <C-J> 3<C-E>
 nnoremap <C-K> 3<C-Y>
 
 " Trim whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
+fun! TrimWhitespace()
+    let l:save_cursor = getpos('.')
+    %s/\s\+$//e
+    call setpos('.', l:save_cursor)
+endfun
+autocmd BufWritePre * :call TrimWhitespace()
 
 " Display vertical line at 80 columns
 autocmd FileType python set colorcolumn=80
+
+" Setup python path
+if filereadable(glob('~/.virtualenvs/neovim3/bin/python'))
+    let g:python3_host_prog = glob('~/.virtualenvs/neovim3/bin/python')
+endif
+if filereadable(glob('~/.virtualenvs/neovim2/bin/python'))
+    let g:python_host_prog = glob('~/.virtualenvs/neovim2/bin/python')
+endif

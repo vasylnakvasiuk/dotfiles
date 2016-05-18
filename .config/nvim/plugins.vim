@@ -22,6 +22,8 @@ Plug 'Raimondi/delimitMate'
 
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'zchee/deoplete-jedi', {'for': 'python'}
 
 function! DoRemote(arg)
   UpdateRemotePlugins
@@ -61,11 +63,18 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:25,results:50'
 
 
 " | NERDTree | {{{
-" Find the current file in the tree
-nmap <silent> <leader>n :NERDTreeFind<CR>
 
-" Toggle NERD tree window
-nmap <silent> <leader>m :NERDTreeToggle<CR>
+" NERDTreeFind with toggle
+function! ToggleNERDTreeFind()
+    if g:NERDTree.IsOpen()
+        execute ':NERDTreeClose'
+    else
+        execute ':NERDTreeFind'
+    endif
+endfunction
+
+" Find the current file in the tree and toggle NERD tree window
+nmap <silent> <leader>n :call ToggleNERDTreeFind()<CR>
 
 " Will open up a window level NERD tree instead of a netrw in the target window
 let g:NERDTreeHijackNetrw = 1
@@ -120,3 +129,20 @@ au FileType python let b:delimitMate_expand_inside_quotes = 1
 " Helpful for triple quotes
 au FileType python let b:delimitMate_nesting_quotes = ["'"]
 " | delimitMate | }}}
+
+
+" | jedi-vim | {{{
+" Disable jedi completions
+let g:jedi#completions_enabled = 0
+let g:jedi#smart_auto_mappings = 0
+let g:jedi#auto_vim_configuration = 0
+
+" Remap all jedi keys
+let g:jedi#goto_command = "<leader>jj"
+let g:jedi#goto_assignments_command = "<leader>jg"
+let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>ju"
+let g:jedi#completions_command = ""
+let g:jedi#rename_command = "<leader>jr"
+" | jedi-vim | }}}
