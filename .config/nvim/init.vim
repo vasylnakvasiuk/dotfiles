@@ -35,8 +35,8 @@ colorscheme base16-eighties
 nmap <silent> <space> :nohlsearch<CR>
 
 " Tricky scroll
-nnoremap <C-J> 3<C-E>
-nnoremap <C-K> 3<C-Y>
+nnoremap <C-J> 3<C-E>3j
+nnoremap <C-K> 3<C-Y>3k
 
 " Trim whitespace on save
 fun! TrimWhitespace()
