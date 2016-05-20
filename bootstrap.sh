@@ -2,6 +2,7 @@
 
 BASE_PACKAGES=(zsh git mc htop iftop ifstat nmap arp-scan arpoison ettercap spoof-mac tor proxychains-ng wget mtr wrk tree ag jq cloc tmux reattach-to-user-namespace spark cmatrix figlet fzf ranger ncdu task taskd tasksh cdiff)
 RANGER_PACKAGES=(highlight)
+CASK_PACKAGES=(keycastr)
 
 BREW_PACKAGES=("${BASE_PACKAGES[@]}" "${RANGER_PACKAGES[@]}")
 
@@ -13,6 +14,13 @@ function install_brew_packages() {
             echo "    > Installing $index..."
             brew install $index &> /dev/null
         fi
+    done
+}
+
+function install_brew_cask_packages() {
+    for index in $CASK_PACKAGES; do
+        echo "    > Installing (cask) $index..."
+        brew cask install $index #&> /dev/null
     done
 }
 
@@ -37,6 +45,9 @@ brew update &> /dev/null
 echo "  > Installing homebrew packages..."
 install_brew_packages
 
+echo "  > Installing homebrew cask packages..."
+install_brew_cask_packages
+
 echo "  > Upgrading homebrew..."
 brew upgrade --all &> /dev/null
 
@@ -45,6 +56,7 @@ rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bo
 
 unset BREW_PACKAGES
 unset install_brew_packages
+unset install_brew_cask_packages
 source ~/.zshrc
 
 echo -n '  > Do you want to update nvim plugins (y/n)? '
