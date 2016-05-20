@@ -59,22 +59,20 @@ endif
 
 " Set max and max displayed results
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:25,results:50'
+
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>r :CtrlPMRU<CR>
+nnoremap <leader>t :CtrlPBufTag %<CR>
+nnoremap <leader>T :CtrlPTag<CR>
 " | ctrlp + Silver Searcher | }}}
 
 
 " | NERDTree | {{{
+" Find the current file in the tree
+nmap <silent> <leader>n :NERDTreeFind<CR>
 
-" NERDTreeFind with toggle
-function! ToggleNERDTreeFind()
-    if g:NERDTree.IsOpen()
-        execute ':NERDTreeClose'
-    else
-        execute ':NERDTreeFind'
-    endif
-endfunction
-
-" Find the current file in the tree and toggle NERD tree window
-nmap <silent> <leader>n :call ToggleNERDTreeFind()<CR>
+" Toggle NERD tree window
+nmap <silent> <leader>N :NERDTreeToggle<CR>
 
 " Will open up a window level NERD tree instead of a netrw in the target window
 let g:NERDTreeHijackNetrw = 1
@@ -84,12 +82,12 @@ let g:NERDTreeHijackNetrw = 1
 " | CtrlSF | {{{
 let g:ctrlsf_position = 'bottom'
 
-vmap <C-N>N <Plug>CtrlSFVwordPath
 vmap <C-N>n <Plug>CtrlSFVwordExec
+vmap <C-N>N <Plug>CtrlSFVwordPath
 nmap <C-N>f <Plug>CtrlSFPrompt
-nmap <C-N>N <Plug>CtrlSFCwordPath
 nmap <C-N>n <Plug>CtrlSFCwordPath<CR>
-nmap <C-N>p <Plug>CtrlSFPwordPath
+nmap <C-N>N <Plug>CtrlSFCwordPath
+nmap <C-N>/ <Plug>CtrlSFPwordPath
 nnoremap <C-N>t :CtrlSFToggle<CR>
 " | CtrlSF | }}}
 

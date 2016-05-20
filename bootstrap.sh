@@ -20,7 +20,7 @@ function install_brew_packages() {
 function install_brew_cask_packages() {
     for index in $CASK_PACKAGES; do
         echo "    > Installing (cask) $index..."
-        brew cask install $index #&> /dev/null
+        brew cask install $index &> /dev/null
     done
 }
 
