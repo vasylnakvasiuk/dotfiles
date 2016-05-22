@@ -20,6 +20,7 @@ Plug 'fisadev/vim-ctrlp-cmdpalette'
 Plug 'henrik/vim-indexed-search'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
