@@ -8,7 +8,7 @@ fshow() {
   local out shas sha q k
   while out=$(
       git log --graph --color=always \
-          --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+          --format="%C(auto)%h%d %s %C(black)%C(bold)%cr %C(auto)%C(green)%cn" "$@" |
       fzf --ansi --multi --no-sort --reverse --query="$q" \
           --print-query --expect=ctrl-d --toggle-sort=\`); do
     q=$(head -1 <<< "$out")
