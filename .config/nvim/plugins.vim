@@ -99,9 +99,6 @@ set updatetime=250
 
 
 " | Vim-CtrlP-CmdPalette | {{{
-" Auto Vim-CtrlP-CmdPalette add to CtrlP pane
-let g:ctrlp_extensions = ['cmdpalette']
-
 " Open Vim-CtrlP-CmdPalette
 nmap <leader>p :CtrlPCmdPalette<CR>
 " | Vim-CtrlP-CmdPalette | }}}
