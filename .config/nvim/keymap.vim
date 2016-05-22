@@ -15,7 +15,7 @@ nnoremap <C-J> 3<C-E>3j
 nnoremap <C-K> 3<C-Y>3k
 
 " Use \ instead of , (repeat latest char jump in opposite direction)
-nnoremap \ q,
+nnoremap \ ,
 
 " By default Y == yy, so add new useful keymap
 nnoremap Y y$
