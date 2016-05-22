@@ -19,3 +19,6 @@ nnoremap \ ,
 
 " By default Y == yy, so add new useful keymap
 nnoremap Y y$
+
+" Bye-bye Ex mode, hello repeat q macros
+nnoremap Q @q
