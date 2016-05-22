@@ -1,10 +1,14 @@
 " Map leader
 let mapleader=","
-nnoremap <leader><leader> ,
 
 if filereadable(expand('~/.config/nvim/plugins.vim'))
   " Include plugins list
   source ~/.config/nvim/plugins.vim
+endif
+
+if filereadable(expand('~/.config/nvim/keymap.vim'))
+  " Include plugins list
+  source ~/.config/nvim/keymap.vim
 endif
 
 " Enable line numbers
@@ -30,22 +34,6 @@ set background=dark
 let base16colorspace=256
 colorscheme base16-eighties
 " | Color options | }}}
-
-" Remove search highlight
-nmap <silent> <space> :nohlsearch<CR>
-
-" Fast file save
-nnoremap <silent> <leader><leader> :update<CR>
-
-" Quit all files
-nnoremap <silent> Zx :qall<CR>
-
-" Quit and discard all files
-nnoremap <silent> ZX :qall!<CR>
-
-" Tricky scroll
-nnoremap <C-J> 3<C-E>3j
-nnoremap <C-K> 3<C-Y>3k
 
 " Trim whitespace on save
 fun! TrimWhitespace()
