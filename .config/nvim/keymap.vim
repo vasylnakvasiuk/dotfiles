@@ -2,7 +2,6 @@
 nmap <silent> <CR> :nohlsearch<CR>
 
 " Fast file save
-nnoremap <silent> <leader><leader> :update<CR>
 nnoremap <silent> <leader>w :update<CR>
 
 " Quit all files
