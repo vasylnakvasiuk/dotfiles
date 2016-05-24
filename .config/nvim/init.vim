@@ -24,7 +24,7 @@ set ignorecase
 set scrolloff=5
 
 " Turn on whitespace highlight
-set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅
 
 " Use system clipboard
 set clipboard=unnamed
