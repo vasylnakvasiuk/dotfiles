@@ -1,5 +1,5 @@
 " Map leader
-let mapleader=","
+let mapleader="\<Space>"
 
 if filereadable(expand('~/.config/nvim/plugins.vim'))
   " Include plugins list

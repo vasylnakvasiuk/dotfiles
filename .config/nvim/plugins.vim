@@ -74,7 +74,7 @@ nnoremap <leader>T :CtrlPTag<CR>
 nmap <silent> <leader>n :NERDTreeFind<CR>
 
 " Toggle NERD tree window
-nmap <silent> <leader>N :NERDTreeToggle<CR>
+nmap <silent> <leader>m :NERDTreeToggle<CR>
 
 " Will open up a window level NERD tree instead of a netrw in the target window
 let g:NERDTreeHijackNetrw = 1
