@@ -22,6 +22,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'mhinz/vim-startify'
+Plug 'junegunn/vim-peekaboo'
 
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }

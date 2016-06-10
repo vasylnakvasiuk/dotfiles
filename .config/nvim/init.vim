@@ -26,9 +26,6 @@ set scrolloff=5
 " Turn on whitespace highlight
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅
 
-" Use system clipboard
-set clipboard=unnamed
-
 " | Color options | {{{
 set background=dark
 let base16colorspace=256
