@@ -15,3 +15,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/
 BASE16_SCHEME="eighties"
 BASE16_SHELL="$HOME/.extra/.zsh/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# Disable auto renaming window title in tmux
+DISABLE_AUTO_TITLE=true
