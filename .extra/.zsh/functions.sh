@@ -1,8 +1,3 @@
-# Create a new directory and enter it
-function mkd() {
-    mkdir -p "$@" && cd "$@"
-}
-
 # fshow - git commit browser (enter for show, ctrl-d for diff, ` toggles sort)
 fshow() {
   local out shas sha q k
