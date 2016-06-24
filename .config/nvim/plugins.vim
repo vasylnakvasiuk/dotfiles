@@ -9,19 +9,18 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'dyng/ctrlsf.vim'
-Plug 'rking/ag.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
-Plug 'fisadev/vim-ctrlp-cmdpalette'
 Plug 'henrik/vim-indexed-search'
+Plug 'Shougo/junkfile.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'mhinz/vim-startify'
 Plug 'junegunn/vim-peekaboo'
 
 Plug 'cespare/vim-toml', {'for': 'toml'}
@@ -49,34 +48,30 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " | vim-airline | }}}
 
 
-" | ctrlp + Silver Searcher | {{{
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+" | fzf | {{{
+let g:fzf_command_prefix = 'Fzf'
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+nnoremap <C-P> :FzfFiles<CR>
+nnoremap <leader>b :FzfBuffers<CR>
+nnoremap <leader>r :FzfHistory<CR>
+nnoremap <leader>p :FzfCommands<CR>
+nnoremap <leader>t :FzfBTags<CR>
+nnoremap <leader>T :FzfTags<CR>
+" | fzf | }}}
 
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
 
-" Set max and max displayed results
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:25,results:50'
-
-nnoremap <leader>b :CtrlPBuffer<CR>
-nnoremap <leader>r :CtrlPMRU<CR>
-nnoremap <leader>t :CtrlPBufTag %<CR>
-nnoremap <leader>T :CtrlPTag<CR>
-" | ctrlp + Silver Searcher | }}}
+" | junkfile | {{{
+nmap <leader>n :JunkfileOpen<space>
+" | junkfile | }}}
 
 
 " | NERDTree | {{{
-" Find the current file in the tree
-nmap <silent> <leader>n :NERDTreeFind<CR>
 
 " Toggle NERD tree window
 nmap <silent> <leader>m :NERDTreeToggle<CR>
+
+" Find the current file in the tree
+nmap <silent> <leader>M :NERDTreeFind<CR>
 
 " Will open up a window level NERD tree instead of a netrw in the target window
 let g:NERDTreeHijackNetrw = 1
@@ -100,12 +95,6 @@ nnoremap <C-N>t :CtrlSFToggle<CR>
 " Reduce the delay of updating sign column to 250ms
 set updatetime=250
 " | vim-gitgutter | }}}
-
-
-" | Vim-CtrlP-CmdPalette | {{{
-" Open Vim-CtrlP-CmdPalette
-nmap <leader>p :CtrlPCmdPalette<CR>
-" | Vim-CtrlP-CmdPalette | }}}
 
 
 " | deoplete | {{{
