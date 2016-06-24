@@ -57,6 +57,8 @@ nnoremap <leader>r :FzfHistory<CR>
 nnoremap <leader>p :FzfCommands<CR>
 nnoremap <leader>t :FzfBTags<CR>
 nnoremap <leader>T :FzfTags<CR>
+nnoremap <leader>g :FzfGFiles?<CR>
+nnoremap <leader>G :FzfGFiles<CR>
 " | fzf | }}}
 
 
