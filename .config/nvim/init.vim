@@ -20,6 +20,9 @@ set cursorline
 " Case-insensitive search
 set ignorecase
 
+" Turn off show mode on the status line
+set noshowmode
+
 " Set scroll offset – number of context lines you would like to see above and below the cursor
 set scrolloff=5
 

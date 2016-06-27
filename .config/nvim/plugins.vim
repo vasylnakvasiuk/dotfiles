@@ -51,14 +51,22 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " | fzf | {{{
 let g:fzf_command_prefix = 'Fzf'
 
-nnoremap <C-P> :FzfFiles<CR>
-nnoremap <leader>b :FzfBuffers<CR>
-nnoremap <leader>r :FzfHistory<CR>
-nnoremap <leader>p :FzfCommands<CR>
-nnoremap <leader>t :FzfBTags<CR>
-nnoremap <leader>T :FzfTags<CR>
-nnoremap <leader>g :FzfGFiles?<CR>
-nnoremap <leader>G :FzfGFiles<CR>
+nnoremap <silent> <C-P> :FzfFiles<CR>
+
+" Ctrl + / for buffer lines search
+nnoremap <silent> <C-_> :FzfBLines<CR>
+
+nnoremap <silent> <leader>b :FzfBuffers<CR>
+nnoremap <silent> <leader>r :FzfHistory<CR>
+nnoremap <silent> q/ :FzfHistory/<CR>
+nnoremap <silent> q: :FzfHistory:<CR>
+nnoremap <silent> <leader>p :FzfCommands<CR>
+nnoremap <silent> <leader>t :FzfBTags<CR>
+nnoremap <silent> <leader>T :FzfTags<CR>
+nnoremap <silent> <leader>g :FzfGFiles?<CR>
+nnoremap <silent> <leader>G :FzfGFiles<CR>
+
+let g:fzf_tags_command = 'ctags --languages=python --python-kinds=-iv -R'
 " | fzf | }}}
 
 
