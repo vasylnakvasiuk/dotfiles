@@ -58,8 +58,8 @@ nnoremap <silent> <C-_> :FzfBLines<CR>
 
 nnoremap <silent> <leader>b :FzfBuffers<CR>
 nnoremap <silent> <leader>r :FzfHistory<CR>
-nnoremap <silent> q/ :FzfHistory/<CR>
-nnoremap <silent> q: :FzfHistory:<CR>
+nnoremap <silent> <leader>q/ :FzfHistory/<CR>
+nnoremap <silent> <leader>q: :FzfHistory:<CR>
 nnoremap <silent> <leader>p :FzfCommands<CR>
 nnoremap <silent> <leader>t :FzfBTags<CR>
 nnoremap <silent> <leader>T :FzfTags<CR>
@@ -91,13 +91,12 @@ let g:NERDTreeHijackNetrw = 1
 " | CtrlSF | {{{
 let g:ctrlsf_position = 'bottom'
 
-vmap <C-N>n <Plug>CtrlSFVwordExec
-vmap <C-N>N <Plug>CtrlSFVwordPath
-nmap <C-N>f <Plug>CtrlSFPrompt
-nmap <C-N>n <Plug>CtrlSFCwordPath<CR>
-nmap <C-N>N <Plug>CtrlSFCwordPath
-nmap <C-N>/ <Plug>CtrlSFPwordPath
-nnoremap <C-N>t :CtrlSFToggle<CR>
+nmap <leader>f/ <Plug>CtrlSFPrompt
+vmap <leader>f* <Plug>CtrlSFVwordPath
+nmap <leader>f* <Plug>CtrlSFCwordPath
+nmap <leader>ff <Plug>CtrlSFCwordPath<CR>
+nmap <leader>fn <Plug>CtrlSFPwordPath
+nnoremap <leader>ft :CtrlSFToggle<CR>
 " | CtrlSF | }}}
 
 
