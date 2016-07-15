@@ -18,3 +18,7 @@ BASE16_SHELL="$HOME/.extra/.zsh/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 
 # Disable auto renaming window title in tmux
 DISABLE_AUTO_TITLE=true
+
+# Now fzf uses ag like a backend
+export FZF_DEFAULT_COMMAND='ag -g ""'
+
