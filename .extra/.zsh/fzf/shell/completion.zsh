@@ -10,106 +10,141 @@
 # - $FZF_COMPLETION_TRIGGER (default: '**')
 # - $FZF_COMPLETION_OPTS    (default: empty)
 
-_fzf_path_completion() {
-  local base lbuf find_opts fzf_opts suffix tail fzf dir leftover matches nnm
+# To use custom commands instead of find, override _fzf_compgen_{path,dir}
+if ! declare -f _fzf_compgen_path > /dev/null; then
+  _fzf_compgen_path() {
+    echo "$1"
+    command find -L "$1" \
+      -name .git -prune -o -name .svn -prune -o \( -type d -o -type f -o -type l \) \
+      -a -not -path "$1" -print 2> /dev/null | sed 's@^\./@@'
+  }
+fi
+
+if ! declare -f _fzf_compgen_dir > /dev/null; then
+  _fzf_compgen_dir() {
+    command find -L "$1" \
+      -name .git -prune -o -name .svn -prune -o -type d \
+      -a -not -path "$1" -print 2> /dev/null | sed 's@^\./@@'
+  }
+fi
+
+###########################################################
+
+__fzf_generic_path_completion() {
+  local base lbuf compgen fzf_opts suffix tail fzf dir leftover matches
+  # (Q) flag removes a quoting level: "foo\ bar" => "foo bar"
   base=${(Q)1}
   lbuf=$2
-  find_opts=$3
+  compgen=$3
   fzf_opts=$4
   suffix=$5
   tail=$6
   [ ${FZF_TMUX:-1} -eq 1 ] && fzf="fzf-tmux -d ${FZF_TMUX_HEIGHT:-40%}" || fzf="fzf"
 
-  if ! setopt | grep nonomatch > /dev/null; then
-    nnm=1
-    setopt nonomatch
-  fi
+  setopt localoptions nonomatch
   dir="$base"
   while [ 1 ]; do
     if [ -z "$dir" -o -d ${~dir} ]; then
       leftover=${base/#"$dir"}
       leftover=${leftover/#\/}
-      [ "$dir" = './' ] && dir=''
+      [ -z "$dir" ] && dir='.'
+      [ "$dir" != "/" ] && dir="${dir/%\//}"
       dir=${~dir}
-      matches=$(\find -L $dir* ${=find_opts} 2> /dev/null | ${=fzf} ${=FZF_COMPLETION_OPTS} ${=fzf_opts} -q "$leftover" | while read item; do
-        printf "%q$suffix " "$item"
+      matches=$(eval "$compgen $(printf %q "$dir")" | ${=fzf} ${=FZF_COMPLETION_OPTS} ${=fzf_opts} -q "$leftover" | while read item; do
+        echo -n "${(q)item}$suffix "
       done)
       matches=${matches% }
       if [ -n "$matches" ]; then
         LBUFFER="$lbuf$matches$tail"
       fi
       zle redisplay
+      typeset -f zle-line-init >/dev/null && zle zle-line-init
       break
     fi
     dir=$(dirname "$dir")
     dir=${dir%/}/
   done
-  [ -n "$nnm" ] && unsetopt nonomatch
 }
 
-_fzf_all_completion() {
-  _fzf_path_completion "$1" "$2" \
-    "-name .git -prune -o -name .svn -prune -o -type d -print -o -type f -print -o -type l -print" \
+_fzf_path_completion() {
+  __fzf_generic_path_completion "$1" "$2" _fzf_compgen_path \
     "-m" "" " "
 }
 
 _fzf_dir_completion() {
-  _fzf_path_completion "$1" "$2" \
-    "-name .git -prune -o -name .svn -prune -o -type d -print" \
+  __fzf_generic_path_completion "$1" "$2" _fzf_compgen_dir \
     "" "/" ""
 }
 
-_fzf_list_completion() {
-  local prefix lbuf fzf_opts src fzf matches
-  prefix=$1
+_fzf_feed_fifo() (
+  command rm -f "$1"
+  mkfifo "$1"
+  cat <&0 > "$1" &
+)
+
+_fzf_complete() {
+  local fifo fzf_opts lbuf fzf matches post
+  fifo="${TMPDIR:-/tmp}/fzf-complete-fifo-$$"
+  fzf_opts=$1
   lbuf=$2
-  fzf_opts=$3
-  read -r src
+  post="${funcstack[2]}_post"
+  type $post > /dev/null 2>&1 || post=cat
+
   [ ${FZF_TMUX:-1} -eq 1 ] && fzf="fzf-tmux -d ${FZF_TMUX_HEIGHT:-40%}" || fzf="fzf"
 
-  matches=$(eval "$src" | ${=fzf} ${=FZF_COMPLETION_OPTS} ${=fzf_opts} -q "$prefix")
+  _fzf_feed_fifo "$fifo"
+  matches=$(cat "$fifo" | ${=fzf} ${=FZF_COMPLETION_OPTS} ${=fzf_opts} -q "${(Q)prefix}" | $post | tr '\n' ' ')
   if [ -n "$matches" ]; then
-    LBUFFER="$lbuf$matches "
+    LBUFFER="$lbuf$matches"
   fi
   zle redisplay
+  typeset -f zle-line-init >/dev/null && zle zle-line-init
+  command rm -f "$fifo"
 }
 
-_fzf_telnet_completion() {
-  _fzf_list_completion "$1" "$2" '+m' << "EOF"
-  \grep -v '^\s*\(#\|$\)' /etc/hosts | \grep -Fv '0.0.0.0' | awk '{if (length($2) > 0) {print $2}}' | sort -u
-EOF
+_fzf_complete_telnet() {
+  _fzf_complete '+m' "$@" < <(
+    command grep -v '^\s*\(#\|$\)' /etc/hosts | command grep -Fv '0.0.0.0' |
+        awk '{if (length($2) > 0) {print $2}}' | sort -u
+  )
 }
 
-_fzf_ssh_completion() {
-  _fzf_list_completion "$1" "$2" '+m' << "EOF"
-    cat <(cat ~/.ssh/config /etc/ssh/ssh_config 2> /dev/null | \grep -i '^host' | \grep -v '*') <(\grep -v '^\s*\(#\|$\)' /etc/hosts | \grep -Fv '0.0.0.0') | awk '{if (length($2) > 0) {print $2}}' | sort -u
-EOF
+_fzf_complete_ssh() {
+  _fzf_complete '+m' "$@" < <(
+    cat <(cat ~/.ssh/config /etc/ssh/ssh_config 2> /dev/null | command grep -i '^host' | command grep -v '*') \
+        <(command grep -oE '^[^ ]+' ~/.ssh/known_hosts | tr ',' '\n' | awk '{ print $1 " " $1 }') \
+        <(command grep -v '^\s*\(#\|$\)' /etc/hosts | command grep -Fv '0.0.0.0') |
+        awk '{if (length($2) > 0) {print $2}}' | sort -u
+  )
 }
 
-_fzf_env_var_completion() {
-  _fzf_list_completion "$1" "$2" '+m' << "EOF"
-  declare -xp | sed 's/=.*//' | sed 's/.* //'
-EOF
+_fzf_complete_export() {
+  _fzf_complete '-m' "$@" < <(
+    declare -xp | sed 's/=.*//' | sed 's/.* //'
+  )
 }
 
-_fzf_alias_completion() {
-  _fzf_list_completion "$1" "$2" '+m' << "EOF"
-  alias | sed 's/=.*//'
-EOF
+_fzf_complete_unset() {
+  _fzf_complete '-m' "$@" < <(
+    declare -xp | sed 's/=.*//' | sed 's/.* //'
+  )
+}
+
+_fzf_complete_unalias() {
+  _fzf_complete '+m' "$@" < <(
+    alias | sed 's/=.*//'
+  )
 }
 
 fzf-completion() {
-  local tokens cmd prefix trigger tail fzf matches lbuf d_cmds sws
-  if setopt | grep shwordsplit > /dev/null; then
-    sws=1
-    unsetopt shwordsplit
-  fi
+  local tokens cmd prefix trigger tail fzf matches lbuf d_cmds
+  setopt localoptions noshwordsplit noksh_arrays
 
   # http://zsh.sourceforge.net/FAQ/zshfaq03.html
   # http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion-Flags
   tokens=(${(z)LBUFFER})
   if [ ${#tokens} -lt 1 ]; then
-    eval "zle ${fzf_default_completion:-expand-or-complete}"
+    zle ${fzf_default_completion:-expand-or-complete}
     return
   fi
 
@@ -128,35 +163,32 @@ fzf-completion() {
       LBUFFER="$LBUFFER$matches"
     fi
     zle redisplay
+    typeset -f zle-line-init >/dev/null && zle zle-line-init
   # Trigger sequence given
   elif [ ${#tokens} -gt 1 -a "$tail" = "$trigger" ]; then
-    d_cmds=(cd pushd rmdir)
+    d_cmds=(${=FZF_COMPLETION_DIR_COMMANDS:-cd pushd rmdir})
 
     [ -z "$trigger"      ] && prefix=${tokens[-1]} || prefix=${tokens[-1]:0:-${#trigger}}
     [ -z "${tokens[-1]}" ] && lbuf=$LBUFFER        || lbuf=${LBUFFER:0:-${#tokens[-1]}}
 
-    if [ ${d_cmds[(i)$cmd]} -le ${#d_cmds} ]; then
-      _fzf_dir_completion "$prefix" $lbuf
-    elif [ $cmd = telnet ]; then
-      _fzf_telnet_completion "$prefix" $lbuf
-    elif [ $cmd = ssh ]; then
-      _fzf_ssh_completion "$prefix" $lbuf
-    elif [ $cmd = unset -o $cmd = export ]; then
-      _fzf_env_var_completion "$prefix" $lbuf
-    elif [ $cmd = unalias ]; then
-      _fzf_alias_completion "$prefix" $lbuf
+    if eval "type _fzf_complete_${cmd} > /dev/null"; then
+      eval "prefix=\"$prefix\" _fzf_complete_${cmd} \"$lbuf\""
+    elif [ ${d_cmds[(i)$cmd]} -le ${#d_cmds} ]; then
+      _fzf_dir_completion "$prefix" "$lbuf"
     else
-      _fzf_all_completion "$prefix" $lbuf
+      _fzf_path_completion "$prefix" "$lbuf"
     fi
   # Fall back to default completion
   else
-    eval "zle ${fzf_default_completion:-expand-or-complete}"
+    zle ${fzf_default_completion:-expand-or-complete}
   fi
-  [ -n "$sws" ] && setopt shwordsplit
 }
 
-[ -z "$fzf_default_completion" ] &&
-  fzf_default_completion=$(bindkey '^I' | grep -v undefined-key | awk '{print $2}')
+[ -z "$fzf_default_completion" ] && {
+  binding=$(bindkey '^I')
+  [[ $binding =~ 'undefined-key' ]] || fzf_default_completion=$binding[(w)2]
+  unset binding
+}
 
 zle     -N   fzf-completion
 bindkey '^I' fzf-completion

@@ -31,4 +31,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Hide hostname and username.
 prompt_context () { }
+
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
 # ======================================= local oh-my-zsh =======================================

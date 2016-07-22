@@ -28,6 +28,7 @@ Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'zchee/deoplete-jedi', {'for': 'python'}
+Plug 'kh3phr3n/python-syntax', {'for': 'python'}
 
 function! DoRemote(arg)
   UpdateRemotePlugins
@@ -68,6 +69,7 @@ nnoremap <silent> <leader>g :FzfGFiles?<CR>
 nnoremap <silent> <leader>G :FzfGFiles<CR>
 
 let g:fzf_tags_command = 'ctags --languages=python --python-kinds=-iv -R'
+let g:fzf_history_dir = '~/.fzf-history'
 " | fzf | }}}
 
 
@@ -144,3 +146,8 @@ let g:jedi#usages_command = "<leader>ju"
 let g:jedi#completions_command = ""
 let g:jedi#rename_command = "<leader>jr"
 " | jedi-vim | }}}
+
+
+" | python-syntax | {{{
+let python_highlight_all = 1
+" | python-syntax | }}}
