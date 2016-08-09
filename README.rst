@@ -42,9 +42,9 @@ To update, ``cd`` into your local ``dotfiles`` repository and then:
 Add custom commands without creating a new fork
 -----------------------------------------------
 
-If ``~/.extra/.zsh/local.sh`` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
+If ``~/.extra/.zsh/local.zsh`` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
 
-My ``~/.extra/.zsh/local.sh`` looks something like this:
+My ``~/.extra/.zsh/local.zsh`` looks something like this:
 
 .. code:: bash
 
@@ -59,7 +59,7 @@ My ``~/.extra/.zsh/local.sh`` looks something like this:
 
     source /usr/local/bin/virtualenvwrapper.sh
 
-You can overwrite something using ``~/.extra/.zsh/local.sh``. For example:
+You can overwrite something using ``~/.extra/.zsh/local.zsh``. For example:
 
 .. code:: bash
 
@@ -69,16 +69,16 @@ You can overwrite something using ``~/.extra/.zsh/local.sh``. For example:
     # Overwrite environment variable
     export EDITOR="emacs"
 
-Or you can extend all your dotfiles configuration using ``~/.extra/.zsh/local.sh`` like entry point. Your ``~/.extra/.zsh/local.sh`` can be like this:
+Or you can extend all your dotfiles configuration using ``~/.extra/.zsh/local.zsh`` like entry point. Your ``~/.extra/.zsh/local.zsh`` can be like this:
 
 .. code:: bash
 
-    for file in ~/.extra/.zsh/{local-exports,local-aliases,local-work-settings}.sh; do
+    for file in ~/.extra/.zsh/{local-exports,local-aliases,local-work-settings}.zsh; do
         [ -r "$file" ] && source "$file"
     done
     unset file
 
-And in ``~/.extra/.zsh/local-exports.sh``, ``~/.extra/.zsh/local-aliases.sh``, ``~/.extra/.zsh/local-work-settings.sh`` you can add your own custom commands.
+And in ``~/.extra/.zsh/local-exports.zsh``, ``~/.extra/.zsh/local-aliases.zsh``, ``~/.extra/.zsh/local-work-settings.zsh`` you can add your own custom commands.
 
 
 Colorscheme and font
