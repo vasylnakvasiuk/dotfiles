@@ -1,7 +1,7 @@
 # Shortcuts
 alias p="cd $HOME/Projects"
 alias h="history"
-alias g='git'
+alias g="git"
 alias v="nvim"
 alias vim="nvim"
 
