@@ -16,19 +16,24 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
-Plug 'henrik/vim-indexed-search'
 Plug 'Shougo/junkfile.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'junegunn/vim-peekaboo'
-Plug 'pgdouyon/vim-evanesco'
 
+" Python plugins
 Plug 'cespare/vim-toml', {'for': 'toml'}
-Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
+Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'zchee/deoplete-jedi', {'for': 'python'}
 Plug 'kh3phr3n/python-syntax', {'for': 'python'}
+
+" Enhancement internal functional
+Plug 'henrik/vim-indexed-search'
+Plug 'junegunn/vim-peekaboo'
+Plug 'pgdouyon/vim-evanesco'
+Plug 'thinca/vim-visualstar'
+Plug 'unblevable/quick-scope'
 
 function! DoRemote(arg)
   UpdateRemotePlugins
@@ -151,3 +156,8 @@ let g:jedi#rename_command = "<leader>jr"
 " | python-syntax | {{{
 let python_highlight_all = 1
 " | python-syntax | }}}
+
+
+" | unblevable/quick-scope | {{{
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" | unblevable/quick-scope | }}}
