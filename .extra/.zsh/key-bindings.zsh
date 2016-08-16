@@ -16,7 +16,7 @@ gf() {
 
 gb() {
   is_in_git_repo || return
-  git branch -a --color=always | grep -v '/HEAD\s' | sort |
+  git branch -a --color=always | grep -v HEAD | sort |
   fzf-tmux --ansi --multi --tac --preview-window right:70% \
     --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
   sed 's/^..//' | cut -d' ' -f1 |
@@ -47,30 +47,40 @@ gr() {
   cut -d' ' -f1
 }
 
-# ge - git commit browser (enter for show, ctrl-d for diff, ` toggles sort)
-ge() {
-  local out shas sha q k
-  while out=$(
-      git log --graph --color=always \
-          --format="%C(auto)%h%d %s %C(black)%C(bold)%cr %C(auto)%C(green)%cn" "$@" |
-      fzf --ansi --multi --no-sort --reverse --query="$q" \
-          --print-query --expect=ctrl-d --toggle-sort=\`); do
-    q=$(head -1 <<< "$out")
-    k=$(head -2 <<< "$out" | tail -1)
-    shas=$(sed '1,2d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
-    [ -z "$shas" ] && continue
-    if [ "$k" = ctrl-d ]; then
-      git diff --color=always $shas | less -R
-    else
-      for sha in $shas; do
-        git show --color=always $sha | less -R
-      done
-    fi
-  done
 
-  # For correct exit from keybind.
-  zle redisplay
+# Checkout git commit
+fzf-checkout-commit() {
+    local commits commit
+    commits=$(git log --graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr %C(auto)%C(blue)%cn") &&
+        commit=$(echo "$commits" | fzf --ansi --no-sort --reverse --tiebreak=index) &&
+        git checkout $(echo "$commit" | grep -o "[a-f0-9]\{7,\}")
 }
+bindkey -s '^Go' 'fzf-checkout-commit\n'
+
+# Checkout git branch
+fzf-checkout-branch() {
+    local branches branch
+    branches=$(git branch -a --color=always | grep -v HEAD | sort) &&
+        branch=$(echo "$branches" |
+    fzf --ansi --tac -d $(( 2 + $(wc -l <<< "$branches") )) +m +s) &&
+        git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+bindkey -s '^Gk' 'fzf-checkout-branch\n'
+
+# Git log
+fzf-log() {
+    is_in_git_repo || return
+    git log --graph --color=always \
+        --format="%C(auto)%h%d %s %C(black)%C(bold)%cr %C(auto)%C(blue)%cn" "$@" |
+    fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
+        --bind "ctrl-m:execute:
+    (grep -o '[a-f0-9]\{7\}' | head -1 |
+    xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
+    {}
+    FZF-EOF"
+}
+bindkey -s '^Gl' 'fzf-log\n'
+
 
 join-lines() {
   local item
@@ -88,8 +98,4 @@ bind-git-helper() {
   done
 }
 bind-git-helper f b t r h
-
-zle -N fzf-ge-widget ge
-bindkey '^Ge' fzf-ge-widget
-
 unset -f bind-git-helper
