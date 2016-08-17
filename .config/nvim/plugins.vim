@@ -30,9 +30,8 @@ Plug 'kh3phr3n/python-syntax', {'for': 'python'}
 
 " Enhancement internal functional
 Plug 'junegunn/vim-peekaboo'
-Plug 'pgdouyon/vim-evanesco'
-Plug 'thinca/vim-visualstar'
 Plug 'unblevable/quick-scope'
+Plug 'thinca/vim-visualstar'
 Plug 'henrik/vim-indexed-search'
 
 function! DoRemote(arg)

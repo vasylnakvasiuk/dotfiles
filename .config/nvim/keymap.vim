@@ -19,3 +19,8 @@ nnoremap Y y$
 
 " Bye-bye Ex mode, hello repeat q macros
 nnoremap Q @q
+
+nnoremap <silent> h h:nohl<CR>
+nnoremap <silent> j j:nohl<CR>
+nnoremap <silent> k k:nohl<CR>
+nnoremap <silent> l l:nohl<CR>
