@@ -78,8 +78,10 @@ fzf-log() {
     xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
     {}
     FZF-EOF"
+    zle redisplay
 }
-bindkey -s '^Gl' 'fzf-log\n'
+zle -N fzf-log
+bindkey '^Gl' fzf-log
 
 
 join-lines() {
