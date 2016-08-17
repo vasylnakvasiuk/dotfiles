@@ -29,11 +29,11 @@ Plug 'zchee/deoplete-jedi', {'for': 'python'}
 Plug 'kh3phr3n/python-syntax', {'for': 'python'}
 
 " Enhancement internal functional
-Plug 'henrik/vim-indexed-search'
 Plug 'junegunn/vim-peekaboo'
 Plug 'pgdouyon/vim-evanesco'
 Plug 'thinca/vim-visualstar'
 Plug 'unblevable/quick-scope'
+Plug 'henrik/vim-indexed-search'
 
 function! DoRemote(arg)
   UpdateRemotePlugins
