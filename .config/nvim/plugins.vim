@@ -20,6 +20,7 @@ Plug 'Shougo/junkfile.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'szw/vim-maximizer'
 
 " Python plugins
 Plug 'cespare/vim-toml', {'for': 'toml'}
@@ -160,3 +161,9 @@ let python_highlight_all = 1
 " | unblevable/quick-scope | {{{
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " | unblevable/quick-scope | }}}
+
+
+" | szw/vim-maximizer | {{{
+let g:maximizer_set_default_mapping = 0
+nnoremap <silent> <leader>z :MaximizerToggle<CR>
+" | szw/vim-maximizer | }}}
