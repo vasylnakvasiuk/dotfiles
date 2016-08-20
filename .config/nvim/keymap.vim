@@ -21,3 +21,7 @@ nnoremap Y y$
 
 " Bye-bye Ex mode, hello repeat q macros
 nnoremap Q @q
+
+" Fast tab switch
+nnoremap <silent> <C-l> :tabnext<CR>
+nnoremap <silent> <C-h> :tabprev<CR>

@@ -29,6 +29,9 @@ Plug 'davidhalter/jedi-vim', {'for': 'python'}
 Plug 'zchee/deoplete-jedi', {'for': 'python'}
 Plug 'kh3phr3n/python-syntax', {'for': 'python'}
 
+" HTML plugin: Highlight enclosing tags
+Plug 'Valloric/MatchTagAlways', {'for': ['xml', 'html', 'jinja', 'htmldjango']}
+
 " Enhancement internal functional
 Plug 'junegunn/vim-peekaboo'
 Plug 'unblevable/quick-scope'
@@ -52,6 +55,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Just show the filename (no path) in the tab
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Do not show buffers in tabline
+let g:airline#extensions#tabline#show_buffers = 0
 " | vim-airline | }}}
 
 
