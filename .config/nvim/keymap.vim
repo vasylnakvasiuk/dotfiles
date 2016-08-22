@@ -1,7 +1,7 @@
 " Remove search highlight
-nmap <silent> <CR> :nohlsearch<CR>
-nnoremap <silent> j j:nohl<CR>
-nnoremap <silent> k k:nohl<CR>
+nmap <silent> <leader><CR> :nohlsearch<CR>
+nnoremap <silent> j j:nohlsearch<CR>
+nnoremap <silent> k k:nohlsearch<CR>
 
 " Fast file save
 nnoremap <silent> <leader>w :update<CR>

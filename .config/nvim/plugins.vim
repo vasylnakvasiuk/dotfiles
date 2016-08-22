@@ -12,6 +12,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-unimpaired'
+Plug 'Valloric/ListToggle'
 Plug 'dyng/ctrlsf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -58,6 +61,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Do not show buffers in tabline
 let g:airline#extensions#tabline#show_buffers = 0
+
+" Use syntastic extension
+let g:airline#extensions#syntastic#enabled = 1
 " | vim-airline | }}}
 
 
@@ -173,3 +179,34 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let g:maximizer_set_default_mapping = 0
 nnoremap <silent> <leader>z :MaximizerToggle<CR>
 " | szw/vim-maximizer | }}}
+
+
+" | scrooloose/syntastic | {{{
+" Put all errors into location-list and close location-list by default
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 2
+
+" Aggregate errors from all checkers into one single error list
+let g:syntastic_aggregate_errors = 1
+
+" Syntax check, when file are first loaded, as well as on saving
+let g:syntastic_check_on_open = 1
+
+" Turn on python syntax checker
+let g:syntastic_python_checkers=['flake8']
+" ignore line length, whitespace around operators and bad indentation
+" let g:syntastic_python_flake8_post_args='--ignore=E501,E128,E225,E231,F403,F405,E126'
+
+" Setup marks styles and colors
+let g:syntastic_error_symbol='●'
+let g:syntastic_warning_symbol='✘'
+let g:syntastic_style_error_symbol='●'
+let g:syntastic_style_warning_symbol='✘'
+highlight SyntasticErrorSign        ctermbg=18 ctermfg=3
+highlight SyntasticWarningSign      ctermbg=18 ctermfg=9
+
+" let g:syntastic_loc_list_height = 5
+nnoremap <leader>st :SyntasticToggleMode<CR>
+nnoremap <leader>sr :SyntasticReset<CR>
+nnoremap <leader>sc :SyntasticCheck<CR>
+" | scrooloose/syntastic | }}}

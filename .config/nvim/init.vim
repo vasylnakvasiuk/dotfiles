@@ -33,6 +33,9 @@ set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅
 set background=dark
 let base16colorspace=256
 colorscheme base16-eighties
+
+" Nice split theme
+hi VertSplit ctermfg=18 ctermbg=18
 " | Color options | }}}
 
 " Trim whitespace on save
