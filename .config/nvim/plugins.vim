@@ -200,6 +200,9 @@ let g:syntastic_aggregate_errors = 1
 " Syntax check, when file are first loaded, as well as on saving
 let g:syntastic_check_on_open = 1
 
+" Turn off highlight column (place) with error
+let g:syntastic_enable_highlighting = 0
+
 " Turn on python syntax checker
 let g:syntastic_python_checkers=['flake8']
 " ignore line length, whitespace around operators and bad indentation
@@ -213,7 +216,6 @@ let g:syntastic_style_warning_symbol='✘'
 highlight SyntasticErrorSign        ctermbg=18 ctermfg=8
 highlight SyntasticWarningSign      ctermbg=18 ctermfg=9
 
-" let g:syntastic_loc_list_height = 5
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sr :SyntasticReset<CR>
 nnoremap <leader>sc :SyntasticCheck<CR>
