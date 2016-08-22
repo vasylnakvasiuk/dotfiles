@@ -49,6 +49,14 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 call plug#end()
 
 
+" | chriskempson/base16-vim | {{{
+" Color options
+set background=dark
+let base16colorspace=256
+colorscheme base16-eighties
+" | chriskempson/base16-vim | }}}
+
+
 " | vim-airline | {{{
 " Use airline fonts
 let g:airline_powerline_fonts = 1
@@ -202,7 +210,7 @@ let g:syntastic_error_symbol='●'
 let g:syntastic_warning_symbol='✘'
 let g:syntastic_style_error_symbol='●'
 let g:syntastic_style_warning_symbol='✘'
-highlight SyntasticErrorSign        ctermbg=18 ctermfg=3
+highlight SyntasticErrorSign        ctermbg=18 ctermfg=8
 highlight SyntasticWarningSign      ctermbg=18 ctermfg=9
 
 " let g:syntastic_loc_list_height = 5

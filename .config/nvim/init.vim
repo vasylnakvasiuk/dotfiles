@@ -29,11 +29,6 @@ set scrolloff=5
 " Turn on whitespace highlight
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅
 
-" | Color options | {{{
-set background=dark
-let base16colorspace=256
-colorscheme base16-eighties
-
 " Nice split theme
 hi VertSplit ctermfg=18 ctermbg=18
 " | Color options | }}}
