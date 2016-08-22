@@ -213,8 +213,8 @@ let g:syntastic_error_symbol='●'
 let g:syntastic_warning_symbol='✘'
 let g:syntastic_style_error_symbol='●'
 let g:syntastic_style_warning_symbol='✘'
-highlight SyntasticErrorSign        ctermbg=18 ctermfg=8
-highlight SyntasticWarningSign      ctermbg=18 ctermfg=9
+highlight SyntasticErrorSign        ctermbg=18 ctermfg=9
+highlight SyntasticWarningSign      ctermbg=18 ctermfg=3
 
 nnoremap <leader>st :SyntasticToggleMode<CR>
 nnoremap <leader>sr :SyntasticReset<CR>
