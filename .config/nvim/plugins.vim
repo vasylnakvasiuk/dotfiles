@@ -197,9 +197,6 @@ let g:syntastic_auto_loc_list = 2
 " Aggregate errors from all checkers into one single error list
 let g:syntastic_aggregate_errors = 1
 
-" Syntax check, when file are first loaded, as well as on saving
-let g:syntastic_check_on_open = 1
-
 " Turn off highlight column (place) with error
 let g:syntastic_enable_highlighting = 0
 
