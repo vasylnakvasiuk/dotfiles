@@ -25,6 +25,9 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'szw/vim-maximizer'
 
+Plug 'kana/vim-textobj-user'
+Plug 'sgur/vim-textobj-parameter'
+
 " Python plugins
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
