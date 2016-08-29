@@ -21,7 +21,22 @@ Pre-installation
 1. Install Homebrew_.
 2. Install unix shell – zsh_ (Z shell) and set ``zsh`` as your `default shell`_.
 3. Install zsh configuration framework oh-my-zsh_.
-4. Install `Python support`_ for neovim.
+4. Install `Python support`_ for neovim:
+
+.. code:: bash
+
+    $ # Setup neovim for Python 3
+    $ mkvirtualenv neovim3 --python=/usr/local/bin/python3.6
+    $ workon neovim3
+    $ pip install neovim
+    $ pip install jedi
+    $ # Setup neovim for Python 2
+    $ mkvirtualenv neovim --python=/usr/local/bin/python2.7
+    $ workon neovim
+    $ pip install neovim
+    $ pip install jedi
+
+5. Install flake8 to the system python environment.
 
 Installation
 ------------
