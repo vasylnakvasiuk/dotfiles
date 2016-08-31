@@ -23,5 +23,6 @@ nnoremap Y y$
 nnoremap Q @q
 
 " Fast tab switch
-nnoremap <silent> <C-l> :tabnext<CR>
-nnoremap <silent> <C-h> :tabprev<CR>
+nnoremap <silent> <C-W>t :tabnew<CR>
+nnoremap <silent> <C-L> :tabnext<CR>
+nnoremap <silent> <C-H> :tabprev<CR>
