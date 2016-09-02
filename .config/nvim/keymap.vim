@@ -19,6 +19,18 @@ nnoremap <C-K> 3<C-Y>3k
 " By default Y == yy, so add new useful keymap
 nnoremap Y y$
 
+" Yank to system clipboard
+nnoremap gy "+y
+vnoremap gy "+y
+nnoremap gY "+y$
+vnoremap gY "+Y
+
+" Paste from system clipboard
+nnoremap gp "+p
+vnoremap gp "+p
+nnoremap gP "+P
+vnoremap gP "+P
+
 " Bye-bye Ex mode, hello repeat q macros
 nnoremap Q @q
 
