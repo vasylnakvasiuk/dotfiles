@@ -25,6 +25,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'szw/vim-maximizer'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
@@ -85,9 +86,8 @@ let g:fzf_command_prefix = 'Fzf'
 
 nnoremap <silent> <C-P> :FzfFiles<CR>
 
-" Ctrl + / for buffer lines search
-nnoremap <silent> <C-_> :FzfBLines<CR>
-
+nnoremap <silent> <leader>/ :FzfBLines<CR>
+nnoremap <silent> <leader>a :FzfAg<space>
 nnoremap <silent> <leader>b :FzfBuffers<CR>
 nnoremap <silent> <leader>r :FzfHistory<CR>
 nnoremap <silent> <leader>q/ :FzfHistory/<CR>
