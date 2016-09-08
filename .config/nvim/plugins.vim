@@ -13,7 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 Plug 'tpope/vim-unimpaired'
 Plug 'Valloric/ListToggle'
 Plug 'dyng/ctrlsf.vim'
@@ -198,31 +198,7 @@ nnoremap <silent> <leader>z :MaximizerToggle<CR>
 " | szw/vim-maximizer | }}}
 
 
-" | scrooloose/syntastic | {{{
-" Put all errors into location-list and close location-list by default
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 2
-
-" Aggregate errors from all checkers into one single error list
-let g:syntastic_aggregate_errors = 1
-
-" Turn off highlight column (place) with error
-let g:syntastic_enable_highlighting = 0
-
-" Turn on python syntax checker
-let g:syntastic_python_checkers=['flake8']
-" ignore line length, whitespace around operators and bad indentation
-" let g:syntastic_python_flake8_post_args='--ignore=E501,E128,E225,E231,F403,F405,E126'
-
-" Setup marks styles and colors
-let g:syntastic_error_symbol='●'
-let g:syntastic_warning_symbol='✘'
-let g:syntastic_style_error_symbol='●'
-let g:syntastic_style_warning_symbol='✘'
-highlight SyntasticErrorSign        ctermbg=18 ctermfg=9
-highlight SyntasticWarningSign      ctermbg=18 ctermfg=3
-
-nnoremap <leader>st :SyntasticToggleMode<CR>
-nnoremap <leader>sr :SyntasticReset<CR>
-nnoremap <leader>sc :SyntasticCheck<CR>
-" | scrooloose/syntastic | }}}
+" | neomake/neomake | {{{
+let g:neomake_python_enabled_makers = ['flake8']
+autocmd! BufWritePost,BufEnter * Neomake
+" | neomake/neomake | }}}

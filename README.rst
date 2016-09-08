@@ -36,7 +36,11 @@ Pre-installation
     $ pip install neovim
     $ pip install jedi
 
-5. Install flake8 to the system python environment.
+5. Install flake8 to the system python environment:
+
+.. code:: bash
+    $ sudo pip2/pip3 install flake8 -U
+
 
 Installation
 ------------
