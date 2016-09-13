@@ -27,6 +27,7 @@ Plug 'tpope/vim-repeat'
 Plug 'szw/vim-maximizer'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'ryanoasis/vim-devicons'
 
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
