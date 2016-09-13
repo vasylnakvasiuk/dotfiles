@@ -103,7 +103,7 @@ And in ``~/.extra/.zsh/local-exports.zsh``, ``~/.extra/.zsh/local-aliases.zsh``,
 Colorscheme and font
 --------------------
 
-I'm using "Base16 Railscasts Dark 256" colorscheme and "Menlo Regular for Powerline" font. These files you can find at ``.extra/etc/`` and ``.extra/.zsh/base16-shell/`` folders. Also I set different font size for ASCII and non-ASCII characters.
+I'm using "Base16 Eighties Dark 256" colorscheme and `"Meslo LG M Regular for Powerline Nerd Font Complete"`_. These files you can find at ``.extra/etc/`` and ``.extra/.zsh/base16-shell/`` folders. Also I set different font size for ASCII and non-ASCII characters.
 
 .. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-iterm2-fonts.png
     :alt: vim
@@ -130,3 +130,4 @@ Thanks to...
 .. _Chris Kempson: https://github.com/chriskempson
 .. _color schemes: https://github.com/chriskempson/base16
 .. _Python support: https://neovim.io/doc/user/nvim_python.html
+.. _"Meslo LG M Regular for Powerline Nerd Font Complete": https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Meslo/M/complete
