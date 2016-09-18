@@ -92,7 +92,7 @@ let g:fzf_command_prefix = 'Fzf'
 nnoremap <silent> <C-P> :FzfFiles<CR>
 
 nnoremap <silent> <leader>/ :FzfBLines<CR>
-nnoremap <silent> <leader>a :FzfAg<space>
+nnoremap <leader>a :FzfAg<space>
 nnoremap <silent> <leader>b :FzfBuffers<CR>
 nnoremap <silent> <leader>r :FzfHistory<CR>
 nnoremap <silent> <leader>q/ :FzfHistory/<CR>
