@@ -27,14 +27,10 @@ Pre-installation
 
     $ # Setup neovim for Python 3
     $ mkvirtualenv neovim3 --python=/usr/local/bin/python3.6
-    $ workon neovim3
-    $ pip install neovim
-    $ pip install jedi
+    $ pip install neovim jedi && deactivate
     $ # Setup neovim for Python 2
-    $ mkvirtualenv neovim --python=/usr/local/bin/python2.7
-    $ workon neovim
-    $ pip install neovim
-    $ pip install jedi
+    $ mkvirtualenv neovim2 --python=/usr/bin/python2.7
+    $ pip install neovim jedi && deactivate
 
 5. Install flake8 to the system python environment:
 
