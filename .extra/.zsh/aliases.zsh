@@ -23,3 +23,10 @@ alias tmux="tmux -2"
 # Tmux helperstb
 alias tb="tmux-bootstrap"
 alias tk="tmux kill-server"
+
+# Bitcoin aliases
+bitcoin_progress(){
+	bitcoin-cli getblockchaininfo | jq .verificationprogress | awk '{printf "Blockchain progress = %4.2f%%\n",$1*100}'
+}
+alias bitcoin-progress=bitcoin_progress
+unset bitcoin_progress
