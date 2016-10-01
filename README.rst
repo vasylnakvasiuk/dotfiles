@@ -37,6 +37,12 @@ Pre-installation
 .. code:: bash
     $ sudo pip2/pip3 install flake8 -U
 
+6. Install universal-ctags:
+
+.. code:: bash
+    $ brew tap universal-ctags/universal-ctags
+    $ brew install --HEAD universal-ctags
+
 
 Installation
 ------------
