@@ -40,8 +40,10 @@ Pre-installation
 6. Install universal-ctags:
 
 .. code:: bash
+
     $ brew tap universal-ctags/universal-ctags
     $ brew install --HEAD universal-ctags
+
 
 Installation
 ------------
