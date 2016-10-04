@@ -35,6 +35,7 @@ Pre-installation
 5. Install flake8 to the system python environment:
 
 .. code:: bash
+
     $ sudo pip2/pip3 install flake8 -U
 
 6. Install universal-ctags:
@@ -47,6 +48,7 @@ Pre-installation
 7. Install zsh-autosuggestions:
 
 .. code:: bash
+
     $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 Installation
