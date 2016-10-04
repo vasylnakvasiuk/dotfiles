@@ -44,6 +44,10 @@ Pre-installation
     $ brew tap universal-ctags/universal-ctags
     $ brew install --HEAD universal-ctags
 
+7. Install zsh-autosuggestions:
+
+.. code:: bash
+    $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 Installation
 ------------
