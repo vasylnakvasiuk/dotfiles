@@ -33,6 +33,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
 
 " Python plugins
+Plug 'voithos/vim-python-matchit', {'for': 'python'}
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
@@ -40,6 +41,7 @@ Plug 'zchee/deoplete-jedi', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
 Plug 'kh3phr3n/python-syntax', {'for': 'python'}
 Plug 'michaeljsmith/vim-indent-object', {'for': 'python'}
+Plug 'nathanaelkane/vim-indent-guides', {'for': 'python'}
 
 " HTML plugin: Highlight enclosing tags
 Plug 'Valloric/MatchTagAlways', {'for': ['xml', 'html', 'jinja', 'htmldjango']}
@@ -204,3 +206,12 @@ nnoremap <silent> <leader>z :MaximizerToggle<CR>
 let g:neomake_python_enabled_makers = ['flake8']
 autocmd! BufWritePost,BufEnter * Neomake
 " | neomake/neomake | }}}
+
+
+" | nathanaelkane/vim-indent-guides | {{{
+hi IndentGuidesOdd  ctermbg=18
+hi IndentGuidesEven ctermbg=18
+nnoremap cog :IndentGuidesToggle<CR>
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+" | nathanaelkane/vim-indent-guides | }}}
