@@ -37,7 +37,6 @@ Plug 'voithos/vim-python-matchit', {'for': 'python'}
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
 Plug 'davidhalter/jedi-vim', {'for': 'python'}
-Plug 'zchee/deoplete-jedi', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
 Plug 'kh3phr3n/python-syntax', {'for': 'python'}
 Plug 'michaeljsmith/vim-indent-object', {'for': 'python'}
@@ -174,7 +173,6 @@ au FileType python let b:delimitMate_nesting_quotes = ["'"]
 
 " | jedi-vim | {{{
 " Disable jedi completions
-let g:jedi#completions_enabled = 0
 let g:jedi#smart_auto_mappings = 0
 let g:jedi#auto_vim_configuration = 0
 
