@@ -9,7 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'vaxXxa/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
@@ -84,8 +84,11 @@ let g:airline#extensions#tabline#show_buffers = 0
 " Use syntastic extension
 let g:airline#extensions#syntastic#enabled = 1
 
+" Hide close button for windows
+let g:airline#extensions#tabline#show_close_button = 0
+
 " Set airline theme
-let g:airline_theme='base16'
+let g:airline_theme='base16_eighties'
 " | vim-airline | }}}
 
 
