@@ -17,6 +17,9 @@ set number
 " Highlight current line
 set cursorline
 
+" Set lazy redraw for smooth scrolling
+set lazyredraw
+
 " Case-insensitive search
 set ignorecase
 
