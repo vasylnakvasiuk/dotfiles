@@ -9,7 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vaxXxa/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
@@ -87,7 +87,8 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#show_close_button = 0
 
 " Set airline theme
-let g:airline_theme='base16_eighties'
+let g:airline_theme='base16'
+let g:airline_base16_improved_contrast = 1
 " | vim-airline | }}}
 
 
@@ -173,7 +174,7 @@ au FileType python let b:delimitMate_nesting_quotes = ["'"]
 
 " | jedi-vim | {{{
 " Disable jedi completions
-let g:jedi#smart_auto_mappings = 0
+let g:jedi#smart_auto_mappings = 1
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#show_call_signatures = 0
 
@@ -185,6 +186,8 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>ju"
 let g:jedi#completions_command = ""
 let g:jedi#rename_command = "<leader>jr"
+
+set completeopt-=preview
 " | jedi-vim | }}}
 
 
@@ -205,6 +208,7 @@ nnoremap <silent> <leader>z :MaximizerToggle<CR>
 
 
 " | neomake/neomake | {{{
+let g:neomake_verbose = 0
 let g:neomake_python_enabled_makers = ['flake8']
 autocmd! BufWritePost,BufEnter * Neomake
 " | neomake/neomake | }}}
