@@ -13,8 +13,10 @@ nnoremap <silent> Zx :qall<CR>
 nnoremap <silent> ZX :qall!<CR>
 
 " Tricky scroll
-nnoremap <C-J> 3<C-E>3j
-nnoremap <C-K> 3<C-Y>3k
+nnoremap <C-j> 3<C-E>3j
+vnoremap <C-j> 3<C-E>3j
+nnoremap <C-k> 3<C-Y>3k
+vnoremap <C-k> 3<C-Y>3k
 
 " By default Y == yy, so add new useful keymap
 nnoremap Y y$
