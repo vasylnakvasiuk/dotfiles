@@ -32,9 +32,6 @@ set undofile
 " Set scroll offset – number of context lines you would like to see above and below the cursor
 set scrolloff=5
 
-" Now unsaved buffer can be hidden
-set hidden
-
 " <tab> inserts spaces
 set expandtab
 
