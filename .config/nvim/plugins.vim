@@ -28,7 +28,7 @@ Plug 'szw/vim-maximizer'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'ryanoasis/vim-devicons'
-Plug 'Shougo/neosnippet.vim'
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 Plug 'kana/vim-textobj-user'
@@ -226,12 +226,7 @@ let g:indent_guides_start_level = 2
 " | nathanaelkane/vim-indent-guides | }}}
 
 
-" | Shougo/neosnippet.vim | {{{
-let g:neosnippet#disable_runtime_snippets = {
-            \   '_' : 1,
-            \ }
-let g:neosnippet#snippets_directory=glob('~/.config/nvim/plugged/vim-snippets/snippets')
-
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" | Shougo/neosnippet.vim | }}}
+" | SirVer/ultisnips | {{{
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" | SirVer/ultisnips | }}}
