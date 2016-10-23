@@ -38,6 +38,9 @@ set expandtab
 " Turn on whitespace highlight
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅
 
+" Put at the start of lines that have been wrapped
+let &showbreak = '+++ '
+
 " Nice split theme
 hi VertSplit ctermfg=18 ctermbg=18
 " | Color options | }}}
