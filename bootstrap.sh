@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BASE_PACKAGES=(zsh git mc htop iftop ifstat nmap arp-scan arpoison ettercap spoof-mac tor proxychains-ng wget mtr wrk tree ag jq cloc tmux reattach-to-user-namespace spark cmatrix figlet fzf ranger ncdu task taskd tasksh cdiff)
+BASE_PACKAGES=(zsh git mc htop iftop ifstat nmap arp-scan arpoison ettercap spoof-mac tor proxychains-ng wget mtr wrk tree ag jq cloc tmux reattach-to-user-namespace spark cmatrix figlet fzf ranger ncdu task taskd tasksh cdiff watch)
 RANGER_PACKAGES=(highlight)
 CASK_PACKAGES=(keycastr)
 

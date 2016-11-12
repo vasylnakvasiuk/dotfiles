@@ -30,3 +30,6 @@ bitcoin_progress(){
 }
 alias bitcoin-progress=bitcoin_progress
 unset bitcoin_progress
+
+# For correct work `watch` + `aliases`
+alias watch='watch '
