@@ -41,6 +41,9 @@ set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅
 " Put at the start of lines that have been wrapped
 let &showbreak = '+++ '
 
+" This makes the cursor a pipe in insert-mode, and a block in normal-mode
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
 " Turn on incremental command live feedback
 set inccommand=split
 
