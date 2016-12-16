@@ -145,7 +145,8 @@ let g:NERDTreeHijackNetrw = 1
 
 
 " | CtrlSF | {{{
-let g:ctrlsf_position = 'bottom'
+let g:ctrlsf_position = 'left'
+let g:ctrlsf_winsize = '50%'
 
 nmap <leader>f/ <Plug>CtrlSFPrompt
 vmap <leader>f* <Plug>CtrlSFVwordPath
