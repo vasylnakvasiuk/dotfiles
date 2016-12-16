@@ -101,7 +101,7 @@ let g:fzf_command_prefix = 'Fzf'
 nnoremap <silent> <C-P> :FzfFiles<CR>
 
 nnoremap <silent> <leader>/ :FzfBLines<CR>
-nnoremap <leader>a :FzfAg<space>
+nnoremap <leader>a :Ag!<space>
 nnoremap <silent> <leader>b :FzfBuffers<CR>
 nnoremap <silent> <leader>r :FzfHistory<CR>
 nnoremap <silent> <leader>q/ :FzfHistory/<CR>
@@ -111,6 +111,15 @@ nnoremap <silent> <leader>t :FzfBTags<CR>
 nnoremap <silent> <leader>T :FzfTags<CR>
 nnoremap <silent> <leader>g :FzfGFiles?<CR>
 nnoremap <silent> <leader>G :FzfGFiles<CR>
+
+imap <c-x><c-l> <plug>(fzf-complete-line)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+
+autocmd VimEnter * command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
 
 let g:fzf_tags_command = 'ctags --languages=python --python-kinds=-iv -R'
 let g:fzf_history_dir = '~/.fzf-history'

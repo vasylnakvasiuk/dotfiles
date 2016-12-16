@@ -21,6 +21,7 @@ DISABLE_AUTO_TITLE=true
 
 # Now fzf uses ag like a backend
 export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_OPTS='--bind=ctrl-z:toggle-up'
 
 # With that fix <C-H> works in neovim
 export TERMINFO="$HOME/.terminfo"
