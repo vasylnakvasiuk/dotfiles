@@ -1,11 +1,11 @@
 Screenshots
 ===========
 
-.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-main.png
+.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-general.png
     :alt: dotfiles
     :align: center
 
-.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-vim.png
+.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-neovim.png
     :alt: vim
     :align: center
 
