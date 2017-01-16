@@ -22,6 +22,7 @@ DISABLE_AUTO_TITLE=true
 # Now fzf uses ag like a backend
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_OPTS='--bind=ctrl-z:toggle-up'
+export FZF_TMUX=1
 
 # With that fix <C-H> works in neovim
 # https://github.com/neovim/neovim/issues/2048#issuecomment-78045837
