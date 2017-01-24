@@ -30,6 +30,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'ryanoasis/vim-devicons'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'mhinz/vim-startify'
 
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
