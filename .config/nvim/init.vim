@@ -38,6 +38,9 @@ set expandtab
 " Turn on whitespace highlight
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅
 
+" Don't give the intro message when starting Vim.
+set shortmess+=I
+
 " Put at the start of lines that have been wrapped
 let &showbreak = '+++ '
 
