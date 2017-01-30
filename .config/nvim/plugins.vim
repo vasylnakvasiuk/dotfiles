@@ -31,6 +31,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-eunuch'
+Plug 'fatih/vim-go'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
