@@ -33,3 +33,6 @@ unset bitcoin_progress
 
 # For correct work `watch` + `aliases`
 alias watch='watch '
+
+# k alias
+alias l='k -A'
