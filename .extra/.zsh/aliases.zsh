@@ -35,4 +35,4 @@ unset bitcoin_progress
 alias watch='watch '
 
 # k alias
-alias l='k -A'
+alias l='k -Ah'
