@@ -29,6 +29,10 @@ set noshowmode
 " Keep undo history for all file changes
 set undofile
 
+" Open vertical split on the right side, horizontal split – below
+set splitbelow
+set splitright
+
 " Set scroll offset – number of context lines you would like to see above and below the cursor
 set scrolloff=5
 

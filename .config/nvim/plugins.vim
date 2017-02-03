@@ -33,6 +33,7 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-eunuch'
 Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'blueyed/vim-diminactive'
 
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'

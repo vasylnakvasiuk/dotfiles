@@ -40,3 +40,12 @@ nnoremap Q @q
 nnoremap <silent> <C-W>t :tabnew<CR>
 nnoremap <silent> <C-L> :tabnext<CR>
 nnoremap <silent> <C-H> :tabprev<CR>
+
+" Close quickfix and location lists
+nnoremap <leader>c :cclose<bar>lclose<cr>
+
+" Switch results from quickfix list
+nnoremap [q :cprev<cr>zz
+nnoremap ]q :cnext<cr>zz
+nnoremap ]Q :cnfile<cr>zz
+nnoremap [Q :cpfile<cr>zz
