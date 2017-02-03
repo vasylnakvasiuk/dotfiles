@@ -34,6 +34,8 @@ Plug 'tpope/vim-eunuch'
 Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'blueyed/vim-diminactive'
+Plug 'junegunn/goyo.vim'
+Plug 'mbbill/undotree'
 
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
@@ -244,3 +246,10 @@ let g:indent_guides_start_level = 2
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " | SirVer/ultisnips | }}}
+
+
+" | mbbill/undotree | {{{
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_WindowLayout = 2
+nnoremap U :UndotreeToggle<CR>
+" | mbbill/undotree | }}}
