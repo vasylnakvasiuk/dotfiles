@@ -16,12 +16,7 @@
 [fetch]
 	prune = true
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
-	ui = true
-	pager = true
+	ui = always
 [color "branch"]
 	current = yellow reverse
 	local   = yellow

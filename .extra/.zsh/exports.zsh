@@ -20,9 +20,10 @@ BASE16_SHELL="$HOME/.extra/.zsh/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 DISABLE_AUTO_TITLE=true
 
 # Now fzf uses ag like a backend
-export FZF_DEFAULT_COMMAND='ag -g ""'
-export FZF_DEFAULT_OPTS='--bind=ctrl-z:toggle-up'
-export FZF_TMUX=1
+export FZF_DEFAULT_COMMAND='ag -g "" --hidden'
+export FZF_DEFAULT_OPTS='--color=dark,bg+:18 --bind=ctrl-z:toggle-up --inline-info --height 50% --no-reverse --border'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS='--no-reverse'
 
 # With that fix <C-H> works in neovim
 # https://github.com/neovim/neovim/issues/2048#issuecomment-78045837
