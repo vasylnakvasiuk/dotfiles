@@ -36,6 +36,7 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'blueyed/vim-diminactive'
 Plug 'junegunn/goyo.vim'
 Plug 'mbbill/undotree'
+Plug 'jreybert/vimagit'
 
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'

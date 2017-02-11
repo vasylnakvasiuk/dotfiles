@@ -8,4 +8,4 @@ for file in ~/.extra/.zsh/{oh-my-zsh,exports,aliases,functions,key-bindings,loca
 done
 unset file
 
-[ -f ~/.extra/.zsh/fzf/.fzf.zsh ] && source ~/.extra/.zsh/fzf/.fzf.zsh
+[ -f ~/.extra/.zsh/fzf/fzf.zsh ] && source ~/.extra/.zsh/fzf/fzf.zsh

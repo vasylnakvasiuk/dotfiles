@@ -32,7 +32,8 @@ alias bitcoin-progress=bitcoin_progress
 unset bitcoin_progress
 
 # For correct work `watch` + `aliases`
-alias watch='watch '
+alias watch="watch "
 
 # k alias
-alias l='k -Ah'
+alias l="k -Ah"
+alias m="vim -c MagitOnly"
