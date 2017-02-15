@@ -14,7 +14,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
-Plug 'tpope/vim-unimpaired'
+Plug 'w0rp/ale'
 Plug 'Valloric/ListToggle'
 Plug 'dyng/ctrlsf.vim'
 Plug 'tpope/vim-fugitive'
@@ -139,12 +139,14 @@ nmap <leader>n :JunkfileOpen<space>
 
 
 " | NERDTree | {{{
+" Find the current file in the tree
+nnoremap <silent> - :NERDTreeFind<CR>
 
 " Toggle NERD tree window
-nmap <silent> <leader>m :NERDTreeToggle<CR>
+nnoremap <silent> _ :NERDTreeToggle<CR>
 
-" Find the current file in the tree
-nmap <silent> <leader>M :NERDTreeFind<CR>
+" Show hidden files by default
+let g:NERDTreeShowHidden=1
 
 " Will open up a window level NERD tree instead of a netrw in the target window
 let g:NERDTreeHijackNetrw = 1
@@ -227,11 +229,31 @@ nnoremap <silent> <leader>z :MaximizerToggle<CR>
 " | szw/vim-maximizer | }}}
 
 
-" | neomake/neomake | {{{
-let g:neomake_verbose = 0
-let g:neomake_python_enabled_makers = ['flake8']
-autocmd! BufWritePost,BufEnter * Neomake
-" | neomake/neomake | }}}
+" | w0rp/ale | {{{
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_enter = 0
+
+" Change ALE highlight colors
+highlight ALEErrorSign ctermbg=18 ctermfg=red
+highlight ALEWarningSign ctermbg=18 ctermfg=yellow
+
+" let g:ale_sign_warning = ''
+" let g:ale_sign_error = ''
+let g:ale_sign_warning = '✖'
+let g:ale_sign_error = '⚠'
+nmap <silent> [e <Plug>(ale_previous_wrap)
+nmap <silent> ]e <Plug>(ale_next_wrap)
+" E501 -- line too long
+" E402 -- import not at top of file
+" E128 -- continuation line underindented
+" E225 -- missing whitespace around operator
+" E231 -- missing whitespace after ','
+" F403 -- import * used, unable to detect undefined names
+" F405 -- name may be undefined, or defined from * imports
+" E126 -- indentation error
+let g:ale_python_flake8_args = '--ignore=E501,E402,E128,E225,E231,F403,F405,E126'
+" | w0rp/ale | }}}
 
 
 " | nathanaelkane/vim-indent-guides | {{{
