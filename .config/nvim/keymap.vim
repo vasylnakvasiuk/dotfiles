@@ -12,6 +12,9 @@ nnoremap <silent> Zx :qall<CR>
 " Quit and discard all files
 nnoremap <silent> ZX :qall!<CR>
 
+" Easy quit
+nnoremap <C-q> :q<CR>
+
 " Tricky scroll
 nnoremap <C-j> 3<C-E>3j
 vnoremap <C-j> 3<C-E>3j

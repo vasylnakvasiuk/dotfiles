@@ -52,7 +52,7 @@ set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅
 set shortmess+=I
 
 " Put at the start of lines that have been wrapped
-let &showbreak = '+++ '
+let &showbreak = '↪ '
 
 " This makes the cursor a pipe in insert-mode, and a block in normal-mode
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
@@ -71,6 +71,17 @@ fun! TrimWhitespace()
     call setpos('.', l:save_cursor)
 endfun
 autocmd BufWritePre * :call TrimWhitespace()
+
+" Change tmux window name {{{
+augroup vimrc
+    autocmd!
+    " Automatic rename of tmux window
+    if exists('$TMUX') && !exists('$NORENAME')
+        au BufEnter * if empty(&buftype) | call system('tmux rename-window '.expand('%:t:S')) | endif
+        au VimLeave * call system('tmux set-window automatic-rename on')
+    endif
+augroup END
+" }}}
 
 " Display vertical line at 80 columns
 autocmd FileType python set colorcolumn=80
