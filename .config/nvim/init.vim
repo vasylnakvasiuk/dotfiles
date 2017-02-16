@@ -32,6 +32,9 @@ set ignorecase
 " Turn off show mode on the status line
 set noshowmode
 
+" Do not fold at start
+set nofoldenable
+
 " Keep undo history for all file changes
 set undofile
 
