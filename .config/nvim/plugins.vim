@@ -17,6 +17,7 @@ Plug 'neomake/neomake'
 Plug 'w0rp/ale'
 Plug 'Valloric/ListToggle'
 Plug 'dyng/ctrlsf.vim'
+Plug 'mhinz/vim-grepper'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
@@ -40,6 +41,7 @@ Plug 'jreybert/vimagit'
 
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
+Plug 'kana/vim-operator-user'
 
 " Python plugins
 Plug 'voithos/vim-python-matchit', {'for': 'python'}
@@ -108,7 +110,6 @@ let g:fzf_command_prefix = 'Fzf'
 nnoremap <silent> <C-P> :FzfFiles<CR>
 
 nnoremap <silent> <leader>/ :FzfBLines<CR>
-nnoremap <leader>a :Ag!<space>
 nnoremap <silent> <leader>b :FzfBuffers<CR>
 nnoremap <silent> <leader>r :FzfHistory<CR>
 nnoremap <silent> <leader>q/ :FzfHistory/<CR>
@@ -130,6 +131,8 @@ autocmd VimEnter * command! -bang -nargs=* Ag
 
 let g:fzf_tags_command = 'ctags --languages=python --python-kinds=-iv -R'
 let g:fzf_history_dir = '~/.fzf-history'
+
+nnoremap <leader>gh :Ag<space>
 " | fzf | }}}
 
 
@@ -276,3 +279,18 @@ let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_WindowLayout = 2
 nnoremap U :UndotreeToggle<CR>
 " | mbbill/undotree | }}}
+
+
+" Grepper settings {{{
+let g:grepper = {}
+let g:grepper.highlight = 1
+let g:grepper.tools = ['ag']
+let g:grepper.prompt = 0
+" Search in hidden fields with ag
+runtime autoload/grepper.vim
+let g:grepper.ag.grepprg .= " --hidden"
+
+nnoremap <leader>gr :Grepper -query<space>
+nmap gr  <plug>(GrepperOperator)
+xmap gr  <plug>(GrepperOperator)
+" }}}

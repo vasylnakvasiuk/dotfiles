@@ -35,3 +35,21 @@ endfunction
 
 command! SafePlugUpdate call s:SafePlugUpdate()
 command! PlugRevert call s:PlugRevert()
+
+" Fzfag operator (I suppose this func should be global)
+function! g:_Fzf_ag(type) abort
+    " Save register contents
+    let l:orig = @@
+    if a:type ==# 'char'
+        execute "normal! `[v`]y"
+        let l:query = @@
+        " Restore register contents
+        let @@ = l:orig
+        execute "Ag ".l:query
+    elseif a:type ==# 'line'
+        call s:EchoFailure('fzfag operator does not support linewise modes!')
+    endif
+endfunction
+
+call operator#user#define('fzfag', 'g:_Fzf_ag')
+map gh <Plug>(operator-fzfag)

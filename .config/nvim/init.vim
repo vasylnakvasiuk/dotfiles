@@ -35,6 +35,9 @@ set noshowmode
 " Do not fold at start
 set nofoldenable
 
+" Hold previous position in normal mode after mode switch
+set nostartofline
+
 " Keep undo history for all file changes
 set undofile
 

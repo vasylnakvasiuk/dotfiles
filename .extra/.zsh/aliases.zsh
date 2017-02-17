@@ -35,6 +35,6 @@ unset bitcoin_progress
 alias watch="watch "
 
 # k alias
-alias l="k -Ah"
+alias l="k -Ah --no-vcs"
 alias j="z"
 alias m="vim -c MagitOnly"
