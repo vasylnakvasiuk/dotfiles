@@ -235,6 +235,8 @@ nnoremap <silent> <leader>z :MaximizerToggle<CR>
 
 " | w0rp/ale | {{{
 let g:ale_lint_on_save = 1
+let g:ale_set_quickfix = 1
+let g:ale_set_loclist = 0
 
 " Change ALE highlight colors
 highlight ALEErrorSign ctermbg=18 ctermfg=red
@@ -280,7 +282,7 @@ nnoremap U :UndotreeToggle<CR>
 " | mbbill/undotree | }}}
 
 
-" Grepper settings {{{
+" mhinz/vim-grepper {{{
 let g:grepper = {}
 let g:grepper.highlight = 1
 let g:grepper.tools = ['ag']
@@ -292,4 +294,4 @@ let g:grepper.ag.grepprg .= " --hidden"
 nnoremap <leader>gr :Grepper -query<space>
 nmap gr  <plug>(GrepperOperator)
 xmap gr  <plug>(GrepperOperator)
-" }}}
+" mhinz/vim-grepper }}}

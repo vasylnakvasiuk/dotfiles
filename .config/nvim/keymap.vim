@@ -81,3 +81,6 @@ nnoremap <silent> ]<space> :pu _<CR>:'[-1<cr>
 
 " Jump to tag smartly
 nnoremap <C-]> g<C-]>
+
+" Switch to alternate buffer
+nnoremap <leader>j <c-^>
