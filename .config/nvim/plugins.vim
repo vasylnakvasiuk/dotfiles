@@ -234,6 +234,9 @@ nnoremap <silent> <leader>z :MaximizerToggle<CR>
 
 " | w0rp/ale | {{{
 let g:ale_lint_on_save = 1
+let g:ale_lint_delay = 250
+
+" Use quickfix list
 let g:ale_set_quickfix = 1
 let g:ale_set_loclist = 0
 
@@ -286,6 +289,14 @@ let g:grepper = {}
 let g:grepper.highlight = 1
 let g:grepper.tools = ['ag']
 let g:grepper.prompt = 0
+
+" Hide and open location list window automatically after linting is over
+let g:grepper.open = 0
+autocmd User Grepper lopen
+
+" Use location list
+let g:grepper.quickfix = 0
+
 " Search in hidden fields with ag
 runtime autoload/grepper.vim
 let g:grepper.ag.grepprg .= " --hidden"
