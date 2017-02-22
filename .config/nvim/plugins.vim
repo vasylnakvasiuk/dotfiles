@@ -112,13 +112,13 @@ nnoremap <silent> <C-P> :FzfFiles<CR>
 nnoremap <silent> <leader>/ :FzfBLines<CR>
 nnoremap <silent> <leader>b :FzfBuffers<CR>
 nnoremap <silent> <leader>r :FzfHistory<CR>
-nnoremap <silent> <leader>q/ :FzfHistory/<CR>
-nnoremap <silent> <leader>q: :FzfHistory:<CR>
+nnoremap <silent> <leader>g/ :FzfHistory/<CR>
+nnoremap <silent> <leader>g: :FzfHistory:<CR>
 nnoremap <silent> <leader>p :FzfCommands<CR>
 nnoremap <silent> <leader>t :FzfBTags<CR>
 nnoremap <silent> <leader>T :FzfTags<CR>
-nnoremap <silent> <leader>g :FzfGFiles?<CR>
-nnoremap <silent> <leader>G :FzfGFiles<CR>
+nnoremap <silent> <leader>gf :FzfGFiles?<CR>
+nnoremap <silent> <leader>gF :FzfGFiles<CR>
 
 imap <c-x><c-l> <plug>(fzf-complete-line)
 imap <c-x><c-f> <plug>(fzf-complete-path)
@@ -205,13 +205,12 @@ let g:jedi#smart_auto_mappings = 0
 let g:jedi#auto_vim_configuration = 0
 
 " Remap all jedi keys
-let g:jedi#goto_command = "<leader>jj"
-let g:jedi#goto_assignments_command = "<leader>jg"
+let g:jedi#goto_command = "<leader>gg"
+let g:jedi#goto_assignments_command = "<leader>ga"
 let g:jedi#goto_definitions_command = ""
 let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>ju"
+let g:jedi#usages_command = "<leader>gu"
 let g:jedi#completions_command = ""
-let g:jedi#rename_command = "<leader>jr"
 
 set completeopt-=preview
 " | jedi-vim | }}}
