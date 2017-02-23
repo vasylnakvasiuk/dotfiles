@@ -13,7 +13,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'neomake/neomake'
 Plug 'w0rp/ale'
 Plug 'Valloric/ListToggle'
 Plug 'dyng/ctrlsf.vim'
