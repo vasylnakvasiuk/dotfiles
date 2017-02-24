@@ -200,6 +200,7 @@ au FileType python let b:delimitMate_nesting_quotes = ["'"]
 " | jedi-vim | {{{
 " Disable jedi completions
 let g:jedi#completions_enabled = 0
+let g:jedi#auto_initialization = 0
 let g:jedi#smart_auto_mappings = 0
 let g:jedi#auto_vim_configuration = 0
 
