@@ -37,4 +37,4 @@ alias watch="watch "
 # k alias
 alias l="k -Ah --no-vcs"
 alias j="z"
-alias mo="vim -c MagitOnly"
+alias mg="vim -c MagitOnly"
