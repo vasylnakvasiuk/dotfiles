@@ -20,6 +20,9 @@ endif
 " Enable line numbers
 set number
 
+" Turn on mouse for all modes
+set mouse=a
+
 " Highlight current line
 set cursorline
 
