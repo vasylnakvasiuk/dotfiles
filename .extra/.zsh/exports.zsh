@@ -25,6 +25,11 @@ export FZF_DEFAULT_OPTS='--color=dark,bg+:18 --bind=ctrl-z:toggle-up --inline-in
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS='--no-reverse'
 
+# Powerlevel9k
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs virtualenv time)
+
+
 # With that fix <C-H> works in neovim
 # https://github.com/neovim/neovim/issues/2048#issuecomment-78045837
 export TERMINFO="$HOME/.terminfo"
