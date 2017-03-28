@@ -13,6 +13,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'Shougo/vimfiler.vim'
+Plug 'Shougo/unite.vim'
 Plug 'w0rp/ale'
 Plug 'Valloric/ListToggle'
 Plug 'dyng/ctrlsf.vim'
@@ -141,19 +143,25 @@ nmap <leader>n :JunkfileOpen<space>
 " | junkfile | }}}
 
 
-" | NERDTree | {{{
-" Find the current file in the tree
-nnoremap <silent> - :NERDTreeFind<CR>
+" | vimfiler | {{{
+" Edit files double clicking with mouse in vimfiler
+autocmd FileType vimfiler nmap <buffer> <2-LeftMouse> <Plug>(vimfiler_edit_file)
 
-" Toggle NERD tree window
-nnoremap <silent> _ :NERDTreeToggle<CR>
+" I'm used to switch splits with <c-l>, not <Tab>
+autocmd FileType vimfiler map <buffer> <c-l> <Plug>(vimfiler_switch_to_other_window)
+autocmd FileType vimfiler map <buffer> <Space> zz
+autocmd BufEnter vimfiler :AirlineRefresh<cr>
 
-" Show hidden files by default
-let g:NERDTreeShowHidden=1
+nnoremap <silent> <leader>f :VimFilerExplorer -find<cr>
+nnoremap <silent> - :VimFilerExplorer -find<cr>
 
-" Will open up a window level NERD tree instead of a netrw in the target window
-let g:NERDTreeHijackNetrw = 1
-" | NERDTree | }}}
+let g:vimfiler_quick_look_command = 'qlmanage -p'
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_tree_opened_icon = '▼'
+let g:vimfiler_tree_closed_icon = '▷'
+let g:vimfiler_tree_leaf_icon = ' '
+let g:vimfiler_ignore_pattern = ['^\.git$', '^\.DS_Store$', '^__pycache__$']
+" | vimfiler | }}}
 
 
 " | CtrlSF | {{{
