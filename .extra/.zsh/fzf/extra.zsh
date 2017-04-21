@@ -78,7 +78,7 @@ fzf-log() {
     fzf-down --height 70% --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
         --bind "ctrl-m:execute:
     (grep -o '[a-f0-9]\{7\}' | head -1 |
-    xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
+    xargs -I % sh -c 'git show --color=always % | diff-so-fancy | less --tabs=4 -RX') << 'FZF-EOF'
     {}
     FZF-EOF"
     zle redisplay
