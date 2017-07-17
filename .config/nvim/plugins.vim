@@ -18,7 +18,6 @@ Plug 'Shougo/unite.vim'
 Plug 'w0rp/ale'
 Plug 'Valloric/ListToggle'
 Plug 'dyng/ctrlsf.vim'
-Plug 'mhinz/vim-grepper'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
@@ -290,26 +289,3 @@ let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_WindowLayout = 2
 nnoremap U :UndotreeToggle<CR>
 " | mbbill/undotree | }}}
-
-
-" mhinz/vim-grepper {{{
-let g:grepper = {}
-let g:grepper.highlight = 1
-let g:grepper.tools = ['ag']
-let g:grepper.prompt = 0
-
-" Hide and open location list window automatically after linting is over
-let g:grepper.open = 0
-autocmd User Grepper lopen
-
-" Use location list
-let g:grepper.quickfix = 0
-
-" Search in hidden fields with ag
-runtime autoload/grepper.vim
-let g:grepper.ag.grepprg .= " --hidden"
-
-nnoremap <leader>gr :Grepper -query<space>
-nmap gr  <plug>(GrepperOperator)
-xmap gr  <plug>(GrepperOperator)
-" mhinz/vim-grepper }}}
