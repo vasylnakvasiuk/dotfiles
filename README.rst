@@ -26,7 +26,7 @@ Pre-installation
 .. code:: bash
 
     $ # Setup neovim for Python 3
-    $ mkvirtualenv neovim3 --python=/usr/local/bin/python3.6
+    $ mkvirtualenv neovim3 --python=/usr/local/bin/python3.7
     $ pip install neovim jedi isort && deactivate
     $ # Setup neovim for Python 2
     $ mkvirtualenv neovim2 --python=/usr/bin/python2.7
