@@ -12,12 +12,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree'
 Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/unite.vim'
 Plug 'w0rp/ale'
 Plug 'Valloric/ListToggle'
-Plug 'dyng/ctrlsf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
@@ -34,10 +32,7 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-eunuch'
 Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'blueyed/vim-diminactive'
-Plug 'junegunn/goyo.vim'
 Plug 'mbbill/undotree'
-Plug 'jreybert/vimagit'
 
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
@@ -161,19 +156,6 @@ let g:vimfiler_tree_closed_icon = '▷'
 let g:vimfiler_tree_leaf_icon = ' '
 let g:vimfiler_ignore_pattern = ['^\.git$', '^\.DS_Store$', '^__pycache__$']
 " | vimfiler | }}}
-
-
-" | CtrlSF | {{{
-let g:ctrlsf_position = 'left'
-let g:ctrlsf_winsize = '50%'
-
-nmap <leader>f/ <Plug>CtrlSFPrompt
-vmap <leader>f* <Plug>CtrlSFVwordPath
-nmap <leader>f* <Plug>CtrlSFCwordPath
-nmap <leader>ff <Plug>CtrlSFCwordPath<CR>
-nmap <leader>fn <Plug>CtrlSFPwordPath
-nnoremap <leader>ft :CtrlSFToggle<CR>
-" | CtrlSF | }}}
 
 
 " | vim-gitgutter | {{{
