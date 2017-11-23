@@ -2,6 +2,9 @@
     "terminal.integrated.fontFamily": "Hack",
     "editor.fontFamily": "Hack",
     "workbench.colorTheme": "Base16 Dark Eighties",
+    "workbench.colorCustomizations": {
+        "tab.inactiveBackground": "#292929"
+    },
     "editor.renderWhitespace": "all",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
