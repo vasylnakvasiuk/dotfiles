@@ -59,19 +59,17 @@ echo "  > Upgrading homebrew..."
 brew upgrade --all &> /dev/null
 
 echo "  > Sync dotfiles..."
-rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-general.png" --exclude "screenshot-neovim.png" --exclude "screenshot-iterm2-fonts.png" --exclude "TODO" -av . ~ &> /dev/null
+rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-general.png" --exclude "screenshot-neovim.png" --exclude "screenshot-iterm2-fonts.png" --exclude "TODO" --exclude ".extra/vscode/" -av . ~ &> /dev/null
+
+echo "  > Sync Visual Studio Code..."
+rsync --exclude ".DS_Store" -av ./.extra/vscode/settings.json ~/Library/Application\ Support/Code/User/ &> /dev/null
+
+echo "  > Installing Visual Studio Code extensions..."
+while read -r line; do code --install-extension "$line"; done <./.extra/vscode/extensions &> /dev/null
 
 unset BREW_PACKAGES
 unset install_brew_packages
 unset install_brew_cask_packages
 source ~/.zshrc
-
-echo -n '  > Do you want to update nvim plugins (y/n)? '
-read ans
-
-if [[ $ans == "y" ]]; then
-  echo "  > Updating nvim plugins..."
-  nvim +PlugInstall +qall
-fi
 
 echo "==> Done with setup."
