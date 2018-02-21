@@ -11,5 +11,6 @@
     "files.trimTrailingWhitespace": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.editor.tabSizing": "shrink"
+    "workbench.editor.tabSizing": "shrink",
+    "search.smartCase": true
 }
