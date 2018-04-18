@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BASE_PACKAGES=(zsh git git-extras neovim mc htop nmap arp-scan arpoison ettercap spoof-mac tor proxychains-ng wget mtr wrk tree ag jq jid tmux reattach-to-user-namespace cmatrix figlet fzf ranger ncdu task taskd tasksh watch pwgen coreutils z m-cli httpie diff-so-fancy)
+BASE_PACKAGES=(zsh git git-extras neovim mc htop nmap arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng wget mtr wrk tree ag jq jid tmux reattach-to-user-namespace cmatrix figlet fzf ranger ncdu watch pwgen coreutils z m-cli httpie diff-so-fancy)
 RANGER_PACKAGES=(highlight)
 CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font)
 
