@@ -56,7 +56,7 @@ echo "  > Installing homebrew cask packages..."
 install_brew_cask_packages
 
 echo "  > Upgrading homebrew..."
-brew upgrade --all &> /dev/null
+brew upgrade &> /dev/null
 
 echo "  > Sync dotfiles..."
 rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-general.png" --exclude "screenshot-neovim.png" --exclude "screenshot-iterm2-fonts.png" --exclude "TODO" --exclude ".extra/vscode/" -av . ~ &> /dev/null
