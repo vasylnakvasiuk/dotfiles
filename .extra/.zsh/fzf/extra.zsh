@@ -22,8 +22,7 @@ gb() {
   git branch -a --color=always | grep -v '/HEAD' | sort |
   fzf-down --ansi --multi --tac --preview-window right:70% \
     --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
-  sed 's/^..//' | cut -d' ' -f1 |
-  sed 's#^remotes/##'
+  sed 's/^..//' | cut -d' ' -f1 | sed 's#^remotes/##'
 }
 
 gt() {
@@ -66,8 +65,7 @@ fzf-checkout-branch() {
   git branch -a --color=always | grep -v '/HEAD' | sort |
   fzf-down --ansi --multi --tac --preview-window right:70% \
     --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
-  sed 's/^..//' | cut -d' ' -f1 |
-  sed 's#^remotes/##' | { read branch; git checkout $branch }
+  sed "s/.* //" | sed "s#remotes/[^/]*/##" | { read branch; git checkout $branch }
 }
 bindkey -s '^Gk' 'fzf-checkout-branch\n'
 
