@@ -94,7 +94,7 @@ My ``~/.extra/.zsh/local.zsh`` looks something like this:
     git config --global user.email "vaxxxa@gmail.com"
 
     # Go environment
-    export GOROOT=/usr/local/go
+    export GOROOT=/usr/local/opt/go/libexec
     export GOPATH=$HOME/Projects/gocode
     export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
