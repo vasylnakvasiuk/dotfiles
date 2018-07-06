@@ -103,3 +103,25 @@ bind-git-helper() {
 }
 bind-git-helper f b t r h
 unset -f bind-git-helper
+
+fzf-flog() {
+  is_in_git_repo || return
+  git diff --name-status "$@" --color=always |
+  fzf-down --height 70% --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
+    --bind "ctrl-m:execute:
+  ( head -1 | cut -f 2 | rev | cut -c 2- | rev |
+  xargs -I % sh -c 'git diff --color=always "$@" -- % | diff-so-fancy | less --tabs=4 -RX') << 'FZF-EOF'
+  {}
+  FZF-EOF" \
+    --bind "ctrl-l:execute:
+  ( head -1 | cut -f 2 | rev | cut -c 2- | rev |
+  xargs -I % sh -c 'git log --color=always --stat "$@" -- % | less --tabs=4 -RX') << 'FZF-EOF'
+  {}
+  FZF-EOF" \
+    --bind "ctrl-d:execute:
+  ( head -1 | cut -f 2 | rev | cut -c 2- | rev |
+  xargs -I % sh -c 'git log --color=always -p "$@" -- % | diff-so-fancy | less --tabs=4 -RX') << 'FZF-EOF'
+  {}
+  FZF-EOF"
+  zle redisplay
+}
