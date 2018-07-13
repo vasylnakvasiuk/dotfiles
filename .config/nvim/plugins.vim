@@ -14,7 +14,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/unite.vim'
-Plug 'w0rp/ale'
 Plug 'Valloric/ListToggle'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -207,36 +206,6 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let g:maximizer_set_default_mapping = 0
 nnoremap <silent> <leader>z :MaximizerToggle<CR>
 " | szw/vim-maximizer | }}}
-
-
-" | w0rp/ale | {{{
-let g:ale_lint_on_save = 1
-let g:ale_lint_delay = 250
-
-" Use quickfix list
-let g:ale_set_quickfix = 1
-let g:ale_set_loclist = 0
-
-" Change ALE highlight colors
-highlight ALEErrorSign ctermbg=18 ctermfg=red
-highlight ALEWarningSign ctermbg=18 ctermfg=yellow
-
-" let g:ale_sign_warning = ''
-" let g:ale_sign_error = ''
-let g:ale_sign_warning = '✖'
-let g:ale_sign_error = '⚠'
-nmap <silent> [e <Plug>(ale_previous_wrap)
-nmap <silent> ]e <Plug>(ale_next_wrap)
-" E501 -- line too long
-" E402 -- import not at top of file
-" E128 -- continuation line underindented
-" E225 -- missing whitespace around operator
-" E231 -- missing whitespace after ','
-" F403 -- import * used, unable to detect undefined names
-" F405 -- name may be undefined, or defined from * imports
-" E126 -- indentation error
-let g:ale_python_flake8_args = '--ignore=E501,E402,E128,E225,E231,F403,F405,E126'
-" | w0rp/ale | }}}
 
 
 " | nathanaelkane/vim-indent-guides | {{{

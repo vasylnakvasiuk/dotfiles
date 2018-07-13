@@ -32,33 +32,27 @@ Pre-installation
     $ mkvirtualenv neovim2 --python=/usr/bin/python2.7
     $ pip install neovim && deactivate
 
-5. Install flake8 to the system python environment:
-
-.. code:: bash
-
-    $ sudo pip2/pip3 install flake8 -U
-
-6. Install universal-ctags:
+5. Install universal-ctags:
 
 .. code:: bash
 
     $ brew tap universal-ctags/universal-ctags
     $ brew install --HEAD universal-ctags
 
-7. Install zsh-autosuggestions, zsh-syntax-highlighting:
+5. Install zsh-autosuggestions, zsh-syntax-highlighting:
 
 .. code:: bash
 
     $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
     $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-8. Install Powerlevel9k:
+7. Install Powerlevel9k:
 
 .. code:: bash
 
     $ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
-9. Install k:
+8. Install k:
 
 .. code:: bash
 
