@@ -42,7 +42,6 @@ Plug 'kana/vim-operator-user'
 Plug 'voithos/vim-python-matchit', {'for': 'python'}
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
-Plug 'fisadev/vim-isort', {'for': 'python'}
 Plug 'kh3phr3n/python-syntax', {'for': 'python'}
 Plug 'michaeljsmith/vim-indent-object', {'for': 'python'}
 Plug 'nathanaelkane/vim-indent-guides', {'for': 'python'}
