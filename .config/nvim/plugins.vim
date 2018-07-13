@@ -42,8 +42,6 @@ Plug 'kana/vim-operator-user'
 Plug 'voithos/vim-python-matchit', {'for': 'python'}
 Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
-Plug 'davidhalter/jedi-vim', {'for': 'python'}
-Plug 'zchee/deoplete-jedi', {'for': 'python'}
 Plug 'fisadev/vim-isort', {'for': 'python'}
 Plug 'kh3phr3n/python-syntax', {'for': 'python'}
 Plug 'michaeljsmith/vim-indent-object', {'for': 'python'}
@@ -195,26 +193,6 @@ au FileType python let b:delimitMate_expand_inside_quotes = 1
 " Helpful for triple quotes
 au FileType python let b:delimitMate_nesting_quotes = ["'"]
 " | delimitMate | }}}
-
-
-" | jedi-vim | {{{
-" Disable jedi completions
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_initialization = 0
-let g:jedi#smart_auto_mappings = 0
-let g:jedi#auto_vim_configuration = 0
-
-" Remap all jedi keys
-let g:jedi#goto_command = "<leader>gg"
-let g:jedi#goto_assignments_command = "<leader>ga"
-let g:jedi#goto_definitions_command = ""
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>gu"
-let g:jedi#completions_command = ""
-
-set completeopt-=preview
-" | jedi-vim | }}}
-
 
 " | python-syntax | {{{
 let python_highlight_all = 1
