@@ -119,7 +119,11 @@ And in ``~/.extra/.zsh/local-exports.zsh``, ``~/.extra/.zsh/local-aliases.zsh``,
 Colorscheme and font
 --------------------
 
-I'm using "Base16 Eighties Dark 256" colorscheme and `"Hack Font"`_. Colorscheme files you can find at ``.extra/.zsh/base16-shell/`` folder.
+I'm using "Base16 Eighties Dark 256" colorscheme and `"Hack Font"`_ + `"Knack Nerd Font"`_. These files you can find at ``.extra/.zsh/base16-shell/`` folder. Also I set different font size for ASCII and non-ASCII characters.
+
+.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-iterm2-fonts.png
+    :alt: fonts
+    :align: center
 
 
 Thanks to...
@@ -143,3 +147,4 @@ Thanks to...
 .. _color schemes: https://github.com/chriskempson/base16
 .. _Python support: https://neovim.io/doc/user/nvim_python.html
 .. _"Hack font": https://github.com/source-foundry/Hack
+.. _"Knack Nerd Font": https://github.com/ryanoasis/nerd-fonts
