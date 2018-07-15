@@ -28,10 +28,3 @@ export FZF_CTRL_T_OPTS='--no-reverse'
 # Powerlevel9k
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs virtualenv time)
-
-
-# With that fix <C-H> works in neovim
-# https://github.com/neovim/neovim/issues/2048#issuecomment-78045837
-export TERMINFO="$HOME/.terminfo"
-[[ -f ~/.$TERM.ti ]] || infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > ~/.$TERM.ti
-tic ~/.$TERM.ti
