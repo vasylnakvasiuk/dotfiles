@@ -58,7 +58,7 @@ Pre-installation
 
     $ git clone https://github.com/supercrabtree/k $HOME/.oh-my-zsh/custom/plugins/k
 
-9. Install Visual Studio Code shell command 'code'.
+9. `Install Visual Studio Code shell command 'code'`_.
 
 Installation
 ------------
