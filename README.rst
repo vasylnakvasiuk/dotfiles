@@ -58,6 +58,8 @@ Pre-installation
 
     $ git clone https://github.com/supercrabtree/k $HOME/.oh-my-zsh/custom/plugins/k
 
+9. Install Visual Studio Code shell command 'code'.
+
 Installation
 ------------
 
@@ -148,3 +150,4 @@ Thanks to...
 .. _Python support: https://neovim.io/doc/user/nvim_python.html
 .. _"Hack font": https://github.com/source-foundry/Hack
 .. _"Knack Nerd Font": https://github.com/ryanoasis/nerd-fonts
+.. _"Install Visual Studio Code shell command 'code'": https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
