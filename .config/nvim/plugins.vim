@@ -12,42 +12,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'Shougo/unite.vim'
-Plug 'Valloric/ListToggle'
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-commentary'
-Plug 'Shougo/junkfile.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'ryanoasis/vim-devicons'
-Plug 'honza/vim-snippets'
-Plug 'tpope/vim-eunuch'
 Plug 'fatih/vim-go'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
-
-Plug 'kana/vim-textobj-user'
-Plug 'sgur/vim-textobj-parameter'
-Plug 'kana/vim-operator-user'
 
 " Python plugins
 Plug 'kh3phr3n/python-syntax', {'for': 'python'}
-Plug 'michaeljsmith/vim-indent-object', {'for': 'python'}
-
-" HTML plugin: Highlight enclosing tags
-Plug 'Valloric/MatchTagAlways', {'for': ['xml', 'html', 'jinja', 'htmldjango']}
 
 " Enhancement internal functional
-Plug 'junegunn/vim-peekaboo'
-Plug 'thinca/vim-visualstar'
 Plug 'henrik/vim-indexed-search'
-
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
 call plug#end()
 
@@ -118,11 +91,6 @@ nnoremap <leader>gh :Ag<space>
 " | fzf | }}}
 
 
-" | junkfile | {{{
-nmap <leader>n :JunkfileOpen<space>
-" | junkfile | }}}
-
-
 " | vim-gitgutter | {{{
 " Reduce the delay of updating sign column to 250ms
 set updatetime=250
@@ -138,13 +106,6 @@ let g:gitgutter_realtime = 1
 let g:gitgutter_eager = 1
 nnoremap <silent> cog :GitGutterLineHighlightsToggle<cr>
 " | vim-gitgutter | }}}
-
-
-" | deoplete | {{{
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_ignore_case = 1
-let g:deoplete#enable_refresh_always = 1
-" | deoplete | }}}
 
 
 " | python-syntax | {{{

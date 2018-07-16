@@ -11,11 +11,6 @@ if filereadable(expand('~/.config/nvim/keymap.vim'))
   source ~/.config/nvim/keymap.vim
 endif
 
-if filereadable(expand('~/.config/nvim/functions.vim'))
-  " Include plugins list
-  source ~/.config/nvim/functions.vim
-endif
-
 
 " Enable line numbers
 set number
