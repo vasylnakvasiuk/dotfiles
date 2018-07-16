@@ -12,45 +12,35 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'Shougo/vimfiler.vim'
 Plug 'Shougo/unite.vim'
 Plug 'Valloric/ListToggle'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'Shougo/junkfile.vim'
-Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'szw/vim-maximizer'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'ryanoasis/vim-devicons'
-Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-eunuch'
 Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'mbbill/undotree'
 
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'kana/vim-operator-user'
 
 " Python plugins
-Plug 'voithos/vim-python-matchit', {'for': 'python'}
-Plug 'cespare/vim-toml', {'for': 'toml'}
-Plug 'hynek/vim-python-pep8-indent', {'for': 'python'}
 Plug 'kh3phr3n/python-syntax', {'for': 'python'}
 Plug 'michaeljsmith/vim-indent-object', {'for': 'python'}
-Plug 'nathanaelkane/vim-indent-guides', {'for': 'python'}
 
 " HTML plugin: Highlight enclosing tags
 Plug 'Valloric/MatchTagAlways', {'for': ['xml', 'html', 'jinja', 'htmldjango']}
 
 " Enhancement internal functional
 Plug 'junegunn/vim-peekaboo'
-Plug 'unblevable/quick-scope'
 Plug 'thinca/vim-visualstar'
 Plug 'henrik/vim-indexed-search'
 
@@ -133,27 +123,6 @@ nmap <leader>n :JunkfileOpen<space>
 " | junkfile | }}}
 
 
-" | vimfiler | {{{
-" Edit files double clicking with mouse in vimfiler
-autocmd FileType vimfiler nmap <buffer> <2-LeftMouse> <Plug>(vimfiler_edit_file)
-
-" I'm used to switch splits with <c-l>, not <Tab>
-autocmd FileType vimfiler map <buffer> <c-l> <Plug>(vimfiler_switch_to_other_window)
-autocmd FileType vimfiler map <buffer> <Space> zz
-autocmd BufEnter vimfiler :AirlineRefresh<cr>
-
-nnoremap <silent> <leader>f :VimFilerExplorer -find<cr>
-nnoremap <silent> - :VimFilerExplorer -find<cr>
-
-let g:vimfiler_quick_look_command = 'qlmanage -p'
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_tree_opened_icon = '▼'
-let g:vimfiler_tree_closed_icon = '▷'
-let g:vimfiler_tree_leaf_icon = ' '
-let g:vimfiler_ignore_pattern = ['^\.git$', '^\.DS_Store$', '^__pycache__$']
-" | vimfiler | }}}
-
-
 " | vim-gitgutter | {{{
 " Reduce the delay of updating sign column to 250ms
 set updatetime=250
@@ -178,53 +147,6 @@ let g:deoplete#enable_refresh_always = 1
 " | deoplete | }}}
 
 
-" | delimitMate | {{{
-" Turns on the expansion of <CR>
-let delimitMate_expand_cr = 1
-
-" Go outside quotes, parens, brackets, etc. (Duplicate for S-Tab)
-imap <C-L> <Plug>delimitMateS-Tab
-
-" Put triple quotes on the separate line after <CR>
-au FileType python let b:delimitMate_expand_inside_quotes = 1
-
-" Helpful for triple quotes
-au FileType python let b:delimitMate_nesting_quotes = ["'"]
-" | delimitMate | }}}
-
 " | python-syntax | {{{
 let python_highlight_all = 1
 " | python-syntax | }}}
-
-
-" | unblevable/quick-scope | {{{
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-" | unblevable/quick-scope | }}}
-
-
-" | szw/vim-maximizer | {{{
-let g:maximizer_set_default_mapping = 0
-nnoremap <silent> <leader>z :MaximizerToggle<CR>
-" | szw/vim-maximizer | }}}
-
-
-" | nathanaelkane/vim-indent-guides | {{{
-hi IndentGuidesOdd  ctermbg=18
-hi IndentGuidesEven ctermbg=18
-nnoremap cog :IndentGuidesToggle<CR>
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
-" | nathanaelkane/vim-indent-guides | }}}
-
-
-" | SirVer/ultisnips | {{{
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-" | SirVer/ultisnips | }}}
-
-
-" | mbbill/undotree | {{{
-let g:undotree_SetFocusWhenToggle = 1
-let g:undotree_WindowLayout = 2
-nnoremap U :UndotreeToggle<CR>
-" | mbbill/undotree | }}}
