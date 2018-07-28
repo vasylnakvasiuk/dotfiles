@@ -1,5 +1,4 @@
-# GIT heart FZF
-# -------------
+# -------------------------------- Git bindings --------------------------------
 
 is_in_git_repo() {
   git rev-parse HEAD > /dev/null 2>&1
@@ -94,7 +93,7 @@ join-lines() {
 }
 
 bind-git-helper() {
-  local char
+  local c
   for c in $@; do
     eval "fzf-g$c-widget() { local result=\$(g$c | join-lines); zle reset-prompt; LBUFFER+=\$result }"
     eval "zle -N fzf-g$c-widget"
@@ -105,6 +104,8 @@ bind-git-helper f b t r h
 unset -f bind-git-helper
 
 fzf-flog() {
+  # Usage:
+  # $ fzf-flog <revision range>
   is_in_git_repo || return
   git diff --name-status "$@" --color=always |
   fzf-down --height 70% --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
@@ -125,3 +126,21 @@ fzf-flog() {
   FZF-EOF"
   zle redisplay
 }
+
+# -------------------------------- Git bindings --------------------------------
+
+
+# -------------------------------- Quick bindings --------------------------------
+
+quick-docker-containers() {
+  docker ps -a --format "table {{.Names}}\t{{.ID}}\t{{.Status}}" | tail -n +2 |
+  fzf-down --ansi --multi --tac --preview-window right:60% \
+    --preview 'docker top {1} | head -'$LINES |
+  cut -d' ' -f1
+}
+
+quick-gd-widget() { local result=$(quick-docker-containers | join-lines); zle reset-prompt; LBUFFER+=$result }
+zle -N quick-gd-widget
+bindkey '^Qd' quick-gd-widget
+
+# -------------------------------- Quick bindings --------------------------------
