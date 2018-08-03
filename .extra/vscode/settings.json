@@ -1,6 +1,7 @@
 {
     "terminal.integrated.fontFamily": "Hack",
     "editor.fontFamily": "Hack",
+    "editor.wordWrap": "on",
     "workbench.colorTheme": "Base16 Dark Eighties",
     "workbench.colorCustomizations": {
         "tab.inactiveBackground": "#292929"
