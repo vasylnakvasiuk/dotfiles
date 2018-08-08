@@ -8,6 +8,9 @@ export ARCHFLAGS="-arch x86_64"
 # Prefer US English and use UTF-8
 export LANG=en_US.UTF-8
 
+# Less configuration
+LESS='-i -M -R'
+
 # PATH environment variable
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/.extra/bin"
 
