@@ -13,5 +13,6 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.tabSizing": "shrink",
-    "search.smartCase": true
+    "search.smartCase": true,
+    "breadcrumbs.enabled": true
 }
