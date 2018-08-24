@@ -34,7 +34,15 @@ unset bitcoin_progress
 # For correct work `watch` + `aliases`
 alias watch="watch "
 
-# k alias
+# Use pretty ls ()
 alias l="k -Ah --no-vcs"
+
+# Use j as z
 alias j="z"
-alias mg="vim -c MagitOnly"
+
+alias preview="fzf --preview 'bat --color \"always\" {}' --bind='ctrl-o:execute(code {})+abort'"
+alias cat="bat"
+alias ping="prettyping --nolegend"
+alias fd="fd -H"
+alias du="ncdu --color dark -r -x"
+alias help="tldr"
