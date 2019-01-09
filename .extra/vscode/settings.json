@@ -4,7 +4,10 @@
     "editor.wordWrap": "on",
     "workbench.colorTheme": "Base16 Dark Eighties",
     "workbench.colorCustomizations": {
-        "tab.inactiveBackground": "#292929"
+        "tab.inactiveBackground": "#292929",
+        "statusBar.background": "#383838",
+        "statusBar.noFolderBackground" : "#383838",
+        "statusBar.debuggingBackground": "#383838"
     },
     "editor.renderWhitespace": "all",
     "files.insertFinalNewline": true,
