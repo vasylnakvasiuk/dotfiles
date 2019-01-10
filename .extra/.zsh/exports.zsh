@@ -1,6 +1,6 @@
 # Preferred editor for local and remote sessions
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='code --wait'
+export VISUAL='code --wait'
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
