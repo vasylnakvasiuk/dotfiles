@@ -2,12 +2,12 @@
 
 BASE_PACKAGES=(zsh git git-extras neovim mc htop nmap arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng wget mtr wrk tree ag rg jq jid tmux reattach-to-user-namespace cmatrix figlet fzf ranger ncdu watch pwgen coreutils z m-cli httpie diff-so-fancy go grc bat prettyping fd tldr noti entr exa)
 RANGER_PACKAGES=(highlight)
-CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font)
+CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font font-fira-code font-firacode-nerd-font)
 
 BREW_PACKAGES=("${BASE_PACKAGES[@]}" "${RANGER_PACKAGES[@]}")
 
-function tap_brew_caskroom_fonts() {
-      brew tap | grep caskroom/fonts > /dev/null || brew tap caskroom/fonts
+function tap_brew_cask_fonts() {
+    brew tap | grep homebrew/cask-fonts > /dev/null || brew tap homebrew/cask-fonts
 }
 
 function install_brew_packages() {
@@ -46,8 +46,8 @@ git pull &> /dev/null
 echo "  > Updating homebrew..."
 brew update &> /dev/null
 
-echo "  > Tap cask caskroom/fonts..."
-tap_brew_caskroom_fonts
+echo "  > Tap cask homebrew/cask-fonts..."
+tap_brew_cask_fonts
 
 echo "  > Installing homebrew packages..."
 install_brew_packages
@@ -57,6 +57,9 @@ install_brew_cask_packages
 
 echo "  > Upgrading homebrew..."
 brew upgrade &> /dev/null
+
+echo "  > Upgrading homebrew cask..."
+brew cask upgrade &> /dev/null
 
 echo "  > Sync dotfiles..."
 rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-general.png" --exclude "screenshot-neovim.png" --exclude "screenshot-iterm2-fonts.png" --exclude "TODO" --exclude ".extra/vscode/" -av . ~ &> /dev/null
