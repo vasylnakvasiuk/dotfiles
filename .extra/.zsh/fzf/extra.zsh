@@ -142,3 +142,12 @@ zle -N quick-gd-widget
 bindkey '^Qd' quick-gd-widget
 
 # -------------------------------- Quick bindings --------------------------------
+
+diskripper() {
+  local VOLUME FILENAME
+
+  FILENAME=$(date +"%Y_%m_%d_%H_%M_%S").iso
+  VOLUME=`ls /Volumes/ | fzf-down` \
+    && hdiutil makehybrid -iso -joliet -o $FILENAME /Volumes/$VOLUME \
+    && noti -t "Disk '$VOLUME' is ripped" -m "'$(pwd)/$FILENAME' is successfully created"
+}
