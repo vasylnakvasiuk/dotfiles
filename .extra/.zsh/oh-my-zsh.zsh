@@ -24,10 +24,13 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(zsh-autosuggestions zsh-syntax-highlighting docker extract)
+plugins=(zsh-completions zsh-autosuggestions zsh-syntax-highlighting docker extract encode64 httpie)
 
 # Install oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
+
+# Reloading the completion.
+autoload -U compinit && compinit
 
 # Hide hostname and username.
 prompt_context () { }

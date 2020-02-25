@@ -39,10 +39,11 @@ Pre-installation
     $ brew tap universal-ctags/universal-ctags
     $ brew install --HEAD universal-ctags
 
-5. Install zsh-autosuggestions, zsh-syntax-highlighting:
+5. Install zsh-completions, zsh-autosuggestions, zsh-syntax-highlighting:
 
 .. code:: bash
 
+    $ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
     $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
     $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
