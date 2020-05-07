@@ -51,7 +51,7 @@ Pre-installation
 
 .. code:: bash
 
-    $ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+    $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
 8. `Install`_ Visual Studio Code shell command 'code'.
 
@@ -116,7 +116,7 @@ And in ``~/.extra/.zsh/local-exports.zsh``, ``~/.extra/.zsh/local-aliases.zsh``,
 Colorscheme and font
 --------------------
 
-I'm using "Base16 Eighties Dark 256" colorscheme and `"Hack Font"`_ + `"Knack Nerd Font"`_. Colorscheme files you can find at ``.extra/.zsh/base16-shell/`` folder. Also I set different font size for ASCII and non-ASCII characters.
+I'm using "Base16 Eighties Dark 256" colorscheme and `"Fira Code"`_ + `"Fira Code Nerd Font"`_. Colorscheme files you can find at ``.extra/.zsh/base16-shell/`` folder. Also I set different font size for ASCII and non-ASCII characters.
 
 .. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-iterm2-fonts.png
     :alt: fonts
@@ -143,6 +143,6 @@ Thanks to...
 .. _Chris Kempson: https://github.com/chriskempson
 .. _color schemes: https://github.com/chriskempson/base16
 .. _Python support: https://neovim.io/doc/user/nvim_python.html
-.. _"Hack font": https://github.com/source-foundry/Hack
-.. _"Knack Nerd Font": https://github.com/ryanoasis/nerd-fonts
+.. _"Fira Code": https://github.com/tonsky/FiraCode
+.. _"Fira Code Nerd Font": https://github.com/ryanoasis/nerd-fonts
 .. _Install: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
