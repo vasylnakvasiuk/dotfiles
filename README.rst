@@ -47,7 +47,7 @@ Pre-installation
     $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
     $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-7. Install Powerlevel9k:
+7. Install Powerlevel10k:
 
 .. code:: bash
 
