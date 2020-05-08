@@ -2,7 +2,7 @@
 
 BASE_PACKAGES=(zsh git git-extras neovim mc htop nmap arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng wget mtr wrk tree ag rg jq jid tmux reattach-to-user-namespace cmatrix figlet fzf ranger ncdu watch pwgen coreutils z m-cli httpie diff-so-fancy go grc bat prettyping fd tldr noti entr exa)
 RANGER_PACKAGES=(highlight)
-CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font font-fira-code font-firacode-nerd-font)
+CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font font-fira-code font-firacode-nerd-font anybar)
 
 BREW_PACKAGES=("${BASE_PACKAGES[@]}" "${RANGER_PACKAGES[@]}")
 
