@@ -12,15 +12,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'fatih/vim-go'
 
 " Python plugins
 Plug 'kh3phr3n/python-syntax', {'for': 'python'}
-
-" Enhancement internal functional
-Plug 'henrik/vim-indexed-search'
 
 call plug#end()
 
@@ -89,23 +85,6 @@ let g:fzf_history_dir = '~/.fzf-history'
 
 nnoremap <leader>gh :Ag<space>
 " | fzf | }}}
-
-
-" | vim-gitgutter | {{{
-" Reduce the delay of updating sign column to 250ms
-set updatetime=250
-
-" Nice uniform gitgutter signs
-let g:gitgutter_sign_added = '▎'
-let g:gitgutter_sign_modified = '▎'
-let g:gitgutter_sign_removed = '▎'
-let g:gitgutter_sign_removed_first_line = '▔'
-let g:gitgutter_sign_modified_removed = '▎'
-
-let g:gitgutter_realtime = 1
-let g:gitgutter_eager = 1
-nnoremap <silent> cog :GitGutterLineHighlightsToggle<cr>
-" | vim-gitgutter | }}}
 
 
 " | python-syntax | {{{
