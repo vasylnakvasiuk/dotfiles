@@ -21,18 +21,7 @@ Pre-installation
 1. Install Homebrew_.
 2. Install unix shell – zsh_ (Z shell) and set ``zsh`` as your `default shell`_.
 3. Install zsh configuration framework oh-my-zsh_.
-4. Install `Python support`_ for neovim:
-
-.. code:: bash
-
-    $ # Setup neovim for Python 3
-    $ mkvirtualenv neovim3 --python=/usr/local/bin/python3.7
-    $ pip install neovim && deactivate
-    $ # Setup neovim for Python 2
-    $ mkvirtualenv neovim2 --python=/usr/bin/python2.7
-    $ pip install neovim && deactivate
-
-5. Install universal-ctags:
+4. Install universal-ctags:
 
 .. code:: bash
 
@@ -47,13 +36,13 @@ Pre-installation
     $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
     $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-7. Install Powerlevel10k:
+6. Install Powerlevel10k:
 
 .. code:: bash
 
     $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
-8. `Install`_ Visual Studio Code shell command 'code'.
+7. `Install`_ Visual Studio Code shell command 'code'.
 
 Installation
 ------------

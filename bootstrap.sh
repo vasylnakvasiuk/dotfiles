@@ -2,7 +2,7 @@
 
 BASE_PACKAGES=(zsh git git-extras neovim mc htop nmap arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng wget mtr wrk tree ag rg jq jid tmux reattach-to-user-namespace cmatrix figlet fzf ranger ncdu muesli/homebrew-tap/duf watch pwgen coreutils z m-cli httpie diff-so-fancy go grc bat prettyping fd tldr noti entr exa)
 RANGER_PACKAGES=(highlight)
-CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font font-fira-code font-firacode-nerd-font anybar)
+CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font font-fira-code font-fira-code-nerd-font anybar)
 
 BREW_PACKAGES=("${BASE_PACKAGES[@]}" "${RANGER_PACKAGES[@]}")
 
@@ -24,7 +24,7 @@ function install_brew_packages() {
 function install_brew_cask_packages() {
     for index in $CASK_PACKAGES; do
         echo "    > Installing (cask) $index..."
-        brew cask install $index &> /dev/null
+        brew install --cask $index &> /dev/null
     done
 }
 
@@ -59,7 +59,7 @@ echo "  > Upgrading homebrew..."
 brew upgrade &> /dev/null
 
 echo "  > Upgrading homebrew cask..."
-brew cask upgrade &> /dev/null
+brew upgrade --cask &> /dev/null
 
 echo "  > Sync dotfiles..."
 rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-general.png" --exclude "screenshot-neovim.png" --exclude "screenshot-iterm2-fonts.png" --exclude "TODO" --exclude ".extra/vscode/" -av . ~ &> /dev/null
