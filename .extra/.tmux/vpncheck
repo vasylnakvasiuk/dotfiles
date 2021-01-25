@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if scutil --nc list | grep -q "Connected"; then
+    echo "VPN"
+fi
