@@ -21,14 +21,7 @@ Pre-installation
 1. Install Homebrew_.
 2. Install unix shell – zsh_ (Z shell) and set ``zsh`` as your `default shell`_.
 3. Install zsh configuration framework oh-my-zsh_.
-4. Install universal-ctags:
-
-.. code:: bash
-
-    $ brew tap universal-ctags/universal-ctags
-    $ brew install --HEAD universal-ctags
-
-5. Install zsh-completions, zsh-autosuggestions, zsh-syntax-highlighting:
+4. Install zsh-completions, zsh-autosuggestions, zsh-syntax-highlighting:
 
 .. code:: bash
 
@@ -36,13 +29,13 @@ Pre-installation
     $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
     $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-6. Install Powerlevel10k:
+5. Install Powerlevel10k:
 
 .. code:: bash
 
     $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
-7. `Install`_ Visual Studio Code shell command 'code'.
+6. `Install`_ Visual Studio Code shell command 'code'.
 
 Installation
 ------------
@@ -77,8 +70,6 @@ My ``~/.extra/.zsh/local.zsh`` looks something like this:
     export GOROOT=/usr/local/opt/go/libexec
     export GOPATH=$HOME/Projects/gocode
     export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
-    source /usr/local/bin/virtualenvwrapper.sh
 
 You can overwrite something using ``~/.extra/.zsh/local.zsh``. For example:
 

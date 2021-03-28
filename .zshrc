@@ -9,4 +9,4 @@ done
 unset file
 
 [ -f ~/.extra/.zsh/fzf/fzf.zsh ] && source ~/.extra/.zsh/fzf/fzf.zsh
-source /usr/local/etc/profile.d/z.sh
+source /opt/homebrew/etc/profile.d/z.sh

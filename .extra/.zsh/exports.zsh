@@ -12,7 +12,7 @@ export LANG=en_US.UTF-8
 LESS='-i -M -R'
 
 # PATH environment variable
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/.extra/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/homebrew/bin:$HOME/.extra/bin"
 
 # Base16 Shell
 BASE16_SCHEME="eighties"

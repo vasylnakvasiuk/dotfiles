@@ -80,7 +80,6 @@ autocmd VimEnter * command! -bang -nargs=* Ag
   \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
   \                 <bang>0)
 
-let g:fzf_tags_command = 'ctags --languages=python --python-kinds=-iv -R'
 let g:fzf_history_dir = '~/.fzf-history'
 
 nnoremap <leader>gh :Ag<space>
