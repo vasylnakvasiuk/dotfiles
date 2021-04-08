@@ -35,8 +35,8 @@ unset bitcoin_progress
 alias watch="watch "
 
 # Use pretty ls
-alias l="exa -lagh --time-style long-iso"
-alias ll="exa -laaghHimuU --time-style long-iso --git"
+alias l="exa -lagh --time-style long-iso --octal-permissions --icons"
+alias ll="exa -laaghHimuU --time-style long-iso --git --octal-permissions --icons"
 
 # Use j as z
 alias j="z"
