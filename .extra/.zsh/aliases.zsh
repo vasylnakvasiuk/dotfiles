@@ -13,10 +13,6 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
-# Show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles 1 && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles 0 && killall Finder"
-
 # Force tmux to assume the terminal supports 256 colours
 alias tmux="tmux -2"
 
