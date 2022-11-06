@@ -35,7 +35,12 @@ Pre-installation
 
     $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
-6. `Install`_ Visual Studio Code shell command 'code'.
+6. Install Visual Studio Code `shell command`_ 'code'.
+7. Install `AstroNvim`_:
+
+.. code:: bash
+    $ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+
 
 Installation
 ------------
@@ -122,7 +127,7 @@ Thanks to...
 .. _dotfiles collection: https://github.com/chrishunt/dot-files
 .. _Chris Kempson: https://github.com/chriskempson
 .. _color schemes: https://github.com/chriskempson/base16
-.. _Python support: https://neovim.io/doc/user/nvim_python.html
 .. _"Fira Code": https://github.com/tonsky/FiraCode
 .. _"Fira Code Nerd Font": https://github.com/ryanoasis/nerd-fonts
-.. _Install: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+.. _shell command: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+.. _AstroNvim: https://github.com/AstroNvim/AstroNvim

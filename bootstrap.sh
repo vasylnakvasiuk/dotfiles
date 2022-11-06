@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BREW_PACKAGES=(zsh git git-extras neovim mc htop nmap arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng wget mtr wrk tree ag rg jq jid tmux reattach-to-user-namespace cmatrix figlet fzf ncdu muesli/homebrew-tap/duf watch pwgen coreutils z m-cli httpie diff-so-fancy go grc bat prettyping fd tldr noti entr exa)
+BREW_PACKAGES=(zsh git git-extras neovim mc htop nmap arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng wget mtr wrk tree ag rg jq jid tmux reattach-to-user-namespace cmatrix figlet fzf ncdu muesli/homebrew-tap/duf watch pwgen coreutils z m-cli httpie diff-so-fancy go grc bat prettyping fd tldr noti entr exa bottom lf lazygit)
 CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font font-fira-code font-fira-code-nerd-font anybar)
 
 function tap_brew_cask_fonts() {
@@ -66,6 +66,9 @@ rsync --exclude ".DS_Store" -av ./.extra/vscode/settings.json ~/Library/Applicat
 
 echo "  > Installing Visual Studio Code extensions..."
 while read -r line; do code --install-extension "$line"; done <./.extra/vscode/extensions &> /dev/null
+
+echo "  > Install/update nvim packages"
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 unset BREW_PACKAGES
 unset install_brew_packages
