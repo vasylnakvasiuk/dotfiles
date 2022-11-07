@@ -74,7 +74,7 @@ fzf-log() {
   fzf-down --height 70% --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
     --bind "ctrl-m:execute:
   (grep -o '[a-f0-9]\{7\}' | head -1 |
-  xargs -I % sh -c 'git show --color=always % | diff-so-fancy | less --tabs=4 -RX') << 'FZF-EOF'
+  xargs -I % sh -c 'git show --color=always % | delta --paging always') << 'FZF-EOF'
   {}
   FZF-EOF"
   zle redisplay
@@ -109,17 +109,17 @@ fzf-flog() {
   fzf-down --height 70% --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
     --bind "ctrl-m:execute:
   ( head -1 | cut -f 2 | rev | cut -c 2- | rev |
-  xargs -I % sh -c 'git diff --color=always "$@" -- % | diff-so-fancy | less --tabs=4 -RX') << 'FZF-EOF'
+  xargs -I % sh -c 'git diff --color=always "$@" -- % | delta --paging always') << 'FZF-EOF'
   {}
   FZF-EOF" \
     --bind "ctrl-l:execute:
   ( head -1 | cut -f 2 | rev | cut -c 2- | rev |
-  xargs -I % sh -c 'git log --color=always --stat "$@" -- % | less --tabs=4 -RX') << 'FZF-EOF'
+  xargs -I % sh -c 'git log --color=always --stat "$@" -- % | delta --paging always') << 'FZF-EOF'
   {}
   FZF-EOF" \
     --bind "ctrl-d:execute:
   ( head -1 | cut -f 2 | rev | cut -c 2- | rev |
-  xargs -I % sh -c 'git log --color=always -p "$@" -- % | diff-so-fancy | less --tabs=4 -RX') << 'FZF-EOF'
+  xargs -I % sh -c 'git log --color=always -p "$@" -- % | delta --paging always') << 'FZF-EOF'
   {}
   FZF-EOF"
   zle redisplay
