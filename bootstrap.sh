@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BREW_PACKAGES=(zsh git git-extras neovim mc htop bottom btop bpytop ctop hacker1024/hacker1024/coretemp nmap arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng wget mtr wrk tree ag rg jq jid tmux reattach-to-user-namespace cmatrix figlet fzf ncdu dust muesli/homebrew-tap/duf watch entr fswatch watchman pwgen coreutils z m-cli httpie diff-so-fancy go grc bat eth-p/software/bat-extras prettyping fd tldr noti exa lf lazygit delta)
+BREW_PACKAGES=(zsh git git-extras neovim helix mc htop bottom btop bpytop ctop hacker1024/hacker1024/coretemp nmap arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng wget mtr wrk tree ag rg jq jid tmux reattach-to-user-namespace cmatrix figlet fzf ncdu dust muesli/homebrew-tap/duf watch entr fswatch watchman pwgen coreutils z m-cli httpie diff-so-fancy go grc bat eth-p/software/bat-extras prettyping fd tldr noti exa lf lazygit gitui delta)
 CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font font-fira-code font-fira-code-nerd-font anybar)
 
 function tap_brew_cask_fonts() {
