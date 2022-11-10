@@ -37,12 +37,11 @@ alias ll="exa -laaghHimuU --time-style long-iso --git --octal-permissions --icon
 # Use j as z
 alias j="z"
 
-# A simple terminal UI for git commands
-alias lg="lazygit"
-
-alias preview="fzf --preview 'bat --color \"always\" {}' --bind='ctrl-o:execute(code {})+abort'"
+alias preview="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' --bind='ctrl-o:execute(code {})+abort'"
 alias cat="bat"
 alias ping="prettyping --nolegend"
 alias fd="fd -H"
 alias du="ncdu --color dark -r -x"
 alias help="tldr"
+alias lg="lazygit"
+alias xcd='cd "$(xplr --print-pwd-as-result)"'
