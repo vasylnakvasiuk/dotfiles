@@ -1,0 +1,12 @@
+[core]
+	pager = delta
+[diff]
+	colorMoved = default
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	diff-so-fancy = true
+	line-numbers = true
+[merge]
+	conflictstyle = diff3

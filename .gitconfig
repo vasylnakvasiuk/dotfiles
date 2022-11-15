@@ -1,25 +1,15 @@
 [core]
-	pager = delta
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	editor = code --wait
 	autocrlf = false
 	safecrlf = true
 	excludesfile = ~/.gitignore
-[diff]
-	colorMoved = default
-[interactive]
-	diffFilter = delta --color-only
-[delta]
-	navigate = true
-	diff-so-fancy = true
-	line-numbers = true
 [pull]
 	rebase = true
 [push]
 	config = default
 	default = simple
 [merge]
-	conflictstyle = diff3
 	summary = true
 	ff = only
 [fetch]
@@ -60,3 +50,6 @@
 	wp      = whatchanged --decorate -p
 	tree    = log --oneline --decorate --all --graph
 	l       = log --pretty='format:%C(yellow)%h %C(blue)%ad %C(reset)%s%C(red)%d %C(green)%an%C(reset), %C(cyan)%ar' --date=short
+[include]
+	path = .gitconfig.delta
+	path = .gitconfig.difftastic
