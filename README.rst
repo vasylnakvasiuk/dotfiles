@@ -39,6 +39,7 @@ Pre-installation
 7. Install `AstroNvim`_:
 
 .. code:: bash
+
     $ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 
