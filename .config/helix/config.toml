@@ -1,4 +1,4 @@
 theme = "base16_terminal"
 
-[editor]
-line-number = "relative"
+[editor.file-picker]
+hidden = false
