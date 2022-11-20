@@ -1,1 +1,4 @@
 - change MODE_INDICATOR="%{$fg_bold[red]%}<%{$fg[red]%}<<%{$reset_color%}"
+- use stow
+- Powerlevel9k -> Powerlevel10k
+- zsh vs fish vs nushell vs
