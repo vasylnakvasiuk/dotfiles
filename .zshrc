@@ -9,4 +9,4 @@ done
 unset file
 
 [ -f ~/.extra/.zsh/fzf/fzf.zsh ] && source ~/.extra/.zsh/fzf/fzf.zsh
-source /opt/homebrew/etc/profile.d/z.sh
+eval "$(zoxide init zsh)"
