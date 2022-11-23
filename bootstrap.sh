@@ -2,15 +2,17 @@
 
 BREW_PACKAGES=(zsh git git-extras topgrade micro neovim kakoune helix mc lf ranger xplr
                htop bottom btop bpytop ctop hacker1024/hacker1024/coretemp
-               nmap arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng
-               wget mtr wrk hyperfine tree rg fd yq jq jid tmux reattach-to-user-namespace
+               nmap rustscan arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng
+               wget wireshark termshark mtr iperf3 speedtest socat wrk hyperfine
+               tree rg fd yq jq jid tmux reattach-to-user-namespace
                cmatrix figlet fzf sk ncdu dust duf watch entr fswatch watchman pwgen coreutils
                zoxide m-cli httpie diff-so-fancy delta difftastic afnanenayet/tap/diffsitter
                go grc bat eth-p/software/bat-extras prettyping tldr noti exa lsd
-               lazygit gitui navi procs podman podman-desktop)
+               lazygit gitui navi procs podman podman-desktop lazydocker dive)
 CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font font-fira-code font-fira-code-nerd-font anybar)
 
-function tap_brew_cask_fonts() {
+function tap_brew_packages() {
+    brew tap | grep teamookla/speedtest > /dev/null || brew tap teamookla/speedtest
     brew tap | grep homebrew/cask-fonts > /dev/null || brew tap homebrew/cask-fonts
 }
 
@@ -47,11 +49,11 @@ cd "$(dirname "$0")"
 echo "  > Pulling latest dotfiles..."
 git pull &> /dev/null
 
+echo "  > Taping homebrew packages..."
+tap_brew_packages
+
 echo "  > Updating homebrew..."
 brew update &> /dev/null
-
-echo "  > Tap cask homebrew/cask-fonts..."
-tap_brew_cask_fonts
 
 echo "  > Installing homebrew packages..."
 install_brew_packages
