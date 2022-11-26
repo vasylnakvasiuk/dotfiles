@@ -23,7 +23,7 @@ BASE16_SHELL="$HOME/.extra/.zsh/base16-shell/base16-$BASE16_SCHEME.sh"
 DISABLE_AUTO_TITLE=true
 
 # Now fzf uses ag like a backend
-export FZF_DEFAULT_COMMAND='ag -g "" --hidden'
+export FZF_DEFAULT_COMMAND='rg --files --sort-files --hidden --follow --glob "!.git"'
 export FZF_DEFAULT_OPTS='--color=dark,bg+:18 --bind=ctrl-z:toggle-up --inline-info --height 50% --no-reverse --border'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS='--no-reverse'

@@ -1,14 +1,14 @@
 #!/usr/bin/env zsh
 
-BREW_PACKAGES=(zsh git git-extras topgrade micro neovim kakoune helix mc lf ranger xplr
-               htop bottom btop bpytop ctop hacker1024/hacker1024/coretemp
+BREW_PACKAGES=(zsh git git-extras lazygit gitui tig topgrade micro neovim kakoune helix
+               mc lf ranger xplr htop bottom btop bpytop ctop hacker1024/hacker1024/coretemp
                nmap rustscan arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng
                wget wireshark termshark mtr iperf3 speedtest socat wrk hyperfine
                tree rg fd wader/tap/fq yq jq jid zellij tmux reattach-to-user-namespace
                cmatrix figlet fzf sk ncdu dust duf watch entr fswatch watchman pwgen coreutils
                zoxide m-cli httpie diff-so-fancy delta difftastic afnanenayet/tap/diffsitter
-               go grc bat eth-p/software/bat-extras prettyping tldr noti exa lsd
-               lazygit gitui navi procs podman podman-desktop lazydocker dive)
+               go grc bat eth-p/software/bat-extras prettyping gping tldr noti exa lsd
+               navi procs podman podman-desktop lazydocker dive)
 CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font font-fira-code font-fira-code-nerd-font anybar)
 
 function tap_brew_packages() {
