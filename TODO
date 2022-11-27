@@ -1,4 +1,7 @@
 - change MODE_INDICATOR="%{$fg_bold[red]%}<%{$fg[red]%}<<%{$reset_color%}"
-- use stow
+- use stow for sync
 - Powerlevel9k -> Powerlevel10k
-- zsh vs fish vs nushell vs
+- zsh vs fish vs nushell vs other?
+- starship?
+- install soft from brew cask
+- kitty vs alacritty vs iTerm2
