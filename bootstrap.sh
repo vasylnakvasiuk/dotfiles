@@ -9,9 +9,11 @@ BREW_PACKAGES=(zsh git git-extras lazygit gitui tig topgrade micro neovim kakoun
                zoxide m-cli httpie diff-so-fancy delta difftastic afnanenayet/tap/diffsitter
                go grc bat eth-p/software/bat-extras prettyping gping tldr noti exa lsd
                navi procs podman podman-desktop lazydocker dive neofetch)
-CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font font-fira-code font-fira-code-nerd-font anybar)
+CASK_PACKAGES=(keycastr font-hack font-hack-nerd-font font-fira-code
+               font-fira-code-nerd-font anybar wez/wezterm/wezterm)
 
 function tap_brew_packages() {
+    brew tap | grep wez/wezterm > /dev/null || brew tap wez/wezterm
     brew tap | grep teamookla/speedtest > /dev/null || brew tap teamookla/speedtest
     brew tap | grep homebrew/cask-fonts > /dev/null || brew tap homebrew/cask-fonts
 }
