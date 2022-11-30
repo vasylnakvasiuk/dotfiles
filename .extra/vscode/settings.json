@@ -1,6 +1,6 @@
 {
-    "terminal.integrated.fontFamily": "Hack",
-    "editor.fontFamily": "Hack",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "editor.fontFamily": "FiraCode Nerd Font",
     "editor.wordWrap": "on",
     "workbench.colorTheme": "Base16 Dark Eighties",
     "workbench.colorCustomizations": {
