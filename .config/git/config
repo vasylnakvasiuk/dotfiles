@@ -3,7 +3,6 @@
 	editor = code --wait
 	autocrlf = false
 	safecrlf = true
-	excludesfile = ~/.gitignore
 [pull]
 	rebase = true
 [push]
