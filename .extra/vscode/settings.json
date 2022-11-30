@@ -1,6 +1,7 @@
 {
     "terminal.integrated.fontFamily": "FiraCode Nerd Font",
     "editor.fontFamily": "FiraCode Nerd Font",
+    "editor.fontLigatures": "'ss05'",
     "editor.wordWrap": "on",
     "workbench.colorTheme": "Base16 Dark Eighties",
     "workbench.colorCustomizations": {

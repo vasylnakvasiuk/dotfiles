@@ -1,5 +1,5 @@
 # Preferred editor for local and remote sessions
-export EDITOR='code --wait'
+export EDITOR='hx'
 export VISUAL='code --wait'
 
 # Compilation flags
