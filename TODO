@@ -5,3 +5,8 @@
 - starship?
 - install soft from brew cask
 - kitty vs alacritty vs iTerm2
+- battery heart -> battery icon
+- git status powerline style
+- fix zsh-completions
+- update README
+- fix all other TODOs
