@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/opt/homebrew/bin/bash
 
 usage() {
 cat <<EOF
@@ -7,6 +7,7 @@ battery usage:
     -h, --help    print this message
     -t            output tmux status bar format
     -z            output zsh prompt format
+    -u            output unicode characters (by default is Nerd Font) instead of spark
     -e            don't output the emoji
     -a            output ascii instead of spark
     -b            battery path            default: /sys/class/power_supply/BAT0
@@ -30,6 +31,12 @@ setDefaults() {
     output_zsh=0
     ascii=0
     ascii_bar='=========='
+    unicode=0
+    unicode_battery_connected='\uf583'
+    unicode_battery_stages=(
+        '\uf58d' '\uf579' '\uf57a' '\uf57b' '\uf57c' '\uf57d'
+        '\uf57e' '\uf57f' '\uf580' '\uf581' '\uf578'
+    )
     emoji=1
     good_color="1;32"
     middle_color="1;33"
@@ -146,6 +153,14 @@ print_status() {
         fi
     fi
 
+    if ((unicode)); then
+        if ((BATT_CONNECTED)); then
+            GRAPH=$(printf "$unicode_battery_connected")
+        else
+            GRAPH=$(printf "${unicode_battery_stages[BATT_PCT / 10]}")
+        fi
+    fi
+
     if ((ascii)); then
         barlength=${#ascii_bar}
 
@@ -157,16 +172,16 @@ print_status() {
     fi
 
     if ((output_tmux)); then
-        printf "%s%s %s%s" "$COLOR" "[$BATT_PCT%]" "$GRAPH" "#[default]"
+        printf "%s%s %s%s" "$COLOR" "$BATT_PCT%" "$GRAPH" "#[default]"
     elif ((output_zsh)); then
-        printf "%%B%s%s %s" "$COLOR" "[$BATT_PCT%%]" "$GRAPH"
+        printf "%%B%s%s %s" "$COLOR" "$BATT_PCT%%" "$GRAPH"
     else
-        printf "\e[0;%sm%s %s \e[m\n"  "$COLOR" "[$BATT_PCT%]"  "$GRAPH"
+        printf "\e[0;%sm%s %s \e[m\n" "$COLOR" "$BATT_PCT%" "$GRAPH"
     fi
 }
 
 # Read args
-while getopts ":g:m:w:tzeab:p" opt; do
+while getopts ":g:m:w:tzueab:p" opt; do
     case $opt in
         g)
             good_color=$OPTARG
@@ -188,6 +203,9 @@ while getopts ":g:m:w:tzeab:p" opt; do
             good_color="64"
             middle_color="136"
             warn_color="160"
+            ;;
+        u)
+            unicode=1
             ;;
         e)
             emoji=0

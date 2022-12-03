@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BREW_PACKAGES=(zsh git git-extras lazygit gitui tig topgrade micro neovim kakoune helix
+BREW_PACKAGES=(zsh bash git git-extras lazygit gitui tig topgrade micro neovim kakoune helix
                mc lf ranger xplr htop bottom btop bpytop ctop hacker1024/hacker1024/coretemp
                nmap rustscan arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng
                wget wireshark termshark mtr iperf3 speedtest socat wrk hyperfine
