@@ -2,9 +2,7 @@
 - use stow for sync
 - Powerlevel9k -> Powerlevel10k
 - zsh vs fish vs nushell vs other?
-- starship?
 - install soft from brew cask
-- git status powerline style
 - fix zsh-completions
 - update README
 - font: Hack vs Fira Code vs Meslo
