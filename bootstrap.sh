@@ -8,7 +8,7 @@ BREW_PACKAGES=(zsh bash git git-extras lazygit gitui tig topgrade micro neovim k
                cmatrix figlet fzf sk ncdu dust duf watch entr fswatch watchman pwgen coreutils
                zoxide m-cli httpie diff-so-fancy delta difftastic afnanenayet/tap/diffsitter
                go grc bat eth-p/software/bat-extras prettyping gping tldr noti exa lsd
-               navi procs podman podman-desktop lazydocker dive neofetch)
+               navi procs podman podman-desktop lazydocker dive neofetch direnv)
 CASK_PACKAGES=(wez/wezterm/wezterm keycastr anybar
                font-hack font-hack-nerd-font
                font-fira-code font-fira-code-nerd-font
