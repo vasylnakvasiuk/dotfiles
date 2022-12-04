@@ -29,14 +29,14 @@ Pre-installation
     $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
     $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-5. Install Powerlevel10k:
+5. Install Powerlevel10k_ Zsh theme:
 
 .. code:: bash
 
     $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
 6. Install Visual Studio Code `shell command`_ 'code'.
-7. Install `AstroNvim`_:
+7. Install AstroNvim_:
 
 .. code:: bash
 
@@ -99,15 +99,11 @@ Or you can extend all your dotfiles configuration using ``~/.extra/.zsh/local.zs
 And in ``~/.extra/.zsh/local-exports.zsh``, ``~/.extra/.zsh/local-aliases.zsh``, ``~/.extra/.zsh/local-work-settings.zsh`` you can add your own custom commands.
 
 
-Colorscheme and font
---------------------
+Colorscheme, font and terminal
+------------------------------
 
-I'm using "Base16 Eighties Dark 256" colorscheme and `"Fira Code"`_ + `"Fira Code Nerd Font"`_. Colorscheme files you can find at ``.extra/.zsh/base16-shell/`` folder. Also I set different font size for ASCII and non-ASCII characters.
-
-.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-iterm2-fonts.png
-    :alt: fonts
-    :align: center
-
+I'm using "Base16 Eighties Dark 256" colorscheme and patched `"Fira Code"` font called `"Fira Code Nerd Font"`_. Colorscheme files you can find at ``.extra/.zsh/base16-shell/`` folder.
+Also my current terminal emulator is `WezTerm`_.
 
 Thanks to...
 ------------
@@ -122,13 +118,15 @@ Thanks to...
 .. _zsh: http://www.zsh.org/
 .. _default shell: http://zanshin.net/2013/09/03/how-to-use-homebrew-zsh-instead-of-max-os-x-default/
 .. _oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
+.. _Powerlevel10k: https://github.com/romkatv/powerlevel10k
+.. _shell command: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+.. _AstroNvim: https://github.com/AstroNvim/AstroNvim
+.. _"Fira Code": https://github.com/tonsky/FiraCode
+.. _"Fira Code Nerd Font": https://github.com/ryanoasis/nerd-fonts
+.. _WezTerm: https://wezfurlong.org/wezterm/
 .. _Mathias Bynens: https://github.com/mathiasbynens
 .. _amazing collection of dotfiles: https://github.com/mathiasbynens/dotfiles
 .. _Chris Hunt: https://github.com/chrishunt
 .. _dotfiles collection: https://github.com/chrishunt/dot-files
 .. _Chris Kempson: https://github.com/chriskempson
 .. _color schemes: https://github.com/chriskempson/base16
-.. _"Fira Code": https://github.com/tonsky/FiraCode
-.. _"Fira Code Nerd Font": https://github.com/ryanoasis/nerd-fonts
-.. _shell command: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
-.. _AstroNvim: https://github.com/AstroNvim/AstroNvim
