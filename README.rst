@@ -102,7 +102,7 @@ And in ``~/.extra/.zsh/local-exports.zsh``, ``~/.extra/.zsh/local-aliases.zsh``,
 Colorscheme, font and terminal
 ------------------------------
 
-I'm using "Base16 Eighties Dark 256" colorscheme and patched `"Fira Code"` font called `"Fira Code Nerd Font"`_. Colorscheme files you can find at ``.extra/.zsh/base16-shell/`` folder.
+I'm using "Base16 Eighties Dark 256" colorscheme and patched `"Fira Code"`_ font called `"Fira Code Nerd Font"`_. Colorscheme files you can find at ``.extra/.zsh/base16-shell/`` folder.
 Also my current terminal emulator is `WezTerm`_.
 
 Thanks to...

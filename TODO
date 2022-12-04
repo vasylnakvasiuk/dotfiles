@@ -4,6 +4,15 @@
 - zsh vs fish vs nushell vs other?
 - install soft from brew cask
 - fix zsh-completions
+- fzf-completion (fzf-completion:zle:8: widgets can only be called when ZLE is active)
+- zsh-syntax-highlighting with brew + other plugins
 - update README
-- font: Hack vs Fira Code vs Meslo
+- font: Hack vs Fira Code vs Meslo vs Source Code Pro
+- tmux popup with file explorer
+- tmux popup other usage
+- fzf-speed
+- fzf-tab
 - fix all other TODOs
+- customize tmux status bar
+- tmux config rework
+- explore fzf-* scripts
