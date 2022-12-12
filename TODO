@@ -6,7 +6,7 @@
 - fix zsh-completions
 - fzf-completion (fzf-completion:zle:8: widgets can only be called when ZLE is active)
 - zsh-syntax-highlighting with brew + other plugins
-- update README
+- update README and screenshot
 - font: Hack vs Fira Code vs Meslo vs Source Code Pro
 - tmux popup with file explorer
 - tmux popup other usage

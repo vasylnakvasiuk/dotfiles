@@ -72,7 +72,7 @@ echo "  > Upgrading homebrew cask..."
 brew upgrade --cask &> /dev/null
 
 echo "  > Sync dotfiles..."
-rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-general.png" --exclude "screenshot-neovim.png" --exclude "screenshot-iterm2-fonts.png" --exclude "TODO" --exclude ".extra/vscode/" -av . ~ &> /dev/null
+rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-general.png" --exclude "screenshot-neovim.png" --exclude "TODO" --exclude ".extra/vscode/" -av . ~ &> /dev/null
 
 echo "  > Sync Visual Studio Code..."
 rsync --exclude ".DS_Store" -av ./.extra/vscode/settings.json ~/Library/Application\ Support/Code/User/ &> /dev/null
