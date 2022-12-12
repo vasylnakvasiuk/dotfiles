@@ -1,16 +1,16 @@
 Screenshots
 ===========
 
-.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-general.png
+.. image:: https://raw.githubusercontent.com/vasylnakvasiuk/dotfiles/master/screenshot-general.png
     :alt: dotfiles
     :align: center
 
-.. image:: https://raw.github.com/vaxXxa/dotfiles/master/screenshot-neovim.png
+.. image:: https://raw.githubusercontent.com/vasylnakvasiuk/dotfiles/master/screenshot-neovim.png
     :alt: vim
     :align: center
 
 
-vaxXxa's dotfiles
+My dotfiles
 =================
 
 Pre-installation
@@ -50,7 +50,7 @@ You can clone the repository wherever you want (I like to keep it in ``~/Project
 
 .. code:: bash
 
-    $ git clone git@github.com:vaxXxa/dotfiles.git && cd dotfiles && make
+    $ git clone git@github.com:vasylnakvasiuk/dotfiles.git && cd dotfiles && make
 
 To update, ``cd`` into your local ``dotfiles`` repository and then:
 
@@ -70,7 +70,7 @@ My ``~/.extra/.zsh/local.zsh`` looks something like this:
 
     # Git credentials
     git config --global user.name "Vasyl Nakvasiuk"
-    git config --global user.email "vaxxxa@gmail.com"
+    git config --global user.email "vasyl.nakvasiuk@gmail.com"
 
     # Go environment
     export GOROOT=/usr/local/opt/go/libexec

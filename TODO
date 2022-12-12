@@ -16,3 +16,4 @@
 - customize tmux status bar
 - tmux config rework
 - explore fzf-* scripts
+- git fzf preview scroll

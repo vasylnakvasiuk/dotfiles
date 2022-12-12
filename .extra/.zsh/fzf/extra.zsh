@@ -98,7 +98,7 @@ bind-git-helper() {
     eval "bindkey '^G$c' fzf-g$c-widget"
   done
 }
-bind-git-helper f b t r h
+bind-git-helper f b t h r
 unset -f bind-git-helper
 
 fzf-flog() {
