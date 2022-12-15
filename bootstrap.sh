@@ -2,13 +2,14 @@
 
 BREW_PACKAGES=(zsh bash git git-extras lazygit gitui tig topgrade micro neovim kakoune helix
                mc lf ranger xplr htop bottom btop bpytop ctop hacker1024/hacker1024/coretemp
-               nmap rustscan arp-scan arpoison ettercap tcpflow spoof-mac tor proxychains-ng
-               wget wireshark termshark mtr iperf3 speedtest socat wrk hyperfine
+               nmap rustscan arp-scan arpoison ettercap tcpflow spoof-mac mitmproxy proxychains-ng
+               wget wireshark termshark mtr iperf3 speedtest socat wrk hyperfine tor
                tree rg fd wader/tap/fq yq jq jid zellij tmux reattach-to-user-namespace
                cmatrix figlet fzf sk ncdu dust duf watch entr fswatch watchman pwgen coreutils
                zoxide m-cli httpie diff-so-fancy delta difftastic afnanenayet/tap/diffsitter
                go grc bat eth-p/software/bat-extras prettyping gping tealdeer noti exa lsd
-               navi procs podman podman-desktop lazydocker dive neofetch direnv code-minimap)
+               navi procs podman podman-desktop lazydocker dive neofetch macchina direnv
+               code-minimap zk)
 CASK_PACKAGES=(wez/wezterm/wezterm keycastr anybar
                font-hack font-hack-nerd-font
                font-fira-code font-fira-code-nerd-font

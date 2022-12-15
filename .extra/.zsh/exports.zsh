@@ -1,6 +1,6 @@
 # Preferred editor for local and remote sessions
-export EDITOR='hx'
-export VISUAL='code --wait'
+export EDITOR=hx
+export VISUAL=$EDITOR
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
