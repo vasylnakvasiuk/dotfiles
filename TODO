@@ -4,7 +4,7 @@
 - fix slow base16 shell
 - zsh vs fish vs nushell vs other?
 - install soft from brew cask
-- fix zsh-completions
+- fix/remove zsh-completions?
 - fzf-completion (fzf-completion:zle:8: widgets can only be called when ZLE is active)
 - zsh-syntax-highlighting with brew + other plugins
 - update README and screenshot
@@ -18,3 +18,4 @@
 - tmux config rework
 - explore fzf-* scripts
 - git fzf preview scroll
+- remove oh-my-zsh?

@@ -20,5 +20,8 @@ unset file
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 
+# Activate powerlevel10k
+source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

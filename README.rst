@@ -19,24 +19,18 @@ Pre-installation
 *Note: this setup works only on Mac OS X*
 
 1. Install Homebrew_.
-2. Install unix shell – zsh_ (Z shell) and set ``zsh`` as your `default shell`_.
+2. Install unix shell - zsh_ (Z shell) and set ``zsh`` as your `default shell`_.
 3. Install zsh configuration framework oh-my-zsh_.
 4. Install zsh-completions, zsh-autosuggestions, zsh-syntax-highlighting:
 
 .. code:: bash
 
-    $ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-    $ git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+    $ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+    $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-5. Install Powerlevel10k_ Zsh theme:
-
-.. code:: bash
-
-    $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-
-6. Install Visual Studio Code `shell command`_ 'code'.
-7. Install AstroNvim_:
+5. Install Visual Studio Code `shell command`_ 'code'.
+6. Install AstroNvim_:
 
 .. code:: bash
 
@@ -118,7 +112,6 @@ Thanks to...
 .. _zsh: http://www.zsh.org/
 .. _default shell: http://zanshin.net/2013/09/03/how-to-use-homebrew-zsh-instead-of-max-os-x-default/
 .. _oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
-.. _Powerlevel10k: https://github.com/romkatv/powerlevel10k
 .. _shell command: https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 .. _AstroNvim: https://github.com/AstroNvim/AstroNvim
 .. _"Fira Code": https://github.com/tonsky/FiraCode
