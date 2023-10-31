@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-BREW_PACKAGES=(zsh bash romkatv/powerlevel10k/powerlevel10k
+BREW_PACKAGES=(zsh bash powerlevel10k
                git git-extras lazygit gitui tig topgrade neovim kakoune helix
                mc lf ranger xplr htop bottom btop bpytop ctop hacker1024/hacker1024/coretemp
                nmap rustscan arp-scan arpoison ettercap tcpflow spoof-mac mitmproxy proxychains-ng
