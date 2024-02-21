@@ -3,13 +3,7 @@
     "editor.fontFamily": "FiraCode Nerd Font",
     "editor.fontLigatures": "'ss05'",
     "editor.wordWrap": "on",
-    "workbench.colorTheme": "Base16 Dark Eighties",
-    "workbench.colorCustomizations": {
-        "tab.inactiveBackground": "#292929",
-        "statusBar.background": "#383838",
-        "statusBar.noFolderBackground" : "#383838",
-        "statusBar.debuggingBackground": "#383838"
-    },
+    "workbench.colorTheme": "One Dark Pro",
     "editor.renderWhitespace": "all",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,

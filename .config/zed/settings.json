@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "theme": "One Dark",
   "buffer_font_family": "FiraCode Nerd Font",
   "buffer_font_features": {
     "ss05": true
