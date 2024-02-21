@@ -75,9 +75,6 @@ rsync --exclude ".DS_Store" -av ./.extra/vscode/settings.json ~/Library/Applicat
 echo "  > Installing Visual Studio Code extensions..."
 while read -r line; do code --install-extension "$line"; done <./.extra/vscode/extensions &> /dev/null
 
-echo "  > Install/update nvim packages"
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-
 unset BREW_PACKAGES
 unset install_brew_packages
 unset install_brew_cask_packages
