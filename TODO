@@ -2,8 +2,6 @@
 - customize tmux status bar
 - use stow for sync
 - use nix?
-- fix slow base16 shell (POWERLEVEL9K_INSTANT_PROMPT=quiet)
-- remove all base16 mentions
 - fix/remove zsh-completions?
 - fzf-completion (fzf-completion:zle:8: widgets can only be called when ZLE is active)
 - zsh-syntax-highlighting with brew + other plugins
