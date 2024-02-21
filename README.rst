@@ -96,7 +96,7 @@ And in ``~/.extra/.zsh/local-exports.zsh``, ``~/.extra/.zsh/local-aliases.zsh``,
 Colorscheme, font and terminal
 ------------------------------
 
-I'm using "Base16 Eighties Dark 256" colorscheme and patched `"Fira Code"`_ font called `"Fira Code Nerd Font"`_. Colorscheme files you can find at ``.extra/.zsh/base16-shell/`` folder.
+I'm using "One Dark" colorscheme and patched `"Fira Code"`_ font called `"Fira Code Nerd Font"`_. Colorscheme files you can find at ``.extra/.zsh/base16-shell/`` folder.
 Also my current terminal emulator is `WezTerm`_.
 
 Thanks to...
@@ -105,8 +105,6 @@ Thanks to...
 `Mathias Bynens`_ for sharing his `amazing collection of dotfiles`_.
 
 `Chris Hunt`_ for nice `dotfiles collection`_.
-
-`Chris Kempson`_ for awesome `color schemes`_.
 
 .. _Homebrew: http://brew.sh/
 .. _zsh: http://www.zsh.org/
@@ -122,4 +120,3 @@ Thanks to...
 .. _Chris Hunt: https://github.com/chrishunt
 .. _dotfiles collection: https://github.com/chrishunt/dot-files
 .. _Chris Kempson: https://github.com/chriskempson
-.. _color schemes: https://github.com/chriskempson/base16
