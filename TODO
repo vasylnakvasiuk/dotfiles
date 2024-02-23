@@ -1,21 +1,22 @@
-- tmux config rework
-- customize tmux status bar
-- use stow for sync
-- use nix?
-- fix/remove zsh-completions?
-- fzf-completion (fzf-completion:zle:8: widgets can only be called when ZLE is active)
+- theme: OneDark vs OneDark Pro vs Dracula
+- font: Hack vs Fira Code vs Meslo vs Source Code Pro vs JetBrains Mono
+- tmux: config rework
+- tmux: popup with file explorer
+- tmux: battery icons are broken
+- tmux: popup other usage
+- tmux: customize status bar
+- fzf: fix/remove zsh-completions?
+- fzf: fzf-completion (fzf-completion:zle:8: widgets can only be called when ZLE is active)
+- fzf: fzf-speed
+- fzf: fzf-tab
+- fzf: explore fzf-* scripts
+- fzf: git fzf preview scroll
+- new: use nix?
+- new: use stow for sync
+- new: sketchybar
+- new: yabai
+- zed: setup keymaps https://zed.dev/docs/key-bindings
 - zsh-syntax-highlighting with brew + other plugins
 - update README and screenshot
-- font: Hack vs Fira Code vs Meslo vs Source Code Pro vs JetBrains Mono
-- tmux popup with file explorer
-- tmux popup other usage
-- fzf-speed
-- fzf-tab
 - fix all other TODOs
-- explore fzf-* scripts
-- git fzf preview scroll
 - remove oh-my-zsh?
-- tmux battery icons are broken
-- yabai
-- sketchybar
-- zed: setup keymaps https://zed.dev/docs/key-bindings
