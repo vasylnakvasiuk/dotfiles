@@ -32,10 +32,10 @@ setDefaults() {
     ascii=0
     ascii_bar='=========='
     unicode=0
-    unicode_battery_connected='\uf583'
+    unicode_battery_connected='\Uf0084'
     unicode_battery_stages=(
-        '\uf58d' '\uf579' '\uf57a' '\uf57b' '\uf57c' '\uf57d'
-        '\uf57e' '\uf57f' '\uf580' '\uf581' '\uf578'
+        '\Uf008e' '\Uf007a' '\Uf007b' '\Uf007c' '\Uf007d' '\Uf007e'
+        '\Uf007f' '\Uf0080' '\Uf0081' '\Uf0082' '\Uf0079'
     )
     emoji=1
     good_color="1;32"

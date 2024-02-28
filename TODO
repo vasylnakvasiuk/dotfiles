@@ -2,7 +2,6 @@
 - font: Hack vs Fira Code vs Meslo vs Source Code Pro vs JetBrains Mono
 - tmux: config rework
 - tmux: popup with file explorer
-- tmux: battery icons are broken
 - tmux: popup other usage
 - tmux: customize status bar
 - fzf: fix/remove zsh-completions?
