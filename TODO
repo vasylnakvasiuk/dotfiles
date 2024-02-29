@@ -12,8 +12,6 @@
 - fzf: git fzf preview scroll
 - new: use nix?
 - new: use stow for sync
-- new: sketchybar
-- new: yabai
 - zed: setup keymaps https://zed.dev/docs/key-bindings
 - zsh-syntax-highlighting with brew + other plugins
 - update README and screenshot

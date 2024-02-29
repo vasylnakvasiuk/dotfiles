@@ -12,7 +12,7 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                navi procs lazydocker dive neofetch macchina direnv code-minimap zk)
 
 CASK_PACKAGES=(wezterm keycastr anybar wireshark android-platform-tools
-               vlc spectacle maccy monitorcontrol
+               vlc rectangle maccy monitorcontrol zed
                homebrew/cask-fonts/font-hack homebrew/cask-fonts/font-hack-nerd-font
                homebrew/cask-fonts/font-fira-code homebrew/cask-fonts/font-fira-code-nerd-font
                homebrew/cask-fonts/font-jetbrains-mono homebrew/cask-fonts/font-jetbrains-mono-nerd-font
