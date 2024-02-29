@@ -5,7 +5,7 @@ return {
     family = 'FiraCode Nerd Font',
     harfbuzz_features = { 'ss05' },
   },
-  color_scheme = "OneDark (base16)",
+  color_scheme = "Eighties (base16)",
   hide_tab_bar_if_only_one_tab = true,
   cell_width = 0.9,
 }

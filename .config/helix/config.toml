@@ -1,4 +1,4 @@
-theme = "onedark"
+theme = "base16_default"
 
 [editor]
 cursorline = true
