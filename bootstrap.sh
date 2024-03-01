@@ -76,6 +76,9 @@ rsync --exclude ".DS_Store" -av ./.extra/vscode/settings.json ~/Library/Applicat
 echo "  > Installing Visual Studio Code extensions..."
 while read -r line; do code --install-extension "$line"; done <./.extra/vscode/extensions &> /dev/null
 
+echo "  > Install fzf auto-completion and key bindings"
+$(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc --no-bash &> /dev/null
+
 unset BREW_PACKAGES
 unset install_brew_packages
 unset install_brew_cask_packages
