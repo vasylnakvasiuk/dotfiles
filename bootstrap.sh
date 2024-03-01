@@ -9,7 +9,7 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                figlet fzf sk ncdu dust duf watch entr fswatch watchman pwgen coreutils
                zoxide m-cli httpie diff-so-fancy git-delta difftastic afnanenayet/tap/diffsitter
                go grc bat eth-p/software/bat-extras prettyping gping tealdeer noti exa lsd
-               navi procs lazydocker dive neofetch macchina direnv code-minimap zk
+               navi procs lazydocker dive neofetch macchina direnv code-minimap zk nap
                cmatrix tty-clock mhzawadi/cbonsai/cbonsai pipes-sh asciiquarium)
 
 CASK_PACKAGES=(wezterm keycastr anybar wireshark android-platform-tools
