@@ -2,7 +2,7 @@
 
 BREW_PACKAGES=(zsh bash powerlevel10k
                git git-extras lazygit gitui tig topgrade neovim kakoune helix
-               mc lf ranger xplr htop bottom btop bpytop ctop hacker1024/hacker1024/coretemp
+               mc lf ranger xplr yazi htop bottom btop bpytop ctop hacker1024/hacker1024/coretemp
                nmap rustscan arp-scan arpoison ettercap tcpflow spoof-mac mitmproxy proxychains-ng
                wget wireshark termshark mtr iperf3 teamookla/speedtest/speedtest socat wrk hyperfine tor
                tree rg fd wader/tap/fq yq jq jid zellij tmux reattach-to-user-namespace
@@ -11,7 +11,8 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                go grc bat eth-p/software/bat-extras prettyping gping tealdeer noti exa lsd
                navi procs lazydocker dive neofetch macchina direnv code-minimap zk nap
                cmatrix tty-clock mhzawadi/cbonsai/cbonsai pipes-sh asciiquarium
-               zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
+               zsh-autosuggestions zsh-completions zsh-syntax-highlighting
+               ffmpegthumbnailer unar poppler)
 
 CASK_PACKAGES=(wezterm keycastr anybar wireshark android-platform-tools
                vlc rectangle maccy monitorcontrol zed
