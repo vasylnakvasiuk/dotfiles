@@ -1,14 +1,14 @@
 # Screenshots
 
-![dotfiles](https://raw.githubusercontent.com/vasylnakvasiuk/dotfiles/master/screenshot-general.png){.align-center}
+![dotfiles](https://raw.githubusercontent.com/vasylnakvasiuk/dotfiles/master/screenshot-general.png)
 
-![vim](https://raw.githubusercontent.com/vasylnakvasiuk/dotfiles/master/screenshot-neovim.png){.align-center}
+![vim](https://raw.githubusercontent.com/vasylnakvasiuk/dotfiles/master/screenshot-neovim.png)
 
 # My dotfiles
 
 ## Pre-installation
 
-*Note: this setup works only on Mac OS X*
+_Note: this setup works only on Mac OS X_
 
 1.  Install [Homebrew](http://brew.sh/).
 2.  Install unix shell - [zsh](http://www.zsh.org/) (Z shell) and set
@@ -19,7 +19,7 @@
 4.  Install zsh-completions, zsh-autosuggestions,
     zsh-syntax-highlighting:
 
-``` bash
+```bash
 $ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -30,7 +30,7 @@ $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTO
     \'code\'.
 6.  Install [AstroNvim](https://github.com/AstroNvim/AstroNvim):
 
-``` bash
+```bash
 $ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 ```
 
@@ -40,13 +40,13 @@ You can clone the repository wherever you want (I like to keep it in
 `~/Projects/dotfiles`). The bootstrapper script will pull in the latest
 version and copy the files to your home folder.
 
-``` bash
+```bash
 $ git clone git@github.com:vasylnakvasiuk/dotfiles.git && cd dotfiles && make
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
 
-``` bash
+```bash
 $ make
 ```
 
@@ -59,7 +59,7 @@ to commit to a public repository.
 
 My `~/.extra/.zsh/local.zsh` looks something like this:
 
-``` bash
+```bash
 # Git credentials
 git config --global user.name "Vasyl Nakvasiuk"
 git config --global user.email "vasyl.nakvasiuk@gmail.com"
@@ -73,7 +73,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 You can overwrite something using `~/.extra/.zsh/local.zsh`. For
 example:
 
-``` bash
+```bash
 # Overwrite alias
 alias p="cd ~/Documents/Projects"
 
@@ -85,7 +85,7 @@ Or you can extend all your dotfiles configuration using
 `~/.extra/.zsh/local.zsh` like entry point. Your
 `~/.extra/.zsh/local.zsh` can be like this:
 
-``` bash
+```bash
 for file in ~/.extra/.zsh/{local-exports,local-aliases,local-work-settings}.zsh; do
     [ -r "$file" ] && source "$file"
 done
