@@ -10,7 +10,8 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                zoxide m-cli httpie diff-so-fancy git-delta difftastic afnanenayet/tap/diffsitter
                go grc bat eth-p/software/bat-extras prettyping gping tealdeer noti exa lsd
                navi procs lazydocker dive neofetch macchina direnv code-minimap zk nap
-               cmatrix tty-clock mhzawadi/cbonsai/cbonsai pipes-sh asciiquarium)
+               cmatrix tty-clock mhzawadi/cbonsai/cbonsai pipes-sh asciiquarium
+               zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 
 CASK_PACKAGES=(wezterm keycastr anybar wireshark android-platform-tools
                vlc rectangle maccy monitorcontrol zed

@@ -14,21 +14,10 @@ _Note: this setup works only on Mac OS X_
 2.  Install unix shell - [zsh](http://www.zsh.org/) (Z shell) and set
     `zsh` as your [default
     shell](http://zanshin.net/2013/09/03/how-to-use-homebrew-zsh-instead-of-max-os-x-default/).
-3.  Install zsh configuration framework
-    [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
-4.  Install zsh-completions, zsh-autosuggestions,
-    zsh-syntax-highlighting:
-
-```bash
-$ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
-$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-
-5.  Install Visual Studio Code [shell
+3.  Install Visual Studio Code [shell
     command](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
     \'code\'.
-6.  Install [AstroNvim](https://github.com/AstroNvim/AstroNvim):
+4.  Install [AstroNvim](https://github.com/AstroNvim/AstroNvim):
 
 ```bash
 $ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim

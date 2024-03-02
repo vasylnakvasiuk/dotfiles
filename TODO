@@ -1,14 +1,11 @@
-- theme: OneDark vs OneDark Pro vs Dracula
 - font: Hack vs Fira Code vs Meslo vs Source Code Pro vs JetBrains Mono
 - tmux: config rework
 - tmux: popup with file explorer
 - tmux: popup other usage
-- tmux: customize status bar
+- tmux: customize status bar (pomodoro, etc.)
 - fzf: fzf-tab
 - fzf: git fzf preview scroll
 - new: use nix?
 - new: use stow for sync
 - zed: setup keymaps https://zed.dev/docs/key-bindings
-- zsh-syntax-highlighting with brew + other plugins
 - update README and screenshot
-- remove oh-my-zsh?

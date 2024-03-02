@@ -8,9 +8,9 @@ fi
 # Set limit the use of system-wide resources
 ulimit -S -n 4096
 
-# Load extra files from ~./extra/.zsh/: oh-my-zsh.sh, exports.sh, aliases.sh, functions.sh, local.sh
+# Load extra files from ~./extra/.zsh/*
 # ~/.extra/.local can be used for settings you don’t want to commit
-for file in ~/.extra/.zsh/{oh-my-zsh,exports,aliases,functions,key-bindings,fzf,local}.zsh; do
+for file in ~/.extra/.zsh/{exports,aliases,functions,key-bindings,fzf,local}.zsh; do
     [ -r "$file" ] && source "$file"
 done
 unset file
@@ -26,3 +26,14 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Activate zsh plugins
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+fi
