@@ -17,11 +17,6 @@ _Note: this setup works only on Mac OS X_
 3.  Install Visual Studio Code [shell
     command](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
     \'code\'.
-4.  Install [AstroNvim](https://github.com/AstroNvim/AstroNvim):
-
-```bash
-$ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-```
 
 ## Installation
 
