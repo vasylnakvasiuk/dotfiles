@@ -46,11 +46,13 @@ alias help="tldr"
 alias lg="lazygit"
 alias xcd='cd "$(xplr --print-pwd-as-result)"'
 
+# --- Exported from oh-my-zsh ---
 setopt auto_cd
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
-
+alias -- -='cd -'
 alias md='mkdir -p'
 alias rd=rmdir
+# --- Exported from oh-my-zsh ---

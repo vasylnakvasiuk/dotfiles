@@ -1,3 +1,4 @@
+# --- Exported from oh-my-zsh ---
 # ZSH stats usage
 function zsh_stats() {
   fc -l 1 \
@@ -36,7 +37,7 @@ function take() {
     takedir "$@"
   fi
 }
-
+# --- Exported from oh-my-zsh ---
 
 # shell wrapper that provides the ability to change the current working directory when exiting Yazi
 function ya() {
