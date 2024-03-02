@@ -8,11 +8,11 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                tree rg fd wader/tap/fq yq jq jid zellij tmux reattach-to-user-namespace
                figlet fzf sk ncdu dust duf watch entr fswatch watchman pwgen coreutils
                zoxide m-cli httpie diff-so-fancy git-delta difftastic afnanenayet/tap/diffsitter
-               go grc bat eth-p/software/bat-extras prettyping gping tealdeer noti exa lsd
+               go grc bat eth-p/software/bat-extras prettyping gping tealdeer noti eza lsd
                navi procs lazydocker dive neofetch macchina direnv code-minimap zk nap
                cmatrix tty-clock mhzawadi/cbonsai/cbonsai pipes-sh asciiquarium
                zsh-autosuggestions zsh-completions zsh-syntax-highlighting
-               ffmpegthumbnailer unar poppler)
+               ffmpegthumbnailer unar poppler exiftool)
 
 CASK_PACKAGES=(wezterm keycastr anybar wireshark android-platform-tools
                vlc rectangle maccy monitorcontrol zed
