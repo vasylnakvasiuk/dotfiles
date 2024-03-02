@@ -45,3 +45,12 @@ alias du="ncdu --color dark -r -x"
 alias help="tldr"
 alias lg="lazygit"
 alias xcd='cd "$(xplr --print-pwd-as-result)"'
+
+setopt auto_cd
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+
+alias md='mkdir -p'
+alias rd=rmdir
