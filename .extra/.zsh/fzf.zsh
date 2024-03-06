@@ -72,7 +72,7 @@ fzf-log() {
   git log --graph --color=always \
     --format="%C(auto)%h%d %s %C(black)%C(bold)%cr %C(auto)%C(blue)%cn" "$@" |
   fzf-down --height 70% --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
-    --bind "ctrl-m:execute:
+    --preview 'git show {2} --stat' --bind "ctrl-m:execute:
   (grep -o '[a-f0-9]\{7\}' | head -1 |
   xargs -I % sh -c 'git show --color=always % | delta --paging always') << 'FZF-EOF'
   {}

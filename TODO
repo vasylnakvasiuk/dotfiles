@@ -4,8 +4,8 @@
 - tmux: popup other usage
 - tmux: customize status bar (pomodoro, etc.)
 - fzf: fzf-tab
-- fzf: git fzf preview scroll
 - new: use nix?
 - new: use stow for sync
 - zed: setup keymaps https://zed.dev/docs/key-bindings
+- remove VS Code
 - update README and screenshot
