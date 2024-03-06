@@ -3,6 +3,7 @@
 - tmux: popup with file explorer
 - tmux: popup other usage
 - tmux: customize status bar (pomodoro, etc.)
+- tmux: tmux-fzf
 - fzf: fzf-tab
 - new: use nix?
 - new: use stow for sync
