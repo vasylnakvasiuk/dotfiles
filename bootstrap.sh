@@ -40,6 +40,13 @@ function install_brew_cask_packages() {
     done
 }
 
+function install_tmux_tpm() {
+    if [ ! -d ~/.tmux/plugins/tpm ] ; then
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    else
+        git -C ~/.tmux/plugins/tpm pull
+    fi
+}
 
 echo "     _       _    __ _ _"
 echo "  __| | ___ | |_ / _(_) | ___  ___"
@@ -81,6 +88,17 @@ while read -r line; do code --install-extension "$line"; done <./.extra/vscode/e
 
 echo "  > Install fzf auto-completion and key bindings"
 $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc --no-bash &> /dev/null
+
+echo "  > Manage tmux plugins"
+
+echo "    > Installing Tmux Plugin Manager..."
+install_tmux_tpm &> /dev/null
+
+echo "    > Installing TPM (Tmux Plugin Manager) plugins..."
+~/.tmux/plugins/tpm/bin/install_plugins &> /dev/null
+
+echo "    > Updating TPM (Tmux Plugin Manager) plugins..."
+~/.tmux/plugins/tpm/bin/update_plugins all &> /dev/null
 
 unset BREW_PACKAGES
 unset install_brew_packages
