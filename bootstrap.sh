@@ -100,6 +100,9 @@ echo "    > Installing TPM (Tmux Plugin Manager) plugins..."
 echo "    > Updating TPM (Tmux Plugin Manager) plugins..."
 ~/.tmux/plugins/tpm/bin/update_plugins all &> /dev/null
 
+echo "    > Cleanup TPM (Tmux Plugin Manager) plugins..."
+~/.tmux/plugins/tpm/bin/clean_plugins &> /dev/null
+
 unset BREW_PACKAGES
 unset install_brew_packages
 unset install_brew_cask_packages
