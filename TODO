@@ -1,9 +1,9 @@
 - font: Hack vs Fira Code vs Meslo vs Source Code Pro vs JetBrains Mono
-- tmux: config rework
 - tmux: popup with file explorer
 - tmux: popup other usage
 - tmux: customize status bar (pomodoro, etc.)
 - tmux: tmux-fzf
+- tmux: TMUX_PLUGIN_MANAGER_PATH ?
 - fzf: fzf-tab
 - new: use nix?
 - new: use stow for sync
