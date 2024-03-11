@@ -2,7 +2,6 @@
 - tmux: popup with file explorer
 - tmux: popup other usage
 - tmux: customize status bar (pomodoro, etc.)
-- tmux: tmux-fzf
 - tmux: TMUX_PLUGIN_MANAGER_PATH ?
 - fzf: fzf-tab
 - new: use nix?
