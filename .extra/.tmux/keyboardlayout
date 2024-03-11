@@ -1,0 +1,15 @@
+#!/bin/bash
+
+keyboard_lang=$(keyboardSwitcher get | cut -c1-3 | awk '{print toupper($0)}')
+
+if [ "$1" == "$keyboard_lang" ];
+then
+    keyboard_color="#[fg=$color_gray]"
+else
+    keyboard_color="#[fg=$color_red]"
+fi
+
+echo -e "  $keyboard_color$keyboard_lang"
+
+unset keyboard_color
+unset keyboard_lang
