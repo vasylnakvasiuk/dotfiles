@@ -3,6 +3,7 @@
 - tmux: popup other usage
 - tmux: customize status bar (pomodoro, etc.)
 - tmux: TMUX_PLUGIN_MANAGER_PATH ?
+- tmux: VPN check not always works
 - fzf: fzf-tab
 - new: use nix?
 - new: use stow for sync
