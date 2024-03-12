@@ -11,7 +11,7 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                homebrew/core/go grc bat eth-p/software/bat-extras prettyping gping tealdeer noti eza lsd
                navi procs lazydocker dive neofetch macchina direnv code-minimap zk nap
                cmatrix tty-clock mhzawadi/cbonsai/cbonsai pipes-sh asciiquarium
-               zsh-autosuggestions zsh-completions zsh-syntax-highlighting
+               zsh-autosuggestions zsh-completions zsh-fast-syntax-highlighting
                py-spy ruff uv
                ffmpegthumbnailer unar poppler exiftool lutzifer/homebrew-tap/keyboardSwitche)
 
