@@ -9,7 +9,7 @@ else
     keyboard_color="#[fg=$color_red]"
 fi
 
-echo -e "  $keyboard_color$keyboard_lang"
+echo -e "$keyboard_color$keyboard_lang"
 
 unset keyboard_color
 unset keyboard_lang

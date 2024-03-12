@@ -1,6 +1,13 @@
 #!/bin/bash
 
-if scutil --nc list | grep -q "Connected";
+if scutil --nwi | rg "Transient Connection";
 then
-    echo "  VPN"
+    vpn_color="#[fg=$color_red]"
+else
+    vpn_color="#[fg=$color_gray]"
 fi
+
+
+echo -e "${vpn_color}VPN"
+
+unset vpn_color
