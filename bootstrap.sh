@@ -48,12 +48,7 @@ function install_tmux_tpm() {
     fi
 }
 
-echo "     _       _    __ _ _"
-echo "  __| | ___ | |_ / _(_) | ___  ___"
-echo " / _\` |/ _ \| __| |_| | |/ _ \/ __|"
-echo "| (_| | (_) | |_|  _| | |  __/\__ \\"
-echo " \__,_|\___/ \__|_| |_|_|\___||___/"
-echo ""
+figlet "dotfiles"
 
 echo "==> Here we go..."
 
