@@ -73,13 +73,7 @@ echo "  > Upgrading homebrew cask..."
 brew upgrade --cask &> /dev/null
 
 echo "  > Sync dotfiles..."
-rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-general.png" --exclude "screenshot-neovim.png" --exclude "TODO" --exclude ".extra/vscode/" -av . ~ &> /dev/null
-
-echo "  > Sync Visual Studio Code..."
-rsync --exclude ".DS_Store" -av ./.extra/vscode/settings.json ~/Library/Application\ Support/Code/User/ &> /dev/null
-
-echo "  > Installing Visual Studio Code extensions..."
-while read -r line; do code --install-extension "$line"; done <./.extra/vscode/extensions &> /dev/null
+rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-general.png" --exclude "screenshot-neovim.png" --exclude "TODO" -av . ~ &> /dev/null
 
 echo "  > Install fzf auto-completion and key bindings"
 $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc --no-bash &> /dev/null

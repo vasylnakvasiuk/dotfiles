@@ -14,9 +14,6 @@ _Note: this setup works only on Mac OS X_
 2.  Install unix shell - [zsh](http://www.zsh.org/) (Z shell) and set
     `zsh` as your [default
     shell](http://zanshin.net/2013/09/03/how-to-use-homebrew-zsh-instead-of-max-os-x-default/).
-3.  Install Visual Studio Code [shell
-    command](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
-    \'code\'.
 
 ## Installation
 
