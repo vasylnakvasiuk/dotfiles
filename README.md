@@ -11,9 +11,6 @@
 _Note: this setup works only on Mac OS X_
 
 1.  Install [Homebrew](http://brew.sh/).
-2.  Install unix shell - [zsh](http://www.zsh.org/) (Z shell) and set
-    `zsh` as your [default
-    shell](http://zanshin.net/2013/09/03/how-to-use-homebrew-zsh-instead-of-max-os-x-default/).
 
 ## Installation
 

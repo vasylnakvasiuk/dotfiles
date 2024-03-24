@@ -2,7 +2,6 @@
 - tmux: popup with file explorer
 - tmux: popup other usage
 - fzf: fzf-tab
-- new: use nix?
 - new: use stow/chezmoi/yadm for sync
 - zed: setup keymaps https://zed.dev/docs/key-bindings
 - update README and screenshot
