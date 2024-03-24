@@ -73,7 +73,7 @@ echo "  > Upgrading homebrew cask..."
 brew upgrade --cask &> /dev/null
 
 echo "  > Sync dotfiles..."
-rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.rst" --exclude "screenshot-general.png" --exclude "screenshot-neovim.png" --exclude "TODO" -av . ~ &> /dev/null
+rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bootstrap.sh" --exclude "README.md" --exclude "screenshot-general.png" --exclude "screenshot-neovim.png" --exclude "TODO" -av . ~ &> /dev/null
 
 echo "  > Install fzf auto-completion and key bindings"
 $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc --no-bash &> /dev/null
