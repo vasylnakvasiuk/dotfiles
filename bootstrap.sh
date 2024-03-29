@@ -13,7 +13,7 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                cmatrix tty-clock mhzawadi/cbonsai/cbonsai pipes-sh asciiquarium
                zsh-autosuggestions zsh-completions zsh-fast-syntax-highlighting
                py-spy ruff uv
-               ffmpegthumbnailer unar poppler exiftool lutzifer/homebrew-tap/keyboardSwitche)
+               ffmpegthumbnailer unar poppler exiftool lutzifer/homebrew-tap/keyboardSwitcher)
 
 CASK_PACKAGES=(wezterm keycastr anybar wireshark android-platform-tools
                vlc rectangle maccy monitorcontrol zed
