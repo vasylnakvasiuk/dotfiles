@@ -75,12 +75,15 @@ And in `~/.extra/.zsh/local-exports.zsh`,
 `~/.extra/.zsh/local-work-settings.zsh` you can add your own custom
 commands.
 
-## Colorscheme, font and terminal
+## Colorscheme, font, terminal and editors
 
 I\'m using \"Base16 Eighties Dark 256\" colorscheme and patched [\"Fira
 Code\"](https://github.com/tonsky/FiraCode) font called [\"Fira Code
 Nerd Font\"](https://github.com/ryanoasis/nerd-fonts). Also my current
 terminal emulator is [WezTerm](https://wezfurlong.org/wezterm/).
+
+As for text editors, I'm using [Helix](https://helix-editor.com/) and
+[Zed](https://zed.dev/).
 
 ## Thanks to\...
 
