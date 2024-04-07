@@ -16,7 +16,7 @@ done
 unset file
 
 # Activate fuzzy auto-completion and key bindings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
 
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
