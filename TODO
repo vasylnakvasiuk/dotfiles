@@ -5,3 +5,4 @@
 - new: use stow/chezmoi/yadm for sync
 - zed: setup keymaps https://zed.dev/docs/key-bindings
 - update README and screenshot
+- use brew bundle for the installation process
