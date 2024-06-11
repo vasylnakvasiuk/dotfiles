@@ -1,4 +1,4 @@
-theme = "base16_default"
+theme = "base16-eighties"
 
 [editor]
 cursorline = true
