@@ -19,8 +19,7 @@ CASK_PACKAGES=(wezterm keycastr anybar wireshark android-platform-tools
                vlc rectangle maccy monitorcontrol zed
                homebrew/cask-fonts/font-hack homebrew/cask-fonts/font-hack-nerd-font
                homebrew/cask-fonts/font-fira-code homebrew/cask-fonts/font-fira-code-nerd-font
-               homebrew/cask-fonts/font-jetbrains-mono homebrew/cask-fonts/font-jetbrains-mono-nerd-font
-               homebrew/cask-fonts/font-iosevka homebrew/cask-fonts/font-iosevka-nerd-font)
+               homebrew/cask-fonts/font-jetbrains-mono homebrew/cask-fonts/font-jetbrains-mono-nerd-font)
 
 function install_brew_packages() {
     for index in $BREW_PACKAGES; do
