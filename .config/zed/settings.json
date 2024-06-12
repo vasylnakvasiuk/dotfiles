@@ -13,7 +13,7 @@
     "ss05": true
   },
   "confirm_quit": true,
-  "show_whitespaces": "all",
+  "show_whitespaces": "boundary",
   "soft_wrap": "editor_width",
   "telemetry": {
     "diagnostics": false,
