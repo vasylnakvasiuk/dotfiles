@@ -7,7 +7,7 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                sniffnet wireshark termshark mtr iperf3 teamookla/speedtest/speedtest socat wrk hyperfine tor
                tree rg fd wader/tap/fq yq jq jid zellij tmux reattach-to-user-namespace
                figlet fzf sk ncdu dust duf watch entr fswatch watchman pwgen coreutils
-               zoxide m-cli httpie wget diff-so-fancy git-delta difftastic afnanenayet/tap/diffsitter
+               zoxide m-cli httpie xh wget diff-so-fancy git-delta difftastic afnanenayet/tap/diffsitter
                homebrew/core/go grc bat eth-p/software/bat-extras prettyping gping tealdeer noti eza lsd
                navi procs lazydocker dive neofetch macchina direnv code-minimap zk nap
                cmatrix tty-clock mhzawadi/cbonsai/cbonsai pipes-sh asciiquarium
