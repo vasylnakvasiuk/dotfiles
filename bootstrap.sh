@@ -12,7 +12,7 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                navi procs lazydocker dive neofetch macchina direnv code-minimap zk nap
                cmatrix tty-clock mhzawadi/cbonsai/cbonsai pipes-sh asciiquarium
                zsh-autosuggestions zsh-completions zsh-fast-syntax-highlighting
-               py-spy ruff uv
+               py-spy ruff uv zig zls
                ffmpegthumbnailer unar poppler exiftool lutzifer/homebrew-tap/keyboardSwitcher)
 
 CASK_PACKAGES=(wezterm keycastr anybar wireshark android-platform-tools
