@@ -41,9 +41,17 @@ function install_brew_cask_packages() {
 
 function install_tmux_tpm() {
     if [ ! -d ~/.config/tmux/plugins/tpm ] ; then
-    git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+        git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
     else
         git -C ~/.config/tmux/plugins/tpm pull
+    fi
+}
+
+function install_fzf_tab() {
+    if [ ! -d ~/.extra/.zsh/fzf-tab ] ; then
+        git clone https://github.com/Aloxaf/fzf-tab ~/.extra/.zsh/fzf-tab
+    else
+        git -C ~/.extra/.zsh/fzf-tab pull
     fi
 }
 
@@ -76,6 +84,9 @@ rsync --exclude ".git/" --exclude ".DS_Store" --exclude "Makefile" --exclude "bo
 
 echo "  > Install fzf auto-completion and key bindings"
 $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc --no-bash &> /dev/null
+
+echo "  > Install fzf-tab"
+install_fzf_tab &> /dev/null
 
 echo "  > Manage tmux plugins"
 

@@ -1,7 +1,6 @@
 - font: Hack vs Fira Code vs Meslo vs Source Code Pro vs JetBrains Mono
 - tmux: popup with file explorer
 - tmux: popup other usage
-- fzf: fzf-tab
 - new: use stow/chezmoi/yadm for sync
 - update README and screenshot
 - use brew bundle for the installation process
