@@ -10,7 +10,7 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                zoxide m-cli httpie xh wget diff-so-fancy git-delta difftastic afnanenayet/tap/diffsitter
                homebrew/core/go grc bat eth-p/software/bat-extras prettyping gping tealdeer noti eza lsd
                navi procs lazydocker dive neofetch macchina direnv code-minimap zk nap
-               cmatrix tty-clock mhzawadi/cbonsai/cbonsai pipes-sh asciiquarium
+               cmatrix tty-clock mhzawadi/cbonsai/cbonsai pipes-sh asciiquarium loc d2
                zsh-autosuggestions zsh-completions zsh-fast-syntax-highlighting
                kubectl k9s kubectx stern awscli py-spy ruff uv zig zls
                ffmpegthumbnailer unar poppler exiftool lutzifer/homebrew-tap/keyboardSwitcher)
@@ -55,7 +55,12 @@ function install_fzf_tab() {
     fi
 }
 
-figlet "dotfiles"
+echo "     _       _    __ _ _"
+echo "  __| | ___ | |_ / _(_) | ___  ___"
+echo " / _\` |/ _ \| __| |_| | |/ _ \/ __|"
+echo "| (_| | (_) | |_|  _| | |  __/\__ \\"
+echo " \__,_|\___/ \__|_| |_|_|\___||___/"
+echo ""
 
 echo "==> Here we go..."
 

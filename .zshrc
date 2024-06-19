@@ -16,10 +16,11 @@ done
 unset file
 
 # Activate fuzzy auto-completion and key bindings
-eval "$(fzf --zsh)"
+source <(fzf --zsh)
 
-eval "$(zoxide init zsh)"
-eval "$(direnv hook zsh)"
+source <(zoxide init zsh)
+source <(direnv hook zsh)
+source <(kubectl completion zsh)
 
 # Activate powerlevel10k
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme

@@ -4,3 +4,4 @@
 - new: use stow/chezmoi/yadm for sync
 - update README and screenshot
 - use brew bundle for the installation process
+- remove zsh-completions?
