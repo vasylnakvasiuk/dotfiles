@@ -55,6 +55,14 @@ function install_fzf_tab() {
     fi
 }
 
+function install_fzf_git() {
+    if [ ! -d ~/.extra/.zsh/fzf-git.sh ] ; then
+        git clone https://github.com/junegunn/fzf-git.sh ~/.extra/.zsh/fzf-git.sh
+    else
+        git -C ~/.extra/.zsh/fzf-git.sh pull
+    fi
+}
+
 echo "     _       _    __ _ _"
 echo "  __| | ___ | |_ / _(_) | ___  ___"
 echo " / _\` |/ _ \| __| |_| | |/ _ \/ __|"
@@ -92,6 +100,9 @@ $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc --no
 
 echo "  > Install fzf-tab"
 install_fzf_tab &> /dev/null
+
+echo "  > Install fzf-git"
+install_fzf_git &> /dev/null
 
 echo "  > Manage tmux plugins"
 

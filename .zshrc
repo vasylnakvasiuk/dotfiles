@@ -15,6 +15,22 @@ for file in ~/.extra/.zsh/{exports,aliases,functions,key-bindings,fzf,local}.zsh
 done
 unset file
 
+# Activate zsh plugins
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+fi
+
+autoload -U compinit; compinit
+source ~/.extra/.zsh/fzf-tab/fzf-tab.plugin.zsh
+
+source ~/.extra/.zsh/fzf-git.sh/fzf-git.sh
+
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
 # Activate fuzzy auto-completion and key bindings
 source <(fzf --zsh)
 
@@ -27,17 +43,3 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Activate zsh plugins
-if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-    autoload -Uz compinit
-    compinit
-fi
-
-autoload -U compinit; compinit
-source ~/.extra/.zsh/fzf-tab/fzf-tab.plugin.zsh
-
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOMEBREW_PREFIX/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
