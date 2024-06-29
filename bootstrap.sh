@@ -16,10 +16,7 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                ffmpegthumbnailer unar poppler exiftool lutzifer/homebrew-tap/keyboardSwitcher)
 
 CASK_PACKAGES=(wezterm keycastr anybar wireshark android-platform-tools
-               vlc rectangle maccy monitorcontrol zed
-               homebrew/cask-fonts/font-hack homebrew/cask-fonts/font-hack-nerd-font
-               homebrew/cask-fonts/font-fira-code homebrew/cask-fonts/font-fira-code-nerd-font
-               homebrew/cask-fonts/font-jetbrains-mono homebrew/cask-fonts/font-jetbrains-mono-nerd-font)
+               vlc rectangle maccy monitorcontrol zed font-fira-code font-fira-code-nerd-font)
 
 function install_brew_packages() {
     for index in $BREW_PACKAGES; do
