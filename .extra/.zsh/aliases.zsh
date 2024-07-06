@@ -32,14 +32,15 @@ alias watch="watch "
 
 # Use pretty ls
 alias l="eza -lagh --time-style long-iso --octal-permissions --icons --git"
-alias lt="eza -lagh --time-style long-iso --octal-permissions --icons --git -T --git-ignore"
 alias ll="eza -laaghHimuU --time-style long-iso --git --octal-permissions --icons --git"
+alias lt="eza -lagh --time-style long-iso --octal-permissions --icons --git -T --git-ignore"
 
 # Use j as z
 alias j="z"
 
 alias preview="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}' --bind='ctrl-o:execute(code {})+abort'"
 alias cat="bat"
+alias pcat="bat -p"
 alias ping="prettyping --nolegend"
 alias fd="fd -H"
 alias du="ncdu --color dark -r -x"
