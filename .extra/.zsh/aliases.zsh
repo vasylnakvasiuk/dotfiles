@@ -32,7 +32,7 @@ alias watch="watch "
 
 # Use pretty ls
 alias l="eza -lagh --time-style long-iso --octal-permissions --icons --git"
-alias lt="eza -lagh --time-style long-iso --octal-permissions --icons --git -T -I .git"
+alias lt="eza -lagh --time-style long-iso --octal-permissions --icons --git -T --git-ignore"
 alias ll="eza -laaghHimuU --time-style long-iso --git --octal-permissions --icons --git"
 
 # Use j as z
