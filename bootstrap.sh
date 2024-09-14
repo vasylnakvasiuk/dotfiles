@@ -15,7 +15,7 @@ BREW_PACKAGES=(zsh bash powerlevel10k
                kubectl k9s kubectx stern awscli py-spy ruff uv zig zls
                ffmpegthumbnailer unar poppler exiftool lutzifer/homebrew-tap/keyboardSwitcher)
 
-CASK_PACKAGES=(wezterm keycastr anybar wireshark android-platform-tools
+CASK_PACKAGES=(wezterm keycastr anybar wireshark android-platform-tools yaak
                vlc rectangle maccy monitorcontrol zed font-fira-code font-fira-code-nerd-font)
 
 function install_brew_packages() {
