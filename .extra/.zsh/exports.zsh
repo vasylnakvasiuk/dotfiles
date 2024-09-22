@@ -1,6 +1,6 @@
 # Preferred editor for local and remote sessions
-export EDITOR=hx
-export VISUAL=$EDITOR
+export EDITOR='hx'
+export VISUAL='zed -w'
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
