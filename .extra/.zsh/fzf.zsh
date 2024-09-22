@@ -33,11 +33,15 @@ fzf-log() {
   git log --graph --color=always \
     --format="%C(auto)%h%d %s %C(black)%C(bold)%cr %C(auto)%C(blue)%cn" "$@" |
   fzf-down --height 70% --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
-    --preview 'grep -o "[a-f0-9]\{7,\}" <<< {} | xargs git show --stat --color=always' --bind "ctrl-m:execute:
-  (grep -o '[a-f0-9]\{7\}' | head -1 |
-  xargs -I % sh -c 'git show --color=always % | delta --paging always') << 'FZF-EOF'
-  {}
-  FZF-EOF"
+    --preview 'grep -o "[a-f0-9]\{7,\}" <<< {} | xargs -I % sh -c "
+        git show --stat --color=always %;
+        echo \"\n\n\n-----------------------------------------------\n\n\n\";
+        git show --color=always --patch %"'
+    --bind "ctrl-m:execute:
+        (grep -o '[a-f0-9]\{7\}' | head -1 |
+        xargs -I % sh -c 'git show --color=always % | delta --paging always') << 'FZF-EOF'
+        {}
+        FZF-EOF"
   zle redisplay
 }
 zle -N fzf-log
