@@ -9,7 +9,7 @@ export ARCHFLAGS="-arch x86_64"
 export LANG=en_US.UTF-8
 
 # Less configuration
-export LESS='-i -M -R --mouse --wheel-lines=3'
+export LESS='-i -M -R --mouse --wheel-lines=1'
 
 # PATH environment variable
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/homebrew/bin:$HOME/.extra/bin"
